@@ -1,6 +1,6 @@
 function  ErrorPage ()  {
     return (
-        <div>
+        <div className="">
             <p>ERROR 404!</p>
         </div>
     )

@@ -8,6 +8,7 @@ import Home from './client/screens/Home.tsx'
 
 // importar/configurar o react-router-dom
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import AboutMe from './client/screens/AboutMe.tsx'
 
 
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
+			},
+			{
+				path: "/about-me",
+				element: <AboutMe/>,
 			}
 		]
 	}

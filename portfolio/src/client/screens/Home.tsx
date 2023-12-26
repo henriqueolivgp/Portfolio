@@ -1,3 +1,5 @@
+
+
 function Home() {
   return (
     <>
@@ -33,6 +35,9 @@ function Home() {
           <div className="flex">
             <img src="/src/client/assets/image.png" alt="my-photo" className="h-96" />
           </div>
+
+        </div>
+        <div >
 
         </div>
       </div>

@@ -33,7 +33,7 @@ function Home() {
             <button type="button" className="text-black text-lg bg-button-contact hover:bg-gray-400 font-medium rounded-lg px-5 py-2.5">Contact me</button>
           </div>
           <div className="flex">
-            <img src="/src/client/assets/image.png" alt="my-photo" className="h-96" />
+            <img src="/image.png" alt="my-photo" className="h-96" />
           </div>
 
         </div>

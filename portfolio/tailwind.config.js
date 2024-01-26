@@ -45,7 +45,8 @@ export default {
     colors: {
       'bluelite': '#139CFFFF',
       'footer-bg': '#001c2f',
-      'button-contact': '#D9D9D9'
+      'button-contact': '#D9D9D9',
+      'hoverbg': '#323B5C'
 
     },
     fontFamily: {

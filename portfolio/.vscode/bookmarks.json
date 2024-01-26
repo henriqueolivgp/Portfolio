@@ -1,0 +1,29 @@
+{
+	"files": [
+		{
+			"path": "src/client/components/BottomNavBar.tsx",
+			"bookmarks": [
+				{
+					"line": 12,
+					"column": 32,
+					"label": ""
+				},
+				{
+					"line": 19,
+					"column": 36,
+					"label": ""
+				},
+				{
+					"line": 26,
+					"column": 36,
+					"label": ""
+				},
+				{
+					"line": 34,
+					"column": 38,
+					"label": ""
+				}
+			]
+		}
+	]
+}

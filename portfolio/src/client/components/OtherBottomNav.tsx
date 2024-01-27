@@ -28,10 +28,10 @@ export const OtherBottomNav: React.FC<NavBarProps> = () => {
 
     return (
         <>
-            {/* <button
+            <button
                 onClick={toggleNavbar}
                 type="button"
-                className="fixed bottom-0 left-0 z-50 w-full h-36 bg-transparent border-gray-200 dark:bg-gray-700 dark:border-gray-600 p-2 w-10 h-10  text-gray-500 rounded-lg"
+                className="fixed bottom-0 flex items-center content-center z-50 h-36 bg-transparent border-gray-200 dark:bg-gray-700 dark:border-gray-600 p-2 w-10  text-gray-500 rounded-lg"
                 aria-controls="navbar-hamburger"
                 aria-expanded={isNavbarOpen ? 'true' : 'false'}
             >
@@ -94,7 +94,7 @@ export const OtherBottomNav: React.FC<NavBarProps> = () => {
                     </button>
                 </div>
             </div>
-            </div> */}
+            </div>
         </>
     )
 }

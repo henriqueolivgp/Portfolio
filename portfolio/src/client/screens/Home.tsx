@@ -1,6 +1,6 @@
 
 
-function Home() {
+export const Home = () => {
   return (
     <>
       {/* Adiciona imagem ao fundo */}
@@ -42,5 +42,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;

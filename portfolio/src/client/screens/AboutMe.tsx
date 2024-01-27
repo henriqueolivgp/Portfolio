@@ -1,15 +1,16 @@
-function AboutMe() {
+export const AboutMe = () => {
   return (
     <>
+      <div className="bg-gradient-to-r from-leftcolor to-rigthcolor h-screen">
+        <div className="container mx-auto  ">
+          <div className="content mx-auto ">
+            <h1 className=" text-white text-center">About me</h1>
+            <div className=" p-20">
 
-      <div className="container mx-auto ">
-        <div className="content mx-auto">
-
+            </div>
+          </div>
         </div>
       </div>
-
     </>
   );
-}
-
-export default AboutMe;
+};

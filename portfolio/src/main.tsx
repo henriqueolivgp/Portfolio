@@ -2,14 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './client/routes/App.tsx'
 import './client/theme/index.css'
-import ErrorPage from './client/screens/ErrorPage.tsx'
-
-import Home from './client/screens/Home.tsx'
-
 // importar/configurar o react-router-dom
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import AboutMe from './client/screens/AboutMe.tsx'
-
+// Import Pages
+import { Home } from './client/screens/Home.tsx'
+import { AboutMe } from './client/screens/AboutMe.tsx'
+import {ErrorPage} from './client/screens/ErrorPage.tsx'
 
 
 // criação da const function
@@ -26,8 +24,16 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/about-me",
-				element: <AboutMe/>,
-			}
+				element: <AboutMe />,
+			},
+			{
+				path: "/projects",
+				element: <AboutMe />,
+			},
+			{
+				path: "/contact-me",
+				element: <AboutMe />,
+			},
 		]
 	}
 ]);

@@ -48,11 +48,11 @@
 // export default HorizontalScrollPage;
 
 import { useRef, useState } from 'react';
-import Home from './Home';
-import AboutMe from './AboutMe';
+import { Home } from './Home';
+import { AboutMe } from './AboutMe';
 
 const HorizontalScrollPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {

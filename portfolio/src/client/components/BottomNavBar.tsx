@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "../theme/css.css";
 
 export const BottomNavBar = () => {
   return (

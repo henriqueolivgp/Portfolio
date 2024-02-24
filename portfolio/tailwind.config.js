@@ -45,12 +45,12 @@ export default {
     colors: {
       'bluelite': '#139CFFFF',
       'footer-bg': '#001c2f',
-      'button-contact': '#D9D9D9',
-      'rigthcolor': '#323B5C',
-      'leftcolor': '#212537'
+      'P-white': '#D9D9D9',
+      'BackgroundR': '#323B5C',
+      'BackgroundL': '#212537'
     },
     fontFamily: {
-  
+      mono: ['JetBrains Mono']
     },
     borderRadius: {
       'none': '0',

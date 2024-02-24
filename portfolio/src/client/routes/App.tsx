@@ -1,12 +1,11 @@
 import { Outlet } from "react-router-dom";
-// import { BottomNavBar } from "../components/BottomNavBar";
-// import { OtherBottomNav } from '../components/OtherBottomNav';
+import { Navbar } from "../components/NavBar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Outlet />
-      {/* <BottomNavBar /> */}
     </>
   );
 }

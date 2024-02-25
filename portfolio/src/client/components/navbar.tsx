@@ -53,7 +53,7 @@ export const Navbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             {isOpen ? (
               <div className="flex absolute right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
-                <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg">
+                <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">
                   <NavMobileLi name="Profile" to="#profile" />
                   <NavMobileLi name="About-me" to="#About-me" />
                   <NavMobileLi name="Projects" to="#Projects" />

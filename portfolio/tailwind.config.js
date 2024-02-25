@@ -23,7 +23,7 @@ export default {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'lgg': '1057px',
+      'lgg': '1150px',
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
@@ -47,7 +47,8 @@ export default {
       'footer-bg': '#001c2f',
       'P-white': '#D9D9D9',
       'BackgroundR': '#323B5C',
-      'BackgroundL': '#212537'
+      'BackgroundL': '#212537',
+      'PPurple-medium' : '#2C3A75'
     },
     fontFamily: {
       mono: ['JetBrains Mono']

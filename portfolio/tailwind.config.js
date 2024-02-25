@@ -23,7 +23,7 @@ export default {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'lgg': '1057px',
+      'lgg': '1150px',
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
@@ -45,12 +45,13 @@ export default {
     colors: {
       'bluelite': '#139CFFFF',
       'footer-bg': '#001c2f',
-      'button-contact': '#D9D9D9',
-      'rigthcolor': '#323B5C',
-      'leftcolor': '#212537'
+      'P-white': '#D9D9D9',
+      'BackgroundR': '#323B5C',
+      'BackgroundL': '#212537',
+      'PPurple-medium' : '#2C3A75'
     },
     fontFamily: {
-  
+      mono: ['JetBrains Mono']
     },
     borderRadius: {
       'none': '0',

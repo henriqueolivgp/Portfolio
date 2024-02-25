@@ -1,15 +1,28 @@
-import { BgAnimation } from "../components/BgAnimation";
-
 
 export const AboutMe = () => {
   return (
     <>
-      <BgAnimation />
       <div className="bg-gradient-to-r from-leftcolor to-rigthcolor h-screen">
         <div className="container mx-auto  ">
           <div className="content mx-auto ">
-            <h1 className=" text-white text-center">About me</h1>
-            <div className=" p-20"></div>
+            <div className="">
+              <h1 className=" text-left text-white text-4xl ">About me</h1>
+              <div className="flex justify-center content-center">
+                <p className=" text-[40px] text-left text-white">
+                  <span className="text-[40px] text-left text-white">
+                    I'm a full stack web developer student and I study{" "}
+                  </span>
+                  <br />
+                  <span className="text-[40px] text-left text-white">
+                    mobile development with Android Studio and React{" "}
+                  </span>
+                  <br />
+                  <span className="text-[40px] text-left text-white">
+                    Native by my choice
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

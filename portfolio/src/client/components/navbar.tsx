@@ -17,12 +17,22 @@ export const Navbar = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('click', handleOutsideClick);
-
+    document.addEventListener("click", handleOutsideClick);
 
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
+
+    // if (isOpen) {
+    //   // Define um timeout de 5 segundos para fechar o menu automaticamente
+    //   const timeoutId = setTimeout(() => {
+    //     setIsOpen(false);
+    //   }, 5000);
+    // }
+
+    // // Limpa o timeout quando o componente é desmontado ou quando isOpen muda para falso
+    // return () => clearTimeout(timeoutId);
+
   }, []);
 
   const handleClick = () => {
@@ -32,7 +42,10 @@ export const Navbar = () => {
   return (
     <>
       <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-30 font-mono ">
-        <div ref={menuRef}  className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4">
+        <div
+          ref={menuRef}
+          className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4"
+        >
           <div className="flex justify-between w-full lgg:w-0 ">
             <a
               href="https://flowbite.com/"

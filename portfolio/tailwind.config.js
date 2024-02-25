@@ -11,7 +11,8 @@ export default {
     extend: {},
     // Define os breakpoints personalizados
     screens: {
-      'xs': '400px',
+
+      'xs': '300px',
       // => @media (min-width: 470px) { ... }
 
       'sm': '640px',

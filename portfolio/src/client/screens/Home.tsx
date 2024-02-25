@@ -1,3 +1,5 @@
+import { AboutMe } from "./AboutMe";
+
 export const Home = () => {
   return (
     <>
@@ -37,9 +39,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="about-me h-screen ">
-            <div className="content ">
-              <h1 className="bg-transparent text-6xl">About me</h1>
-            </div>
+            <AboutMe/>
           </div>
         </div>
       </div>

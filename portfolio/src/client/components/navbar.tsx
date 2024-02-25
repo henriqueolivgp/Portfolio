@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../assets/logo.png";
 import { NavMobileLi } from "./navbarComponents/navmobileli";
 import { NavLi } from "./navbarComponents/navli";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    const target = event.target as Node;
+
+    // Verifica se o clique foi fora do menu
+    if (menuRef.current && !menuRef.current.contains(target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+
+
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -13,7 +32,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-30 font-mono ">
-        <div className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4">
+        <div ref={menuRef}  className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4">
           <div className="flex justify-between w-full lgg:w-0 ">
             <a
               href="https://flowbite.com/"
@@ -50,7 +69,7 @@ export const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <div className="hidden w-full xs:block xs:w-auto" id="navbar-default">
             {isOpen ? (
               <div className="flex absolute right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
                 <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">

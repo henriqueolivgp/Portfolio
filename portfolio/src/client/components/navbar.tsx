@@ -19,21 +19,21 @@ export const Navbar = () => {
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
 
-    return () => {
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    if (isOpen) {
+      // Define one timeout at 5 seconds for close the menu automatically
+      timeoutId = setTimeout(() => {
+        setIsOpen(false);
+      }, 3500);
+    }
+
+    // Clean timeout when component is down, when isOpen changed for false or when menu is close manualy
+    return () => {  
       document.removeEventListener("click", handleOutsideClick);
+      clearTimeout(timeoutId);
     };
-
-    // if (isOpen) {
-    //   // Define um timeout de 5 segundos para fechar o menu automaticamente
-    //   const timeoutId = setTimeout(() => {
-    //     setIsOpen(false);
-    //   }, 5000);
-    // }
-
-    // // Limpa o timeout quando o componente é desmontado ou quando isOpen muda para falso
-    // return () => clearTimeout(timeoutId);
-
-  }, []);
+  }, [isOpen]);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -84,13 +84,13 @@ export const Navbar = () => {
           </div>
           <div className="hidden w-full xs:block xs:w-auto" id="navbar-default">
             {isOpen ? (
-              <div className="flex absolute right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
+              <div className="flex absolute lgg:hidden right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
                 <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">
                   <NavMobileLi name="Profile" to="#profile" />
                   <NavMobileLi name="About-me" to="#About-me" />
                   <NavMobileLi name="Projects" to="#Projects" />
                   <NavMobileLi name="Technologies" to="#Technologies" />
-                  <NavMobileLi name="Contact-me1" to="#Contact-me" />
+                  <NavMobileLi name="Contact-me" to="#Contact-me" />
                 </ul>
               </div>
             ) : (
@@ -99,7 +99,7 @@ export const Navbar = () => {
                 <NavLi name="About-me" to="#About-me" />
                 <NavLi name="Projects" to="#Projects" />
                 <NavLi name="Technologies" to="#Technologies" />
-                <NavLi name="Contact-me2" to="#Contact-me" />
+                <NavLi name="Contact-me" to="#Contact-me" />
               </ul>
             )}
           </div>

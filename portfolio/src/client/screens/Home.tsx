@@ -1,4 +1,8 @@
+import { ScrollUp } from "../components/scrollup";
+import { Separator } from "../components/sparator";
 import { AboutMe } from "./AboutMe";
+import { ContactMe } from "./contactme";
+import { Projects } from "./projects";
 
 export const Home = () => {
   return (
@@ -38,11 +42,20 @@ export const Home = () => {
               </div>
             </div>
           </div>
+         
           <div className="about-me h-screen ">
             <AboutMe/>
           </div>
+          <Separator/>
+          <div className="about-me h-screen ">
+            <Projects/>
+          </div>
+          <div className="about-me h-screen ">
+            <ContactMe/>
+          </div>
         </div>
       </div>
+      <ScrollUp/>
     </>
   );
 };

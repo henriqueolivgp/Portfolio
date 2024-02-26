@@ -1,8 +1,9 @@
 
+
 export const AboutMe = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-leftcolor to-rigthcolor h-screen">
+      <div className="bg-PPurple-medium h-screen">
         <div className="container mx-auto  ">
           <div className="content mx-auto ">
             <div className="">

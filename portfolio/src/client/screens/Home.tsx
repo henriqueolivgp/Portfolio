@@ -1,5 +1,4 @@
 import { ScrollUp } from "../components/scrollup";
-import { Separator } from "../components/sparator";
 import { AboutMe } from "./AboutMe";
 import { ContactMe } from "./contactme";
 import { Projects } from "./projects";
@@ -46,7 +45,6 @@ export const Home = () => {
           <div className="about-me h-screen ">
             <AboutMe/>
           </div>
-          <Separator/>
           <div className="about-me h-screen ">
             <Projects/>
           </div>

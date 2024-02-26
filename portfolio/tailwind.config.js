@@ -49,7 +49,9 @@ export default {
       'P-white': '#D9D9D9',
       'BackgroundR': '#323B5C',
       'BackgroundL': '#212537',
-      'PPurple-medium' : '#2C3A75'
+      'PPurple-medium' : '#2C3A75',
+      'PDark': '#20264B',
+      'PCinza': '#A6AAAE'
     },
     fontFamily: {
       mono: ['JetBrains Mono']

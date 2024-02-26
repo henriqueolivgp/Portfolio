@@ -17,7 +17,7 @@ export const Home = () => {
         <div className="container mx-auto space-y-2 z-20 font-mono">
           <div className="content flex flex-col justify-center h-screen z-20">
             <div className="flex items-center justify-between z-20">
-              <div className="bg-transparent text-6xl ">
+              <div className="bg-transparent text-4xl xl:text-6xl ">
                 <p className="mb-2 tracking-tight text-white">Hi,</p>
                 <p className="mb-2 tracking-tight text-white">
                   I’m Henrique oliveira,

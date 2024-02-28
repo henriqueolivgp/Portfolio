@@ -11,7 +11,7 @@ export const NavMobileLi = ({to, name}: NavMobileProps) => {
       <li>
         <Link
           to={to}
-          className="w-full border-b rounded-t-lg no-underline "
+          className="w-full no-underline "
         >
           {name}
         </Link>

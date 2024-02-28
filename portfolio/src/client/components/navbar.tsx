@@ -25,7 +25,7 @@ export const Navbar = () => {
       // Define one timeout at 5 seconds for close the menu automatically
       timeoutId = setTimeout(() => {
         setIsOpen(false);
-      }, 3500);
+      }, 300500);
     }
 
     // Clean timeout when component is down, when isOpen changed for false or when menu is close manualy

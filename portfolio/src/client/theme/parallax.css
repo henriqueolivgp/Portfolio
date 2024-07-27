@@ -7,7 +7,3 @@ html {
   will-change: transform;
 }
 
-.main {
-  position: relative;
-  z-index: 30;
-}

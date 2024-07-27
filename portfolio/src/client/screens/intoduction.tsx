@@ -28,7 +28,7 @@ export const Introduction = (props: IntroductionProps) => {
                 </p>
                 <p className="tracking-tight text-white">I’m a Developer.</p>
                 <p className="text-2xl text-white">
-                  <TypewriterText text="Web Developer and Mobile Developer"/> 
+                  <TypewriterText text="Full Stack Web Developer"/> {/*  and Mobile Developer */}
                 </p>
                 <button
                   type="button"

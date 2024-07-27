@@ -1,4 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .parallax {
   position: relative;
   will-change: transform;
+}
+
+.main {
+  position: relative;
+  z-index: 30;
 }

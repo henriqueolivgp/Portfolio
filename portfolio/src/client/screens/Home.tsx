@@ -1,13 +1,12 @@
 import { ScreensGroup } from "../components/screensgroup";
 import { ScrollUp } from "../components/scrollup";
-import { useEffect } from 'react';
-import '../theme/parallax.css';
+import { useEffect } from "react";
+import "../theme/parallax.css";
 
 export const Home = () => {
-
   useEffect(() => {
     const handleScroll = () => {
-      const parallax = document.querySelectorAll('.parallax');
+      const parallax = document.querySelectorAll(".parallax");
       parallax.forEach((el) => {
         if (el instanceof HTMLElement) {
           let scrollPosition = window.scrollY;
@@ -16,9 +15,9 @@ export const Home = () => {
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -36,31 +35,32 @@ export const Home = () => {
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/100 to-black/0 pointer-events-none"></div>
 
         <div className="container mx-auto space-y-2 z-20 font-mono">
-        <div className="content flex flex-col justify-center h-screen z-20 parallax">
-        <div className="flex items-center justify-between ">
-          <div className="bg-transparent text-4xl xl:text-6xl">
-            <p className="mb-2 tracking-tight text-white">Hi,</p>
-            <p className="mb-2 tracking-tight text-white">
-              I’m Henrique Oliveira,
-            </p>
-            <p className="tracking-tight text-white">I’m a Developer.</p>
-            <p className="text-2xl text-white">
-              Web Developer and Mobile Developer
-            </p>
-            <button
-              type="button"
-              className="text-black text-lg bg-P-white hover:bg-gray-400 font-medium rounded-lg px-5 py-2.5 mt-4"
-            >
-              Contact-me
-            </button>
-          </div>
-          <div className="flex">
-            <img src="/image.png" alt="my-photo" className="h-96" />
-            
+          <div className="content flex flex-col justify-center h-screen z-20 parallax">
+            <div className="flex items-center justify-between ">
+              <div className="bg-transparent text-4xl xl:text-6xl">
+                <p className="mb-2 tracking-tight text-white">Hi,</p>
+                <p className="mb-2 tracking-tight text-white">
+                  I’m Henrique Oliveira,
+                </p>
+                <p className="tracking-tight text-white">I’m a Developer.</p>
+                <p className="text-2xl text-white">
+                  Web Developer and Mobile Developer
+                </p>
+                <button
+                  type="button"
+                  className="text-black text-lg bg-P-white hover:bg-gray-400 font-medium rounded-lg px-5 py-2.5 mt-4"
+                >
+                  Contact-me
+                </button>
+              </div>
+              <div className="flex">
+                <img src="/image.png" alt="my-photo" className="h-96" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <ScreensGroup className="relative z-30" />
+        <div className="relative z-30">
+          <ScreensGroup />
         </div>
       </div>
       <ScrollUp />

@@ -1,6 +1,5 @@
 import { Avatar } from "flowbite-react";
 
-
 export const AboutMe = () => {
   return (
     <>

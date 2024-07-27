@@ -89,7 +89,7 @@ export const Navbar = () => {
                   <NavMobileLi name="Profile" to="#rofile" />
                   <NavMobileLi name="About-me" to="#About-me" />
                   <NavMobileLi name="Projects" to="#projects" />
-                  <NavMobileLi name="Technologies" to="#Technologies" />
+                  <NavMobileLi name="Technologies" to="#technologies" />
                   <NavMobileLi name="Contact-me" to="#Contact-me" />
                 </ul>
               </div>
@@ -98,7 +98,7 @@ export const Navbar = () => {
                 <NavLi name="Profile" to="#profile" />
                 <NavLi name="About-me" to="#About-me" />
                 <NavLi name="Projects" to="#projects" />
-                <NavLi name="Technologies" to="#Technologies" />
+                <NavLi name="Technologies" to="#technologies" />
                 <NavLi name="Contact-me" to="#Contact-me" />
               </ul>
             )}

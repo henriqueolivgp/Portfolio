@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <>
       {/* Adiciona imagem ao fundo */}
-      <div className="main bg-gradient-to-r from-BackgroundL to-BackgroundR z-0">
+      <div className="main bg-gray-600 z-0">
         <img
           src="/Background.jpg"
           alt="imagem de fundo"

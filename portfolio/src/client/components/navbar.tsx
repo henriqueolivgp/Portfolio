@@ -25,7 +25,7 @@ export const Navbar = () => {
       // Define one timeout at 5 seconds for close the menu automatically
       timeoutId = setTimeout(() => {
         setIsOpen(false);
-      }, 300500);
+      }, 3000);
     }
 
     // Clean timeout when component is down, when isOpen changed for false or when menu is close manualy
@@ -86,9 +86,9 @@ export const Navbar = () => {
             {isOpen ? (
               <div className="flex absolute lgg:hidden right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
                 <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">
-                  <NavMobileLi name="Profile" to="#profile" />
+                  <NavMobileLi name="Profile" to="#rofile" />
                   <NavMobileLi name="About-me" to="#About-me" />
-                  <NavMobileLi name="Projects" to="#Projects" />
+                  <NavMobileLi name="Projects" to="#projects" />
                   <NavMobileLi name="Technologies" to="#Technologies" />
                   <NavMobileLi name="Contact-me" to="#Contact-me" />
                 </ul>
@@ -97,7 +97,7 @@ export const Navbar = () => {
               <ul className="font-medium hidden flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lgg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
                 <NavLi name="Profile" to="#profile" />
                 <NavLi name="About-me" to="#About-me" />
-                <NavLi name="Projects" to="#Projects" />
+                <NavLi name="Projects" to="#projects" />
                 <NavLi name="Technologies" to="#Technologies" />
                 <NavLi name="Contact-me" to="#Contact-me" />
               </ul>

@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.34",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
+    "framer-motion": "^11.2.11",
     "lucide-react": "^0.341.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",

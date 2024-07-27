@@ -1,3 +1,4 @@
+import { Avatar } from "flowbite-react";
 
 
 export const AboutMe = () => {
@@ -7,7 +8,7 @@ export const AboutMe = () => {
         <div className="container mx-auto  ">
           <div className="content mx-auto ">
             <div className="">
-              <h1 className=" text-left text-white text-4xl ">About me</h1>
+              <h1 id="About-me" className=" text-left text-white text-4xl ">About-me</h1>
               <div className="flex justify-center content-center">
                 <p className=" text-[40px] text-left text-white">
                   <span className="text-[40px] text-left text-white">
@@ -21,6 +22,7 @@ export const AboutMe = () => {
                   <span className="text-[40px] text-left text-white">
                     Native by my choice
                   </span>
+                  <Avatar/>
                 </p>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 interface NavLiProps {
   name: string,
@@ -9,12 +9,12 @@ export const NavLi = ({name, to}: NavLiProps) => {
   return (
     <>
       <li>
-        <Link
-          to={to}
+        <a
+          href={to}
           className="block py-2 px-3 text-white rounded  md:hover:bg-transparent md:border-0 "
         >
           {name}
-        </Link>
+        </a>
       </li>
     </>
   );

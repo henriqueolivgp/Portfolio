@@ -41,7 +41,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-30 font-mono ">
+      <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-40 font-mono ">
         <div
           ref={menuRef}
           className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4"

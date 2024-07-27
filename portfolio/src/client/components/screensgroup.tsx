@@ -15,9 +15,12 @@ export const ScreensGroup = (props : screensProps) => {
       <div className="about-me h-screen ">
         <Projects />
       </div>
-      {/* <div className="about-me h-screen ">
-        <ContactMe />
-      </div> */}
+      <div className="about-me h-screen ">
+        <Projects />
+      </div>
+      <div className="about-me h-screen ">
+        <Projects />
+      </div>
       <div className="about-me h-screen ">
         <ContactMe />
       </div>

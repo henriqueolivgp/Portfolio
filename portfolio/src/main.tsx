@@ -6,7 +6,6 @@ import './client/theme/index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 // Import Pages
 import { Home } from './client/screens/Home.tsx'
-import { AboutMe } from './client/screens/AboutMe.tsx'
 import {ErrorPage} from './client/screens/ErrorPage.tsx'
 
 
@@ -21,18 +20,6 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
-			},
-			{
-				path: "/about-me",
-				element: <AboutMe />,
-			},
-			{
-				path: "/projects",
-				element: <AboutMe />,
-			},
-			{
-				path: "/contact-me",
-				element: <AboutMe />,
 			},
 		]
 	}

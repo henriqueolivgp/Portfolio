@@ -6,7 +6,6 @@ import './client/theme/index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 // Import Pages
 import { Home } from './client/screens/Home.tsx'
-import { AboutMe } from './client/screens/AboutMe.tsx'
 import {ErrorPage} from './client/screens/ErrorPage.tsx'
 
 

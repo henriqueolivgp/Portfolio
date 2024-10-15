@@ -8,7 +8,6 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Home } from './client/screens/Home.tsx'
 import {ErrorPage} from './client/screens/ErrorPage.tsx'
 
-
 // criação da const function
 const router = createBrowserRouter([
 	{

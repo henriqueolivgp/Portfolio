@@ -11,9 +11,6 @@ export const ScreensGroup = (props : screensProps) => {
     <>
     <div className="" {...props}>
       <div className="about-me h-screen ">
-        <AboutMe />
-      </div>
-      <div className="about-me h-screen ">
         <Projects />
       </div>
       <div className="about-me h-screen ">

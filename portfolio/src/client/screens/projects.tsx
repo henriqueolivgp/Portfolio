@@ -1,7 +1,18 @@
+import { Slider } from "../components/SliderProjects/slider";
+
 export const Projects = () => {
   return (
     <>
-      <h1 id="projects" className=" text-left text-white text-4xl ">Projects</h1>
+      <div id="projects" className="pt-28 ">
+        <div className="pl-20">
+          <h1 className="mt-4 text-left text-white text-4xl ">
+            Work Expirience
+          </h1>
+        </div>
+        <div className="flex mt-20 w-full">
+          <Slider />
+        </div>
+      </div>
     </>
   );
 };

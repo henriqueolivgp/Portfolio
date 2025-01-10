@@ -1,6 +1,4 @@
 // ProjectCard.tsx
-import React from "react";
-// Slider.tsx
 import { useState } from "react";
 import { ProjectCard } from "./card";
 
@@ -27,17 +25,15 @@ export const Slider = () => {
 
   return (
     <div className="relative w-full" data-carousel="static">
-      <div className="flex justify-center items-center gap-8 ml-4 pl-14 ">
+      <div className="flex justify-center items-center gap-8 ml-4 pl-14">
         {[...Array(totalSlides)].map((_, index) => (
           <div
             key={index}
             className={`transition-opacity duration-1000 ${
-              index === currentSlide
-                ? "opacity-100 enabled"
-                : "opacity-35 "  
+              index === currentSlide ? "opacity-100 enabled" : "opacity-35"
             }`}
           >
-            <ProjectCard onClick={handleCardClick} />
+            <ProjectCard onClick={handleCardClick} disabled={index !== currentSlide} />
           </div>
         ))}
       </div>

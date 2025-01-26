@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "styled-components": "^6.1.11",
+    "tech-stack-icons": "^2.1.0",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

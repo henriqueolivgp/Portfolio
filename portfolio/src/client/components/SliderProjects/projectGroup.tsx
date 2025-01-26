@@ -4,17 +4,9 @@ import { ProjectCard } from "./card";
 
 export const ProjectsGroup = () => {
   const [currentSlide, setCurrentSlide] = useState<number | null>(null); // Card em foco
-  const [hoveredSlide, setHoveredSlide] = useState<number | null>(null); // Para o hover
   const [isModalOpen, setIsModalOpen] = useState(false); // Controla o modal
   const totalSlides = 4; // Total de cartões
 
-  const handleMouseEnter = (index: number) => {
-    setHoveredSlide(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredSlide(null);
-  };
 
   const handleCardClick = (index: number) => {
     setCurrentSlide(index);
@@ -35,8 +27,7 @@ export const ProjectsGroup = () => {
         {[...Array(totalSlides)].map((_, index) => (
           <div
             key={index}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
+
             onClick={() => handleCardClick(index)}
           
           >

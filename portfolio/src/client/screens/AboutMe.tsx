@@ -1,30 +1,30 @@
-import { Avatar } from "flowbite-react";
 
 export const AboutMe = () => {
   return (
     <>
-      <div className=" h-screen">
-        <div className="container mx-auto  ">
-          <div className="content mx-auto ">
-            <div className="">
-              <h1 id="About-me" className=" text-left text-white text-4xl ">About-me</h1>
-              <div className="flex justify-center content-center">
-                <p className=" text-[40px] text-left text-white">
-                  <span className="text-[40px] text-left text-white">
-                    I'm a full stack web developer student and I study{" "}
-                  </span>
-                  <br />
-                  <span className="text-[40px] text-left text-white">
-                    mobile development with Android Studio and React{" "}
-                  </span>
-                  <br />
-                  <span className="text-[40px] text-left text-white">
-                    Native by my choice
-                  </span>
-                  <Avatar/>
-                </p>
-              </div>
-            </div>
+      <div id="About-me" className="pt-28 bg-gray-900">
+        <div className="pl-20">
+          <h1 className="mt-4 text-left text-white font-mono text-4xl">About me</h1>
+        </div>
+        <div className="flex flex-col md:flex-row items-center md:items-start mt-20 w-full px-4">
+          {/* Imagem à esquerda */}
+          <div className="md:w-1/3 flex justify-center">
+            <img className="w-96 rounded-md" src="/me.jpg" alt="My portrait" />
+          </div>
+          {/* Texto à direita */}
+          <div className="md:w-2/3 mt-8 md:mt-0 md:pl-10">
+            <p className="text-gray-400 text-xl font-bold max-w-4xl leading-relaxed">
+              I'm a Full-stack developer graduated in the course of Technology
+              and Programming of Information Systems, TPSI at the Polytechnic
+              Institute of Viana do Castelo-IPVC. I work with state-of-the-art
+              technologies: React, React Native, Next.js, PostgreSQL,
+              TypeScript, and JavaScript, besides developing REST and RESTful
+              APIs. I love to program. <br></br>See the final result of my projects,
+              making sure everything is working perfectly.
+            </p>
+          </div>
+          <div className="flex-wrap">
+
           </div>
         </div>
       </div>

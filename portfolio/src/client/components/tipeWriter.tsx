@@ -14,7 +14,7 @@ export function TypewriterText({ text, divProps }: TypewriterTextProps) {
         onInit={(typewriter) => {
           typewriter
             .typeString(text) // Use a string diretamente
-            .pauseFor(10000)  // Pausa antes de apagar
+            .pauseFor(5000)  // Pausa antes de apagar
             .deleteAll()      // Apaga o texto
             .start();         // Inicia o efeito de digitação
         }}

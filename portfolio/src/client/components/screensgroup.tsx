@@ -4,22 +4,25 @@ import { ContactMe } from "../screens/contactme";
 import { Projects } from "../screens/projects";
 import { Technologies } from "../screens/technologies";
 
-interface screensProps extends ComponentProps <'div'> {}
+interface screensProps extends ComponentProps<"div"> {}
 
-export const ScreensGroup = (props : screensProps) => {
+export const ScreensGroup = (props: screensProps) => {
   return (
     <>
-    <div className="" {...props}>
-      <div className="about-me h-screen ">
-        <Projects />
+      <div className="" {...props}>
+        <div className="h-screen ">
+          <AboutMe />
+        </div>
+        <div className="h-screen ">
+          <Projects />
+        </div>
+        <div className="h-screen ">
+          <Technologies />
+        </div>
+        <div className="h-screen ">
+          <ContactMe />
+        </div>
       </div>
-      <div className="about-me h-screen ">
-        <Technologies />
-      </div>
-      <div className="about-me h-screen ">
-        <ContactMe />
-      </div>
-    </div>
     </>
   );
 };

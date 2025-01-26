@@ -1,4 +1,4 @@
-import { Slider } from "../components/SliderProjects/slider";
+import { ProjectsGroup } from "../components/SliderProjects/projectGroup";
 
 export const Projects = () => {
   return (
@@ -10,7 +10,7 @@ export const Projects = () => {
           </h1>
         </div>
         <div className="flex mt-20 w-full">
-          <Slider />
+          <ProjectsGroup />
         </div>
       </div>
     </>

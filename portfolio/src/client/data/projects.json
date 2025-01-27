@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Cyber Reports",
+    "description": "Plataform for report, protect and prevence cyberatacks.",
+    "technologies": ["React", "Typescript", "Tailwind CSS", "Node.js", "Fastify", "MongoDB"],
+    "image": "../assets/projects/CR.png",
+    "repository": "https://github.com/henriqueolivgp/Plataforma-De-Denuncias-De-Ciberataques",
+    "liveDemo": "https://ciberreports.com",
+    "features": [
+      "User Autentication",
+      "Send cyber reports",
+      "Data anlistics Dashboard"
+    ]
+  }
+]

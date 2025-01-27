@@ -89,17 +89,17 @@ export const Navbar = () => {
                   <NavMobileLi name="Profile" to="#rofile" />
                   <NavMobileLi name="About-me" to="#About-me" />
                   <NavMobileLi name="Projects" to="#projects" />
-                  <NavMobileLi name="Technologies" to="#technologies" />
-                  <NavMobileLi name="Contact-me" to="#Contact-me" />
+                  {/* <NavMobileLi name="Technologies" to="#technologies" />
+                  <NavMobileLi name="Contact-me" to="#Contact-me" /> */}
                 </ul>
               </div>
             ) : (
-              <ul className="font-medium hidden flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lgg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
+              <ul className="font-medium hidden gap-8 flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lgg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
                 <NavLi name="Profile" to="#profile" />
                 <NavLi name="About-me" to="#About-me" />
                 <NavLi name="Projects" to="#projects" />
-                <NavLi name="Technologies" to="#technologies" />
-                <NavLi name="Contact-me" to="#Contact-me" />
+                {/* <NavLi name="Technologies" to="#technologies" />
+                <NavLi name="Contact-me" to="#Contact-me" /> */}
               </ul>
             )}
           </div>

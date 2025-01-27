@@ -13,7 +13,7 @@ export const ScreensGroup = (props: screensProps) => {
         <div className="h-screen ">
           <AboutMe />
         </div>
-        <div className="h-screen ">
+        <div className="min-h-screen max-h-auto">
           <Projects />
         </div>
         {/* <div className="h-screen ">

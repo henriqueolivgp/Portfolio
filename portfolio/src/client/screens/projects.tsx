@@ -1,15 +1,15 @@
-import { ProjectsGroup } from "../components/SliderProjects/projectGroup";
+import { ProjectsGroup } from "../components/Projects/projectGroup";
 
 export const Projects = () => {
   return (
     <>
       <div id="projects" className="pt-28">
         <div className="pl-20">
-          <h1 className="mt-4 text-left text-white text-4xl ">
-            Work Expirience
+          <h1 className="mt-4 text-left text-gray-300 text-4xl ">
+            Projects
           </h1>
         </div>
-        <div className="flex mt-20 w-full ">
+        <div className="flex mt-16 w-full ">
           <ProjectsGroup />
         </div>
       </div>

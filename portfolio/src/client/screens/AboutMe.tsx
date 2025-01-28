@@ -3,7 +3,7 @@ import { Skills } from "../components/AboutMe/skills";
 export const AboutMe = () => {
   return (
     <>
-      <div id="About-me" className="pt-28 bg-gray-900">
+      <div id="about-me" className="pt-28 bg-gray-900">
         <div className="pl-20 xs:pl-0">
           <h1 className="mt-4 xs:mt-0 xs:text-center text-left text-gray-300 font-mono text-4xl">
             About me

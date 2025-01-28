@@ -9,7 +9,7 @@ export const Introduction = (props: IntroductionProps) => {
       <div
         id="profile"
         {...props}
-        className="relative top-0 left-0 w-full h-screen z-10"
+        className="relative top-0 left-0 w-full h-screen z-10 "
       >
         {/* Adiciona imagem ao fundo */}
         <img
@@ -22,9 +22,9 @@ export const Introduction = (props: IntroductionProps) => {
         <div className="absolute top-0 left-0 h-screen w-full bg-gradient-to-t from-black/100 to-black/35  "></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/100 to-black/0 pointer-events-none"></div>
 
-        <div className="container mx-auto space-y-2  font-mono">
+        <div className="container mx-auto space-y-2 font-mono">
           <div className="content flex flex-col justify-center h-screen parallax">
-            <div className="flex items-center justify-between ">
+            <div className="flex items-center justify-between xs:flex">
               <div className="bg-transparent text-4xl xl:text-6xl">
                 <p className="mb-2 tracking-tight text-gray-300">Hi,</p>
                 <p className="mb-2 tracking-tight text-gray-300">
@@ -54,7 +54,7 @@ export const Introduction = (props: IntroductionProps) => {
               </div>
               <div className="flex">
                 <a href="https://github.com/henriqueolivgp" target="_blank">
-                  <img src="/image.png" alt="my-photo" className="h-96" />
+                  <img src="/image.png" alt="my-photo" className="h-96 " />
                 </a>
               </div>
             </div>

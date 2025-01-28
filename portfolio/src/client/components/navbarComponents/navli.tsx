@@ -11,7 +11,7 @@ export const NavLi = ({name, to}: NavLiProps) => {
       <li>
         <a
           href={to}
-          className="block py-2 px-3 text-white font-semibold text-lg rounded  md:hover:bg-transparent md:border-0 "
+          className="block py-2 px-3 text-white  font-semibold text-lg rounded  md:hover:bg-transparent md:border-0 "
         >
           {name}
         </a>

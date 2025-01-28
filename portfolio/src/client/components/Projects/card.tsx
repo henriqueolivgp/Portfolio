@@ -7,7 +7,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ img,   }: ProjectCardProps) => {
   return (
     <div
-      className="md:w-[600px] md:h-96 xs:w-72 xs:h-40 bg-center relative overflow-hidden rounded-lg cursor-pointer"
+      className="lg:w-[500px] lg:h-80 lg:bottom-4 xs:w-72 xs:h-40 bg-center relative overflow-hidden rounded-lg cursor-pointer"
       // onClick={() => handleCardClick(index)} // Passa o índice ao clicar
     >
       <img src={img} alt="project-image" className="w-full h-full object-fill" />

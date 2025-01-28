@@ -5,7 +5,7 @@ export const Projects = () => {
     <>
       <div id="projects" className="relative pt-28">
         <div className="pl-20">
-          <h1 className="relative mt-4 text-left text-gray-300 text-4xl ">
+          <h1 className="relative font-bold mt-4 text-left text-gray-300 text-3xl ">
             Projects
           </h1>
         </div>

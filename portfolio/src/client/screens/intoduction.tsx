@@ -36,7 +36,7 @@ export const Introduction = (props: IntroductionProps) => {
                     />
                   </a>
                 </div>
-                <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
+                <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl lg:text-6xl xs:text-2xl ">
                   Hi,
                 </p>
                 <p className="md:mb-2 tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">

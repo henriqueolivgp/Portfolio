@@ -11,7 +11,7 @@ export const NavMobileLi = ({to, name}: NavMobileProps) => {
       <li>
         <a
           href={to}
-          className="w-full no-underline "
+          className="w-full no-underline font-bold "
         >
           {name}
         </a>

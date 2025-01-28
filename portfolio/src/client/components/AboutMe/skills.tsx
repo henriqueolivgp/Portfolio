@@ -4,23 +4,23 @@ export const Skills = () => {
   return (
     <>
       <div className="md:w-1/2 flex flex-wrap gap-8 ">
-        <StackIcon name="reactjs" className="w-16" />
-        <StackIcon name="nextjs2" className="w-16" />
-        <StackIcon name="docker" className="w-16" />
-        <StackIcon name="typescript" className="w-16" />
-        <StackIcon name="vitejs" className="w-16" />
-        <StackIcon name="nodejs" className="w-16" />
-        <StackIcon name="js" className="w-16" />
-        <StackIcon name="nestjs" className="w-16" />
-        <StackIcon name="tailwindcss" className="w-16" />
-        <StackIcon name="vscode" className="w-16" />
-        <StackIcon name="mongodb" className="w-16" />
-        <StackIcon name="postgresql" className="w-16" />
-        <StackIcon name="insomnia" className="w-16" />
-        <StackIcon name="npm" className="w-16" />
-        <StackIcon name="git" className="w-16" />
+        <StackIcon name="reactjs" className="w-16 xs:w-10" />
+        <StackIcon name="nextjs2" className="w-16 xs:w-10" />
+        <StackIcon name="docker" className="w-16 xs:w-10" />
+        <StackIcon name="typescript" className="w-16 xs:w-10" />
+        <StackIcon name="vitejs" className="w-16 xs:w-10" />
+        <StackIcon name="nodejs" className="w-16 xs:w-10" />
+        <StackIcon name="js" className="w-16 xs:w-10" />
+        <StackIcon name="nestjs" className="w-16 xs:w-10" />
+        <StackIcon name="tailwindcss" className="w-16 xs:w-10" />
+        <StackIcon name="vscode" className="w-16 xs:w-10" />
+        <StackIcon name="mongodb" className="w-16 xs:w-10" />
+        <StackIcon name="postgresql" className="w-16 xs:w-10" />
+        <StackIcon name="insomnia" className="w-16 xs:w-10" />
+        <StackIcon name="npm" className="w-16 xs:w-10" />
+        <StackIcon name="git" className="w-16 xs:w-10" />
         <svg
-          width="64"
+          width="40"
           height="100"
           viewBox="0 0 100 100"
           fill="none"

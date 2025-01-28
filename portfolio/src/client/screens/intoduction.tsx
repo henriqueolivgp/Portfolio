@@ -36,11 +36,11 @@ export const Introduction = (props: IntroductionProps) => {
                   />
                 </a>
               </div>
-                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl">Hi,</p>
-                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl">
+                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl xxs:text-2xl">Hi,</p>
+                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl xxs:text-2xl">
                   I’m Henrique Oliveira,
                 </p>
-                <p className="tracking-tight text-gray-300 xs:text-3xl">
+                <p className="tracking-tight text-gray-300 xs:text-3xl xxs:text-2xl">
                   <TypewriterText text="Full-Stack Developer." />
                 </p>
                 <div className="flex gap-4">

@@ -3,7 +3,7 @@ import StackIcon from "tech-stack-icons";
 export const Skills = () => {
   return (
     <>
-      <div className="relative md:w-1/2 xs:w-full flex flex-wrap gap-4 xs:space-y-1 xs:items-center xs:justify-center ">
+      <div className="relative md:w-1/2 xs:w-full flex flex-wrap md:gap-8 xs:gap-4 xs:space-y-1 xs:items-center xs:justify-center ">
         <StackIcon name="reactjs" className="md:w-16 xs:w-9" />
         <StackIcon name="nextjs2" className="md:w-16 xs:w-9" />
         <StackIcon name="docker" className="md:w-16 xs:w-9" />

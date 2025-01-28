@@ -26,18 +26,28 @@ export const Introduction = (props: IntroductionProps) => {
           <div className="content flex flex-col justify-center h-screen parallax">
             <div className="flex items-center justify-between xs:flex">
               <div className="bg-transparent text-4xl xl:text-6xl">
-                <p className="mb-2 tracking-tight text-gray-300">Hi,</p>
-                <p className="mb-2 tracking-tight text-gray-300">
+              <div className="flex justify-center md:justify-end">
+                {/* Imagem para telas pequenas (xs) */}
+                <a href="https://github.com/henriqueolivgp" target="_blank">
+                  <img
+                    src="/image.png"
+                    alt="my-photo"
+                    className="block md:hidden h-64 w-64 object-cover"
+                  />
+                </a>
+              </div>
+                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl">Hi,</p>
+                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-3xl">
                   I’m Henrique Oliveira,
                 </p>
-                <p className="tracking-tight text-gray-300">
+                <p className="tracking-tight text-gray-300 xs:text-3xl">
                   <TypewriterText text="Full-Stack Developer." />
                 </p>
                 <div className="flex gap-4">
                   <a href="../../../doc/CV.pdf" download={true}>
                     <button
                       type="button"
-                      className="text-black text-lg bg-P-white hover:bg-gray-400 font-medium rounded-lg px-5 py-2.5 mt-4"
+                      className="text-black md:text-lg xs:text-sm bg-P-white hover:bg-gray-400 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                     >
                       Download CV
                     </button>
@@ -45,16 +55,22 @@ export const Introduction = (props: IntroductionProps) => {
                   <a href="mailto:henrique.b.oliveira@outlook.pt">
                     <button
                       type="button"
-                      className="text-black text-lg bg-P-white hover:bg-gray-400 font-medium rounded-lg px-5 py-2.5 mt-4 "
+                      className="text-black md:text-lg xs:text-sm bg-P-white hover:bg-gray-400 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
                     >
                       Contact-me
                     </button>
                   </a>
                 </div>
               </div>
-              <div className="flex">
+              {}
+              <div className="flex justify-center md:justify-end">
+                {/* Imagem para telas médias (md) ou maiores */}
                 <a href="https://github.com/henriqueolivgp" target="_blank">
-                  <img src="/image.png" alt="my-photo" className="h-96 " />
+                  <img
+                    src="/image.png"
+                    alt="my-photo"
+                    className="hidden md:block md:h-96 md:w-auto object-cover rounded-lg"
+                  />
                 </a>
               </div>
             </div>

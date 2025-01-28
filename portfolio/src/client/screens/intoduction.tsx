@@ -24,23 +24,25 @@ export const Introduction = (props: IntroductionProps) => {
 
         <div className="container mx-auto space-y-2 font-mono">
           <div className="content flex flex-col justify-center h-screen parallax">
-            <div className="flex items-center justify-between xs:flex">
-              <div className="bg-transparent text-4xl xl:text-6xl">
-              <div className="flex justify-center md:justify-end">
-                {/* Imagem para telas pequenas (xs) */}
-                <a href="https://github.com/henriqueolivgp" target="_blank">
-                  <img
-                    src="/image.png"
-                    alt="my-photo"
-                    className="block md:hidden h-64 w-64 object-cover"
-                  />
-                </a>
-              </div>
-                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-2xl ">Hi,</p>
-                <p className="md:mb-2 tracking-tight text-gray-300 xs:text-2xl ">
+            <div className="flex md:justify-between xs:justify-center xs:items-center xs:flex">
+              <div className="bg-transparent">
+                <div className="flex justify-center md:justify-end">
+                  {/* Imagem para telas pequenas (xs) */}
+                  <a href="https://github.com/henriqueolivgp" target="_blank">
+                    <img
+                      src="/image.png"
+                      alt="my-photo"
+                      className="block md:hidden h-64 w-64 object-cover"
+                    />
+                  </a>
+                </div>
+                <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
+                  Hi,
+                </p>
+                <p className="md:mb-2 tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
                   I’m Henrique Oliveira,
                 </p>
-                <p className="tracking-tight text-gray-300 xs:text-2xl ">
+                <p className="tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
                   <TypewriterText text="Full-Stack Developer." />
                 </p>
                 <div className="flex gap-4">

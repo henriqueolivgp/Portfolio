@@ -86,8 +86,8 @@ export const Navbar = () => {
             {isOpen ? (
               <div className="flex absolute lgg:hidden right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
                 <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">
-                  <NavMobileLi name="Profile" to="#rofile" />
-                  <NavMobileLi name="About-me" to="#About-me" />
+                  <NavMobileLi name="Profile" to="#profile" />
+                  <NavMobileLi name="About-me" to="#about-me" />
                   <NavMobileLi name="Projects" to="#projects" />
                   {/* <NavMobileLi name="Technologies" to="#technologies" />
                   <NavMobileLi name="Contact-me" to="#Contact-me" /> */}

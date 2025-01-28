@@ -15,7 +15,7 @@ export const Introduction = (props: IntroductionProps) => {
         <img
           src="/Background.jpg"
           alt="imagem de fundo"
-          className="absolute w-full top-0 z-0 h-screen"
+          className="absolute md:w-full top-0 z-0 h-screen"
         />
 
         {/* Adicionando uma camada escura */}

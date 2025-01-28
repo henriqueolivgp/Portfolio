@@ -3,24 +3,24 @@ import StackIcon from "tech-stack-icons";
 export const Skills = () => {
   return (
     <>
-      <div className="md:w-1/2 flex flex-wrap gap-8 ">
-        <StackIcon name="reactjs" className="w-16 xs:w-10" />
-        <StackIcon name="nextjs2" className="w-16 xs:w-10" />
-        <StackIcon name="docker" className="w-16 xs:w-10" />
-        <StackIcon name="typescript" className="w-16 xs:w-10" />
-        <StackIcon name="vitejs" className="w-16 xs:w-10" />
-        <StackIcon name="nodejs" className="w-16 xs:w-10" />
-        <StackIcon name="js" className="w-16 xs:w-10" />
-        <StackIcon name="nestjs" className="w-16 xs:w-10" />
-        <StackIcon name="tailwindcss" className="w-16 xs:w-10" />
-        <StackIcon name="vscode" className="w-16 xs:w-10" />
-        <StackIcon name="mongodb" className="w-16 xs:w-10" />
-        <StackIcon name="postgresql" className="w-16 xs:w-10" />
-        <StackIcon name="insomnia" className="w-16 xs:w-10" />
-        <StackIcon name="npm" className="w-16 xs:w-10" />
-        <StackIcon name="git" className="w-16 xs:w-10" />
+      <div className="relative md:w-1/2 xs:w-full flex flex-wrap gap-4 xs:space-y-1 xs:items-center xs:justify-center ">
+        <StackIcon name="reactjs" className="md:w-16 xs:w-9" />
+        <StackIcon name="nextjs2" className="md:w-16 xs:w-9" />
+        <StackIcon name="docker" className="md:w-16 xs:w-9" />
+        <StackIcon name="typescript" className="md:w-16 xs:w-9" />
+        <StackIcon name="vitejs" className="md:w-16 xs:w-9" />
+        <StackIcon name="nodejs" className="md:w-16 xs:w-9" />
+        <StackIcon name="js" className="md:w-16 xs:w-9" />
+        <StackIcon name="nestjs" className="md:w-16 xs:w-9" />
+        <StackIcon name="tailwindcss" className="md:w-16 xs:w-9" />
+        <StackIcon name="vscode" className="md:w-16 xs:w-9" />
+        <StackIcon name="mongodb" className="md:w-16 xs:w-9" />
+        <StackIcon name="postgresql" className="md:w-16 xs:w-9" />
+        <StackIcon name="insomnia" className="md:w-16 xs:w-9" />
+        <StackIcon name="npm" className="md:w-16 xs:w-9" />
+        <StackIcon name="git" className="md:w-16 xs:w-9" />
         <svg
-          width="40"
+          className="md:w-16 xs:w-9"
           height="100"
           viewBox="0 0 100 100"
           fill="none"

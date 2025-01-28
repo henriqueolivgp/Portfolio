@@ -5,11 +5,11 @@ export const Projects = () => {
     <>
       <div id="projects" className="pt-28">
         <div className="pl-20">
-          <h1 className="mt-4 text-left text-gray-300 text-4xl ">
+          <h1 className="relative mt-4 text-left text-gray-300 text-4xl ">
             Projects
           </h1>
         </div>
-        <div className="flex mt-16 w-full ">
+        <div className="flex mt-16 w-full justify-center items-center">
           <ProjectsGroup />
         </div>
       </div>

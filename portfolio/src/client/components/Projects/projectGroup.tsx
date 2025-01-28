@@ -24,7 +24,7 @@ export const ProjectsGroup = () => {
   return (
     <>
       <div
-        className="relative w-full flex-1 flex-wrap justify-center items-center bottom-10"
+        className=" w-full flex flex-wrap justify-center items-center md:bottom-10"
         data-carousel="static"
       >
         <FilterMenu />

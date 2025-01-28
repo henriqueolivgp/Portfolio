@@ -96,7 +96,7 @@ export const Navbar = () => {
             ) : (
               <ul className="font-medium hidden gap-8 flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lgg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
                 <NavLi name="Profile" to="#profile" />
-                <NavLi name="About-me" to="#About-me" />
+                <NavLi name="About-me" to="#about-me" />
                 <NavLi name="Projects" to="#projects" />
                 {/* <NavLi name="Technologies" to="#technologies" />
                 <NavLi name="Contact-me" to="#Contact-me" /> */}

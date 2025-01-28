@@ -30,7 +30,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="relative z-20 xs:h-auto ">
+      <div className="xs:h-auto ">
         <Introduction />
 
         <div className="relative bg-gray-900  z-30">

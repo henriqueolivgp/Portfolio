@@ -9,12 +9,12 @@ export const NavMobileLi = ({to, name}: NavMobileProps) => {
   return (
     <>
       <li>
-        <Link
-          to={to}
+        <a
+          href={to}
           className="w-full no-underline "
         >
           {name}
-        </Link>
+        </a>
       </li>
     </>
   );

@@ -42,9 +42,9 @@ export const Introduction = (props: IntroductionProps) => {
                 <p className="md:mb-2 tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
                   I’m Henrique Oliveira,
                 </p>
-                <p className="tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
+                <span className="tracking-tight text-gray-300  text-4xl xl:text-6xl xs:text-2xl ">
                   <TypewriterText text="Full-Stack Developer." />
-                </p>
+                </span>
                 <div className="flex gap-4">
                   <a content="application/pdf" href="doc/CV.pdf" download={true}>
                     <button

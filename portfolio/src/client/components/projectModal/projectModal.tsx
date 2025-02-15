@@ -1,26 +1,19 @@
+import { Project } from "../../DTO/projects";
+
 interface ProjectModalProps {
   isModalOpen: boolean;
-  currentSlide: number | null; // Índice do card atual
+  currentproject: Project | null; // Índice do card atual
   closeModal: () => void;
 }
 
 export const ProjectModal = ({
   isModalOpen,
-  currentSlide,
+  currentproject,
   closeModal,
 }: ProjectModalProps) => {
-  const cardTitles = [
-    "Título do Card 1",
-    "Título do Card 2",
-    "Título do Card 3",
-    "Título do Card 4",
-    "Título do Card 5",
-    "Título do Card 6",
-  ];
-
   return (
     <>
-      {isModalOpen && currentSlide !== null && (
+      {isModalOpen && currentproject !== null && (
         <div className="fixed z-30 inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="relative bg-PPurple-medium w-full md:w-[70%] lg:w-[50%] h-[80%] rounded-2xl">
             <button
@@ -45,13 +38,16 @@ export const ProjectModal = ({
               </svg>
               <span className="sr-only">Close modal</span>
             </button>
+
             <div className="p-4">
               {/* Exibe o título com base no índice */}
-              <h1 className="text-white text-xl">{cardTitles[currentSlide]}</h1>
+              <h1 className="text-white text-xl">{currentproject.name}</h1>
+              <img src={currentproject.image} alt="image project" />
+              <a href={currentproject.live} target="_blank">
+                <button>View</button>
+              </a>
               {/* Adicione mais detalhes, se necessário */}
-              <p className="text-white mt-4">
-                Detalhes do Card {currentSlide + 1}
-              </p>
+              <p className="text-white mt-4">Detalhes do Card {currentproject.description}</p>
             </div>
           </div>
         </div>

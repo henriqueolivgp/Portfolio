@@ -46,7 +46,7 @@ export const Introduction = (props: IntroductionProps) => {
                   <TypewriterText text="Full-Stack Developer." />
                 </p>
                 <div className="flex gap-4">
-                  <a href="../../../doc/CV.pdf" download={true}>
+                  <a content="application/pdf" href="doc/CV.pdf" download={true}>
                     <button
                       type="button"
                       className="text-black md:text-lg xs:text-sm bg-P-white hover:bg-gray-400 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"

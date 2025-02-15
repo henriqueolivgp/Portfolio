@@ -1,16 +1,30 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Cyber Reports",
     "description": "Plataform for report, protect and prevence cyberatacks.",
     "technologies": ["React", "Typescript", "Tailwind CSS", "Node.js", "Fastify", "MongoDB"],
-    "image": "../assets/projects/CR.png",
+    "image": "/projects/CR.png",
     "repository": "https://github.com/henriqueolivgp/Plataforma-De-Denuncias-De-Ciberataques",
-    "liveDemo": "https://ciberreports.com",
+    "live": "https://ciberreports.com",
     "features": [
       "User Autentication",
       "Send cyber reports",
       "Data anlistics Dashboard"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Expert Notes",
+    "description": "Plataform for take your notes inside your browser, this project save all todo in your browser data you can add todo's with text or voice using your mic.",
+    "technologies": ["React", "Typescript", "Tailwind CSS"],
+    "image": "/projects/Expert-Notes.png",
+    "repository": "https://github.com/henriqueolivgp/Plataforma-De-Denuncias-De-Ciberataques",
+    "live": "https://nlw-expert-notes.pages.dev",
+    "features": [
+      "User Autentication",
+      "store todo's",
+      "Save data in browser storage"
     ]
   }
 ]

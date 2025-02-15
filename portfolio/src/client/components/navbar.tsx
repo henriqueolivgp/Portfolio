@@ -41,14 +41,14 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-40 font-mono ">
+      <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-40  ">
         <div
           ref={menuRef}
           className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4"
         >
           <div className="flex justify-between w-full lgg:w-0 ">
             <a
-              href="https://flowbite.com/"
+              href="#profile"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={logo} className="h-7" alt="Logo" />

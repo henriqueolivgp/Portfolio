@@ -1,13 +1,45 @@
 import { MeAbout } from "../components/AboutMe/me-about";
-import { Skills } from "../components/AboutMe/skills";
+// import { Skills } from "../components/AboutMe/skills";
 
 export const AboutMe = () => {
   return (
     <>
       <div
         id="about-me"
-        className="flex p-10 items-center xs:pt-4 bg-gray-900 justify-center min-h-screen"
+        className="flex relative overflow-hidden bg-slate-800 p-10 items-center xs:pt-4 justify-center min-h-screen"
       >
+        <div className="absolute left-[-122px] top-[-100px]">
+          <svg
+            width="460"
+            height="425"
+            viewBox="0 0 460 425"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 362L386 13"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+            <path
+              d="M74 411.5L447 62.5"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+            <path
+              d="M45 386.5L418 37.5"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
         <div className="flex justify-center items-center w-full h-auto gap-8 ">
           <MeAbout />
           <div className="flex flex-col w-[40%]">
@@ -66,6 +98,37 @@ export const AboutMe = () => {
             </p>
             {/* <Skills /> */}
           </div>
+        </div>
+        <div className="absolute right-[-122px] bottom-[-100px]">
+          <svg
+            width="460"
+            height="425"
+            viewBox="0 0 460 425"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 362L386 13"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+            <path
+              d="M74 411.5L447 62.5"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+            <path
+              d="M45 386.5L418 37.5"
+              stroke="#60A5FA"
+              stroke-opacity="0.4"
+              stroke-width="26"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
       </div>
     </>

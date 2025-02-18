@@ -11,6 +11,20 @@ export const AboutMe = () => {
           <h1 className="relative font-bold mt-4 text-left text-gray-300 text-3xl ">
             About-me
           </h1>
+          <svg
+            width="146"
+            height="12"
+            viewBox="0 0 136 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.14131 8.21839C103.179 -0.581582 131.229 2.82004 132.748 5.62084"
+              stroke="#EFF6FF"
+              stroke-width="4.56445"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-center md:mt-10 xs:mt-6 w-full">
@@ -35,7 +49,9 @@ export const AboutMe = () => {
               perfectly.
             </p>
             <div className="flex-wrap mt-10 w-auto">
-              <h1 className="text-xl text-gray-300 mb-8 font-semibold">My Skills</h1>
+              <h1 className="text-xl text-gray-300 mb-8 font-semibold">
+                My Skills
+              </h1>
               <Skills />
             </div>
           </div>

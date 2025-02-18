@@ -54,6 +54,7 @@ export default {
       'PPurple-medium' : '#2C3A75',
       'PDark': '#20264B',
       'PCinza': '#A6AAAE',
+      'slate-800': '#1e293b',
       'slate-950': '#020617',
       'sky-500': '#0ea5e9'
     },

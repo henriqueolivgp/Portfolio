@@ -53,7 +53,8 @@ export default {
       'BackgroundL': '#212537',
       'PPurple-medium' : '#2C3A75',
       'PDark': '#20264B',
-      'PCinza': '#A6AAAE'
+      'PCinza': '#A6AAAE',
+      'slate-950': '#020617'
     },
     fontFamily: {
       mono: ['JetBrains Mono']

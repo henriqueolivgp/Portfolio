@@ -63,15 +63,14 @@ export const Introduction = (props: IntroductionProps) => {
                     />
                   </svg>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 ml-[6%]">
                   <a
-                    content="application/pdf"
-                    href="doc/CV.pdf"
-                    download={true}
+                    href="www.linkedin.com/in/henrique-oliveira-gp"
+                    target="_blank"
                   >
                     <button
                       type="button"
-                      className=" flex text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                      className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                     >
                     <Linkedin />
                       LinkedIn
@@ -80,7 +79,7 @@ export const Introduction = (props: IntroductionProps) => {
                   <a href="mailto:henrique.b.oliveira@outlook.pt">
                     <button
                       type="button"
-                      className="flex text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
+                      className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
                     >
                       <Github size={24}/>
                       GitHub

@@ -1,4 +1,5 @@
-type Project = {
+// Em /DTO/projects.ts
+export interface Project {
   id: number;
   name: string;
   description: string;
@@ -7,6 +8,5 @@ type Project = {
   repository: string;
   live: string;
   features: string[];
-};
+}
 
-export type { Project };

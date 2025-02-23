@@ -33,7 +33,7 @@ export const Home = () => {
       <div className="xs:h-auto ">
         <Introduction />
 
-        <div className="relative bg-gray-900  z-30">
+        <div className="relative bg-slate-950  z-30">
           <div className="">
             <ScreensGroup />
           </div>

@@ -1,55 +1,70 @@
 // ProjectCard.tsx
 import { useEffect, useState } from "react";
-import { ProjectCard } from "./card";
+import { ProjectWebCard } from "./WebCard";
 // import Images from "../../utils/images";
-import { FilterMenu } from "./filterMenu";
-import { ProjectModal } from "../projectModal/projectModal";
-import projectsData from "../../data/projects.json";
+import webprojectsData from "../../data/WebProjects.json";
+import mobileprojectsData from "../../data/MobileProjects.json";
 import { Project } from "../../DTO/projects";
+import { ProjectMobileCard } from "./MobileCard";
 
 export const ProjectsGroup = () => {
-  const [currentProject, setcurrentProject] = useState<number | null>(null); // Card em foco
-  const [isModalOpen, setIsModalOpen] = useState(false); // Controla o modal\
-
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [webProjects, setWebProjects] = useState<Project[]>([]);
+  const [mobileProjects, setMobileProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    setProjects(projectsData);
+    setWebProjects(webprojectsData);
+    setMobileProjects(mobileprojectsData);
   });
-
-  const handleCardClick = (index: number) => {
-    console.log(index);
-    setcurrentProject(index);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setcurrentProject(null);
-  };
 
   return (
     <>
-      <div className="w-full flex flex-col items-center">
-        <FilterMenu />
+      <div className="relative w-auto flex bottom-16">
+        {/* <FilterMenu /> */}
         <div
-          className="w-full flex flex-wrap justify-center items-center md:bottom-10 mt-8"
+          className="w-auto flex flex-col justify-center md:bottom-10"
           data-carousel="static"
         >
-          <div className="flex flex-wrap justify-center items-center gap-14">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={project.id}
-                img={project.image}
-                handleCardClick={() => handleCardClick(index)} index={index}              />
+          <div id="web-projects" className="relative bottom-4 ">
+            <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
+              Mobile Projects
+            </h1>
+          </div>
+          <div className="flex flex-col left-0 items-center gap-14">
+            {webProjects.map((project) => (
+              <>
+                <ProjectWebCard
+                  key={project.id}
+                  img={project.image}
+                  name={project.name}
+                  description={project.description}
+                  features={project.features}
+                  technologies={project.technologies}
+                  repo={project.repository}
+                />
+              </>
             ))}
           </div>
-          <ProjectModal
-            closeModal={closeModal}
-            currentproject={currentProject !== null ? projects[currentProject] : null}
-            isModalOpen={isModalOpen}
 
-          />
+          <div id="mobile-projects" className="relative mt-4 bottom-4 ">
+            <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
+              Mobile Projects
+            </h1>
+          </div>
+          <div  className="flex flex-col gap-12">
+            {mobileProjects.map((project) => (
+              <>
+                <ProjectMobileCard
+                  key={project.id}
+                  img={project.image}
+                  name={project.name}
+                  description={project.description}
+                  features={project.features}
+                  technologies={project.technologies}
+                  repo={project.repository}
+                />
+              </>
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -56,7 +56,7 @@ export default {
       'PCinza': '#A6AAAE',
       'slate-800': '#1e293b',
       'slate-950': '#020617',
-      'sky-500': '#0ea5e9'
+      'sky-600': '#0ea5e9'
     },
     fontFamily: {
       mono: ['JetBrains Mono']

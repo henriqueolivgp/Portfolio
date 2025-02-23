@@ -4,12 +4,14 @@ import linkedin from '../assets/SocialNetworks/linkedin.png'
 import twitch from '../assets/SocialNetworks/twitch.png'
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <footer className="bg-slate-950 font-monoshadow dark:bg-gray-800">
         <div className="w-full mx-auto max-w-screen-xl p-10 md:flex items-center justify-between">
           <span className="text-sm text-PCinza sm:text-center dark:text-gray-400">
-            © 2024{" "}
+            © {currentYear}{" "}
             <Link to="https://github.com/henriqueolivgp" target="_blank" className="hover:underline">
               Henrique Oliveira™
             </Link>

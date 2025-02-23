@@ -1,0 +1,21 @@
+[
+  
+  {
+    "id": 1,
+    "name": "Expert Notes",
+    "description": "Plataform for taking your notes inside your browser, this project saves all todo items in your browser data. You can add todos with text or voice using your mic.",
+    "technologies": [
+      "React",
+      "Typescript",
+      "Tailwind CSS"
+    ],
+    "image": "/projects/Expert-Notes.png",
+    "repository": "https://github.com/henriqueolivgp/Plataforma-De-Denuncias-De-Ciberataques",
+    "live": "https://nlw-expert-notes.pages.dev",
+    "features": [
+      "User Authentication",
+      "Store todos",
+      "Save data in browser storage"
+    ]
+  }
+]

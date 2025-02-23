@@ -1,0 +1,15 @@
+[
+  {
+    "id": 0,
+    "name": "CoFi (In Development...)",
+    "description": "Comming Soon....",
+    "technologies": ["React-native", "Typescript", "Tailwind CSS"],
+    "image": "/projects/CoFi.png",
+    "repository": "https://github.com/henriqueolivgp/CoFi-Controlo-Financeiro",
+    "live": "",
+    "features": [
+      "Store all payments etc",
+      "Save data in local storage or DB"
+    ]
+  }
+]

@@ -29,16 +29,6 @@ export const Introduction = (props: IntroductionProps) => {
             <div className="flex md:justify-between xs:justify-center xs:items-center xs:flex">
               <div className="bg-transparent font-normal">
                 <div>
-                  <div className="flex justify-center md:justify-end">
-                    {/* Imagem para telas pequenas (xs) */}
-                    <a href="https://github.com/henriqueolivgp" target="_blank">
-                      <img
-                        src="/image.png"
-                        alt="my-photo"
-                        className="block md:hidden h-64 w-64 object-cover"
-                      />
-                    </a>
-                  </div>
                   <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl lg:text-6xl xs:text-2xl ">
                     Hi,
                   </p>
@@ -71,7 +61,7 @@ export const Introduction = (props: IntroductionProps) => {
                   >
                     <button
                       type="button"
-                      className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                      className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                     >
                       <Linkedin />
                       LinkedIn
@@ -84,7 +74,7 @@ export const Introduction = (props: IntroductionProps) => {
                   >
                     <button
                       type="button"
-                      className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-950 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
+                      className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
                     >
                       <Github size={24} />
                       GitHub

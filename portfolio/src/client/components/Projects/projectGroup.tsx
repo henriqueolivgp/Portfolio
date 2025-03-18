@@ -45,7 +45,7 @@ export const ProjectsGroup = () => {
             ))}
           </div>
 
-          <div id="mobile-projects" className="relative mt-4 bottom-4 ">
+          {/* <div id="mobile-projects" className="relative mt-4 bottom-4 ">
             <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
               Mobile Projects
             </h1>
@@ -64,7 +64,7 @@ export const ProjectsGroup = () => {
                 />
               </>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>

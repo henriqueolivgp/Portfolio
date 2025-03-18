@@ -3,17 +3,17 @@ import { useEffect, useState } from "react";
 import { ProjectWebCard } from "./WebCard";
 // import Images from "../../utils/images";
 import webprojectsData from "../../data/WebProjects.json";
-import mobileprojectsData from "../../data/MobileProjects.json";
+// import mobileprojectsData from "../../data/MobileProjects.json";
 import { Project } from "../../DTO/projects";
-import { ProjectMobileCard } from "./MobileCard";
+// import { ProjectMobileCard } from "./MobileCard";
 
 export const ProjectsGroup = () => {
   const [webProjects, setWebProjects] = useState<Project[]>([]);
-  const [mobileProjects, setMobileProjects] = useState<Project[]>([]);
+  // const [mobileProjects, setMobileProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     setWebProjects(webprojectsData);
-    setMobileProjects(mobileprojectsData);
+    // setMobileProjects(mobileprojectsData);
   });
 
   return (

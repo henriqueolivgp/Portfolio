@@ -26,7 +26,7 @@ export const ProjectsGroup = () => {
         >
           <div id="web-projects" className="relative bottom-4 ">
             <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
-              Mobile Projects
+              Web Projects
             </h1>
           </div>
           <div className="flex flex-col left-0 items-center gap-14">

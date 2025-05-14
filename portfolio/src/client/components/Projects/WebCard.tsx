@@ -12,7 +12,6 @@ interface ProjectCardProps extends ComponentProps<"div"> {
 }
 
 export const ProjectWebCard = ({
-  img,
   video,
   name,
   description,

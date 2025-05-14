@@ -10,14 +10,14 @@ interface screensProps extends ComponentProps<"div"> {}
 export const ScreensGroup = (props: screensProps) => {
   return (
     <>
-      <div className="" {...props}>
+      <div {...props}>
         <div className="h-screen relative">
           <AboutMe />
         </div>
-        <div className="relative h-auto md:max-h-auto">
+        <div className="relative ">
           <Projects />
         </div>
-        <div className="">
+        <div className="relative h-auto md:max-h-auto">
           <Contact />
         </div>
       </div>

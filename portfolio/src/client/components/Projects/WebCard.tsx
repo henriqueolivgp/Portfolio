@@ -74,7 +74,7 @@ export const ProjectWebCard = ({
         {video && (
           <video
             className="lgg:w-[40%] h-auto xs:w-[80%]"
-            src="/videos/Cyber-Reports.mp4"
+            src="../../assets/videos/Cyber-Reports.mp4"
             controls
             autoPlay
             muted

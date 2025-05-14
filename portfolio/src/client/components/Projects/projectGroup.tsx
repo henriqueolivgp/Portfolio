@@ -24,17 +24,18 @@ export const ProjectsGroup = () => {
           className="w-auto flex flex-col justify-center md:bottom-10"
           data-carousel="static"
         >
-          <div id="web-projects" className="relative bottom-4 ">
+          {/* <div id="web-projects" className="relative bottom-4 ">
             <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
               Web Projects
             </h1>
-          </div>
-          <div className="flex flex-col left-0 items-center gap-14">
+          </div> */}
+          <div className="flex left-0 items-center gap-14 mt-4">
             {webProjects.map((project) => (
               <>
                 <ProjectWebCard
                   key={project.id}
-                  img={project.image}
+                  img={project.image || ''}
+                  video={project.video || ''}
                   name={project.name}
                   description={project.description}
                   features={project.features}

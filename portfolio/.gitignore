@@ -27,8 +27,4 @@ dist-ssr
 .contentlayer
 
 # next-video
-
-!videos/*.json
-!videos/*.js
-!videos/*.ts
 public/_next-video

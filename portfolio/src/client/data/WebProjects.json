@@ -1,21 +1,23 @@
 [
-  
+
   {
-    "id": 1,
-    "name": "Expert Notes",
-    "description": "Plataform for taking your notes inside your browser, this project saves all todo items in your browser data. You can add todos with text or voice using your mic.",
+    "id": 2,
+    "name": "Cyber Reports",
+    "description": "Plataform for report your issius inside your browser, this project saves all todo items in your browser data. You can add todos with text or voice using your mic.",
     "technologies": [
+      "Next.js",
       "React",
       "Typescript",
       "Tailwind CSS"
     ],
-    "image": "/projects/Expert-Notes.png",
-    "repository": "https://github.com/henriqueolivgp/Plataforma-De-Denuncias-De-Ciberataques",
-    "live": "https://nlw-expert-notes.pages.dev",
+    "video": "/projects/Cyber-Reports.mp4",
+    "repository": "https://github.com/henriqueolivgp/CyberReports",
+    "live": "https://cyberreports.pages.dev/",
     "features": [
       "User Authentication",
-      "Store todos",
-      "Save data in browser storage"
+      "Three types of users",
+      "Store All reports",
+      "Filtering reports"
     ]
   }
 ]

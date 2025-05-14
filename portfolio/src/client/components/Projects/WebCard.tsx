@@ -1,9 +1,9 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 
 interface ProjectCardProps extends ComponentProps<"div"> {
   img: string;
+  video: string;
   name: string;
   description: string;
   technologies: string[];
@@ -13,6 +13,7 @@ interface ProjectCardProps extends ComponentProps<"div"> {
 
 export const ProjectWebCard = ({
   img,
+  video,
   name,
   description,
   technologies,
@@ -30,28 +31,9 @@ export const ProjectWebCard = ({
 
   return (
     <>
-      <div className="flex justify-center w-auto h-auto gap-8">
-        <motion.div
-          layout
-          className={`relative cursor-pointer ${
-            isZoomed
-              ? "absolute z-10 inset-0 flex justify-center items-center bg-slate-950 "
-              : ""
-          }`}
-          onClick={() => setIsZoomed(!isZoomed)}
-        >
-          <motion.img
-            src={img}
-            alt="Zoomable"
-            className="w-full h-full object-cover rounded-lg md:w-96 md:h-auto "
-            layout
-            initial={{ scale: 1 }}
-            animate={{ scale: isZoomed ? 2 : 1 }}
-            transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          />
-        </motion.div>
-        <div className="flex flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          <div className="flex flex-col p-4 leading-normal">
+      <div className="flex lgg:flex-row xs:flex-col xs:justify-center xs:items-center justify-center  w-full h-auto gap-8">
+        <div className="flex w-[80%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <div className="flex flex-col p-4 leading-normal space-y-2">
             <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-400 dark:text-white">
               {name}
             </h1>
@@ -61,23 +43,24 @@ export const ProjectWebCard = ({
             <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
               Technologies
             </h1>
-            <ul className="list-disc pl-5 space-y-2">
+            <section className="flex gap-2">
               {technologies.map((tech, index) => (
-                <li key={index} className="text-gray-500">
-                  {tech}
-                </li>
+                <span key={index} className="text-gray-500">
+                  ● {tech}
+                </span>
               ))}
-            </ul>{" "}
+            </section>
+
             <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
               Features
             </h1>
-            <ul className="list-disc pl-5 space-y-2">
+            <section className="space-y-1.5">
               {features.map((features, index) => (
-                <li key={index} className="text-gray-500">
-                  {features}
-                </li>
+                <ul key={index} className="text-gray-500">
+                  <li>● {features}</li>
+                </ul>
               ))}
-            </ul>
+            </section>
             <a href={repo} target="_blank">
               <button
                 type="button"
@@ -89,10 +72,17 @@ export const ProjectWebCard = ({
             </a>
           </div>
         </div>
+        {video && (
+          <video
+            className="lgg:w-[40%] h-auto xs:w-[80%]"
+            src="/videos/Cyber-Reports.mp4"
+            controls
+            autoPlay
+            muted
+            loop
+          />
+        )}
       </div>
-      <hr className="border-t-2 border-white border-dashed mt-6 w-full opacity-80" />
-
-
     </>
   );
 };

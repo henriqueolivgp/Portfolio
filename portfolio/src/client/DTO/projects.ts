@@ -4,7 +4,8 @@ export interface Project {
   name: string;
   description: string;
   technologies: string[];
-  image: string;
+  image?: string;
+  video?: string
   repository: string;
   live: string;
   features: string[];

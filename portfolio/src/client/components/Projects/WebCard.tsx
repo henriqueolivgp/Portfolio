@@ -1,5 +1,5 @@
 import { ComponentProps, useEffect, useState } from "react";
-import { Github } from "lucide-react";
+import { Github, Globe } from "lucide-react";
 
 interface ProjectCardProps extends ComponentProps<"div"> {
   img: string;
@@ -9,6 +9,7 @@ interface ProjectCardProps extends ComponentProps<"div"> {
   technologies: string[];
   features: string[];
   repo: string;
+  live: string
 }
 
 export const ProjectWebCard = ({
@@ -18,6 +19,7 @@ export const ProjectWebCard = ({
   technologies,
   features,
   repo,
+  live,
 }: ProjectCardProps) => {
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -60,15 +62,26 @@ export const ProjectWebCard = ({
                 </ul>
               ))}
             </section>
-            <a href={repo} target="_blank">
-              <button
-                type="button"
-                className=" flex w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
-              >
-                <Github size={24} />
-                Github
-              </button>
-            </a>
+            <section className="flex gap-4">
+              <a href={live} target="_blank">
+                <button
+                  type="button"
+                  className=" flex min-w-40 max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                >
+                  <Globe size={24} />
+                  Website
+                </button>
+              </a>
+              <a href={repo} target="_blank">
+                <button
+                  type="button"
+                  className=" flex w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                >
+                  <Github size={24} />
+                  Github
+                </button>
+              </a>
+            </section>
           </div>
         </div>
         {video && (

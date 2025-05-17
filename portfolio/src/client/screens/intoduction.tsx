@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { TypewriterText } from "../components/tipeWriter";
+import { TypewriterText } from "../utils/tipeWriter";
 import { Me } from "../components/introduction/me";
 import { Github, Linkedin } from "lucide-react";
 

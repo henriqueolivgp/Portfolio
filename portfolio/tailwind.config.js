@@ -8,7 +8,17 @@ export default {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+        },
+      },
+      animation: {
+        shine: 'shine 5s linear infinite',
+      },
+    },
     // Define os breakpoints personalizados
     screens: {
 
@@ -51,7 +61,7 @@ export default {
       'P-white': '#D9D9D9',
       'BackgroundR': '#323B5C',
       'BackgroundL': '#212537',
-      'PPurple-medium' : '#2C3A75',
+      'PPurple-medium': '#2C3A75',
       'PDark': '#20264B',
       'PCinza': '#A6AAAE',
       'slate-800': '#1e293b',

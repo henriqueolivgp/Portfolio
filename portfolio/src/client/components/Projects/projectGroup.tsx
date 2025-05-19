@@ -18,18 +18,13 @@ export const ProjectsGroup = () => {
 
   return (
     <>
-      <div className="relative w-auto flex bottom-16">
+      <div className="relative w-auto flex">
         {/* <FilterMenu /> */}
         <div
-          className="w-auto flex flex-col justify-center md:bottom-10"
+          className="w-auto flex flex-col justify-center "
           data-carousel="static"
         >
-          {/* <div id="web-projects" className="relative bottom-4 ">
-            <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
-              Web Projects
-            </h1>
-          </div> */}
-          <div className="flex left-0 items-center gap-14 mt-4">
+          <div className="flex left-0 items-center gap-14">
             {webProjects.map((project) => (
               <>
                 <ProjectWebCard
@@ -41,16 +36,13 @@ export const ProjectsGroup = () => {
                   features={project.features}
                   technologies={project.technologies}
                   repo={project.repository}
+                  live={project.live}
                 />
               </>
             ))}
           </div>
 
-          {/* <div id="mobile-projects" className="relative mt-4 bottom-4 ">
-            <h1 className=" font-bold mt-4 text-left text-gray-300 text-2xl">
-              Mobile Projects
-            </h1>
-          </div>
+          {/*
           <div  className="flex flex-col gap-12">
             {mobileProjects.map((project) => (
               <>

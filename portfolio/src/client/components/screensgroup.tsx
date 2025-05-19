@@ -14,7 +14,7 @@ export const ScreensGroup = (props: screensProps) => {
         <div className="h-screen relative">
           <AboutMe />
         </div>
-        <div className="relative ">
+        <div className="relative h-screen ">
           <Projects />
         </div>
         <div className="relative h-auto md:max-h-auto">

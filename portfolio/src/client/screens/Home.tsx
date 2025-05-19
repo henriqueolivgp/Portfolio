@@ -26,8 +26,6 @@ export const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
-
   return (
     <>
       <div className="xs:h-auto ">

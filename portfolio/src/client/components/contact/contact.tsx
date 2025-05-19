@@ -1,24 +1,7 @@
-import { useEffect } from "react";
 import Aurora from "../../utils/Aurora";
 import ShinyText from "../../utils/ShinyText";
 
 export const Contact = () => {
-  useEffect(() => {
-    const textarea = document.getElementById("message")!;
-    textarea.addEventListener("input", function () {
-      this.style.height = "auto"; // Reset the height
-      this.style.height = this.scrollHeight + "px"; // Set it to the scrollHeight
-    });
-
-    // Clean up the event listener on component unmount
-    return () => {
-      textarea.removeEventListener("input", function () {
-        this.style.height = "auto";
-        this.style.height = this.scrollHeight + "px";
-      });
-    };
-  }, []);
-
   return (
     <>
       <section className="absolute top-0 left-0 w-full h-auto z-10 pointer-events-none">
@@ -54,7 +37,11 @@ export const Contact = () => {
             </svg>
           </section>
           <section className="flex gap-6 justify-center items-center w-auto">
-            <form className="max-w-sm mx-auto">
+            <form
+              className="max-w-sm mx-auto"
+              action="https://formspree.io/f/xdkgjdeb"
+              method="POST"
+            >
               <label
                 htmlFor="email-address-icon"
                 className="block mb-2 text-sm font-medium text-gray-300"
@@ -76,7 +63,8 @@ export const Contact = () => {
                     </svg>
                   </section>
                   <input
-                    type="text"
+                    type="email"
+                    name="email"
                     id="email-address"
                     className="w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block ps-10 p-2.5"
                     placeholder="youremail@example.com"
@@ -90,13 +78,14 @@ export const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="block p-2.5 pb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
                   placeholder="Leave a comment..."
                 ></textarea>
                 <section className="flex w-full">
                   <button
-                    type="button"
+                    type="submit"
                     className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                   >
                     <ShinyText

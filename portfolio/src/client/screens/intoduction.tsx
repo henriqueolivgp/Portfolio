@@ -2,6 +2,7 @@ import { ComponentProps } from "react";
 import { TypewriterText } from "../utils/tipeWriter";
 import { Me } from "../components/introduction/me";
 import { Github, Linkedin } from "lucide-react";
+import ShinyText from "../utils/ShinyText";
 
 interface IntroductionProps extends ComponentProps<"div"> {}
 
@@ -64,7 +65,13 @@ export const Introduction = (props: IntroductionProps) => {
                       className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                     >
                       <Linkedin />
-                      LinkedIn
+
+                      <ShinyText
+                        text="LinkedIn"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class"
+                      />
                     </button>
                   </a>
                   <a
@@ -77,7 +84,13 @@ export const Introduction = (props: IntroductionProps) => {
                       className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
                     >
                       <Github size={24} />
-                      GitHub
+
+                      <ShinyText
+                        text="Github"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class"
+                      />
                     </button>
                   </a>
                 </div>

@@ -1,5 +1,7 @@
 import { ComponentProps, useEffect, useState } from "react";
 import { Github, Globe } from "lucide-react";
+import ShinyText from "../../utils/ShinyText";
+import { Badge } from "../badge/badge";
 
 interface ProjectCardProps extends ComponentProps<"div"> {
   img: string;
@@ -9,7 +11,7 @@ interface ProjectCardProps extends ComponentProps<"div"> {
   technologies: string[];
   features: string[];
   repo: string;
-  live: string
+  live: string;
 }
 
 export const ProjectWebCard = ({
@@ -38,29 +40,40 @@ export const ProjectWebCard = ({
             <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-400 dark:text-white">
               {name}
             </h1>
+            <section className="flex w-full gap-2">
+              <Badge text="Web" Icon={Globe} bgColor="bg-orange-500" />
+              <Badge text="Back-end" Icon={Globe} bgColor="bg-gray-700" />
+              <Badge text="Front-end" Icon={Globe} bgColor="bg-blue-500" />
+            </section>
             <p className="mb-3 font-normal text-gray-200 dark:text-gray-400">
               {description}
             </p>
-            <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
-              Technologies
-            </h1>
-            <section className="flex gap-2">
-              {technologies.map((tech, index) => (
-                <span key={index} className="text-gray-500">
-                  ● {tech}
-                </span>
-              ))}
-            </section>
+            <section className="flex w-96 justify-between ">
+              <section className="">
+                <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
+                  Technologies
+                </h1>
+                <section className="space-y-1.5">
+                  {technologies.map((tech, index) => (
+                    <ul key={index} className="text-gray-500">
+                      <li>● {tech}</li>
+                    </ul>
+                  ))}
+                </section>
+              </section>
 
-            <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
-              Features
-            </h1>
-            <section className="space-y-1.5">
-              {features.map((features, index) => (
-                <ul key={index} className="text-gray-500">
-                  <li>● {features}</li>
-                </ul>
-              ))}
+              <section className="">
+                <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
+                  Features
+                </h1>
+                <section className="space-y-1.5">
+                  {features.map((features, index) => (
+                    <ul key={index} className="text-gray-500">
+                      <li>● {features}</li>
+                    </ul>
+                  ))}
+                </section>
+              </section>
             </section>
             <section className="flex gap-4">
               <a href={live} target="_blank">
@@ -69,16 +82,26 @@ export const ProjectWebCard = ({
                   className=" flex min-w-40 max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                 >
                   <Globe size={24} />
-                  Website
+                  <ShinyText
+                    text="Website"
+                    disabled={false}
+                    speed={3}
+                    className="custom-class"
+                  />
                 </button>
               </a>
               <a href={repo} target="_blank">
                 <button
                   type="button"
-                  className=" flex w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                  className=" flex min-w-40 max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                 >
                   <Github size={24} />
-                  Github
+                  <ShinyText
+                    text="Github Project"
+                    disabled={false}
+                    speed={3}
+                    className="custom-class"
+                  />
                 </button>
               </a>
             </section>

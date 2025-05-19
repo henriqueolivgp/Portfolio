@@ -15,7 +15,7 @@ export const ScrollUp = () => {
 
   return (
     <>
-      <div data-dial-init className="fixed end-6 bottom-6 group">
+      <div data-dial-init className="fixed end-6 bottom-6 group z-[9999]">
         <button
           type="button"
           data-dial-toggle="speed-dial-menu-default"

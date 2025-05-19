@@ -18,13 +18,13 @@ export const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex items-center text-sm mr-10 font-medium text-PCinza sm:mt-0">
-              <a href="#profile" className="hover:underline me-4 md:me-6">
+              <a href="https://www.linkedin.com/in/henrique-oliveira-gp" target="_blank" className="hover:underline me-4 md:me-6">
                 <img className=" w-6" src={linkedin} alt="linkedin" />
               </a>
-              <a href="#profile" className="hover:underline me-4 md:me-6">
+              <a href="https://www.instagram.com/henryolivgp/" target="_blank" className="hover:underline me-4 md:me-6">
                 <img className=" w-6" src={instagram} alt="instagram" />
               </a>
-              <a href="#profile" className="hover:underline me-4 md:me-6">
+              <a href="https://www.twitch.tv/henriqueoliv_gp" target="_blank" className="hover:underline me-4 md:me-6">
                 <img className=" w-6" src={twitch} alt="twitch" />
               </a>
           </div>

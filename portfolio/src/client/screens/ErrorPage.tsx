@@ -5,7 +5,7 @@ export const ErrorPage = () => {
     <div className=" bg-gray-900 h-screen lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">
       <div className="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
         <div className="relative">
-          <div className="absolute">
+          <div className="absolute -top-10">
             <h1 className=" text-gray-400 font-bold text-2xl">
               Sorry but you tried to access something that doesn't exist
             </h1>

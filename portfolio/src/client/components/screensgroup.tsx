@@ -5,22 +5,22 @@ import { Projects } from "../screens/projects";
 import { Contact } from "./contact/contact";
 // import { Technologies } from "../screens/technologies";
 
-interface screensProps extends ComponentProps<"div"> {}
+interface screensProps extends ComponentProps<"section"> {}
 
 export const ScreensGroup = (props: screensProps) => {
   return (
     <>
-      <div {...props}>
-        <div className="h-screen relative">
+      <section {...props}>
+        <section className="h-screen relative">
           <AboutMe />
-        </div>
-        <div className="relative h-screen ">
+        </section>
+        <section className="relative h-screen xxs:max-h-auto ">
           <Projects />
-        </div>
-        <div className="relative h-auto md:max-h-auto">
+        </section>
+        <section className="relative h-auto xxs:max-h-auto">
           <Contact />
-        </div>
-      </div>
+        </section>
+      </section>
     </>
   );
 };

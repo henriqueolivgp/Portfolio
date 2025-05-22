@@ -4,7 +4,8 @@ import ShinyText from "../../utils/ShinyText";
 export const Contact = () => {
   return (
     <>
-      <section className="absolute top-0 left-0 w-full h-auto z-10 pointer-events-none">
+      <section className="absolute top-0 left-0 w-full min-h-[300px] z-10 pointer-events-none">
+
         <Aurora
           colorStops={["#213448", "#547792", "#94B4C1"]}
           blend={0.1}

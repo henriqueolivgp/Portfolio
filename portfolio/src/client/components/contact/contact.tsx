@@ -39,7 +39,7 @@ export const Contact = () => {
           <section className="flex gap-6 justify-center items-center w-auto">
             <form
               className="max-w-sm mx-auto"
-              action="https://formspree.io/f/xdkgjdeb"
+              action="https://formspree.io/f/mjkwzejg"
               method="POST"
             >
               <label

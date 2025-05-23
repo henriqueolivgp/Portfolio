@@ -15,6 +15,16 @@ body {
   flex: 1;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem */
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none;  /* Para IE e Edge */
+  scrollbar-width: none;      /* Para Firefox */
+}
+
+
 @keyframes shine {
   to {
     background-position: -200% 0;

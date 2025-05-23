@@ -1,11 +1,22 @@
+import { useEffect, useRef, useState } from "react";
 import Aurora from "../../utils/Aurora";
 import ShinyText from "../../utils/ShinyText";
 
 export const Contact = () => {
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+      textareaRef.current.style.height =
+        textareaRef.current.scrollHeight + "px";
+    }
+  }, [message, email]);
   return (
     <>
-      <section className="absolute top-0 left-0 w-full min-h-[300px] z-10 pointer-events-none">
-
+      <section className="absolute top-0 left-0 bottom-0 w-full z-10 pointer-events-none">
         <Aurora
           colorStops={["#213448", "#547792", "#94B4C1"]}
           blend={0.1}
@@ -66,6 +77,8 @@ export const Contact = () => {
                   <input
                     type="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email-address"
                     className="w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block ps-10 p-2.5"
                     placeholder="youremail@example.com"
@@ -78,12 +91,13 @@ export const Contact = () => {
                   Your message
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
+                  className="flex-1 w-full min-h-20 max-h-24 resize-none overflow-y-auto bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg px-4 py-2 text-sm scrollbar-thin custom-scrollbar "
+                  ref={textareaRef}
                   rows={4}
-                  className="block p-2.5 pb-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Leave a comment..."
-                ></textarea>
+                />
                 <section className="flex w-full">
                   <button
                     type="submit"

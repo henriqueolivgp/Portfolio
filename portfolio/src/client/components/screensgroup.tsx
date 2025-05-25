@@ -11,7 +11,7 @@ export const ScreensGroup = (props: screensProps) => {
   return (
     <>
       <section {...props}>
-        <section className="h-screen relative">
+        <section className="relative h-screen xxs:max-h-auto">
           <AboutMe />
         </section>
         <section className="relative h-screen xxs:max-h-auto ">

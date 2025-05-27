@@ -5,7 +5,6 @@ import "../theme/parallax.css";
 import { Introduction } from "./intoduction";
 
 export const Home = () => {
-
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -28,16 +27,13 @@ export const Home = () => {
 
   return (
     <>
-      <div className="xs:h-auto ">
+      <div className="h-auto">
         <Introduction />
 
-        <div className="relative bg-slate-950  z-30">
-          <div className="">
-            <ScreensGroup />
-          </div>
+        <div className="relative bg-slate-950 z-30 h-auto ">
+          <ScreensGroup />
           {scrollTop > 100 && <ScrollUp />}
         </div>
-        
       </div>
     </>
   );

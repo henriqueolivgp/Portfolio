@@ -45,41 +45,39 @@ export const ProjectWebCard = ({
               <Badge text="Back-end" Icon={Globe} bgColor="bg-gray-700" />
               <Badge text="Front-end" Icon={Globe} bgColor="bg-blue-500" />
             </section>
-            <p className="mb-3 font-normal text-gray-200 dark:text-gray-400">
+            <p className=" font-normal text-gray-200 dark:text-gray-400">
               {description}
             </p>
-            <section className="flex w-96 justify-between ">
-              <section className="">
+
+            <section className="flex flex-wrap sm:flex-nowrap xxs:w-full gap-4">
+              <section className="flex flex-col sm:w-1/2 xxs:w-full space-y-1.5">
                 <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   Technologies
                 </h1>
-                <section className="space-y-1.5">
-                  {technologies.map((tech, index) => (
-                    <ul key={index} className="text-gray-500">
-                      <li>● {tech}</li>
-                    </ul>
-                  ))}
-                </section>
+                {technologies.map((tech, index) => (
+                  <ul key={index} className="flex w-auto text-gray-500">
+                    <li>● {tech}</li>
+                  </ul>
+                ))}
               </section>
 
-              <section className="">
+              <section className="flex flex-col sm:w-1/2 xxs:w-full  space-y-1.5">
                 <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   Features
                 </h1>
-                <section className="space-y-1.5">
-                  {features.map((features, index) => (
-                    <ul key={index} className="text-gray-500">
-                      <li>● {features}</li>
-                    </ul>
-                  ))}
-                </section>
+                {features.map((features, index) => (
+                  <ul key={index} className="text-gray-500">
+                    <li>● {features}</li>
+                  </ul>
+                ))}
               </section>
             </section>
-            <section className="flex gap-4">
+
+            <section className="flex xxs:justify-center sm:justify-normal gap-4">
               <a href={live} target="_blank">
                 <button
                   type="button"
-                  className=" flex min-w-40 max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                  className=" flex min-w-auto max-w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                 >
                   <Globe size={24} />
                   <ShinyText
@@ -93,15 +91,25 @@ export const ProjectWebCard = ({
               <a href={repo} target="_blank">
                 <button
                   type="button"
-                  className=" flex min-w-40 max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                  className=" flex min-w-auto max-w-50 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                 >
                   <Github size={24} />
-                  <ShinyText
-                    text="Github Project"
-                    disabled={false}
-                    speed={3}
-                    className="custom-class"
-                  />
+                  <section className="flex gap-1">
+                    <ShinyText
+                      text="Github"
+                      disabled={false}
+                      speed={3}
+                      className="custom-class"
+                    />
+                    <span className="xxs:hidden sm:flex">
+                      <ShinyText
+                        text="Project"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class"
+                      />
+                    </span>
+                  </section>
                 </button>
               </a>
             </section>

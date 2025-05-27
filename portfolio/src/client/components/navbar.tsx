@@ -44,7 +44,7 @@ export const Navbar = () => {
       <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-40  ">
         <div
           ref={menuRef}
-          className="max-w-screen-xl flex flex-wrap items-center lgg:justify-between mx-auto p-4"
+          className="flex flex-wrap items-center lgg:justify-between mx-auto p-4"
         >
           <div className="flex justify-between w-full lgg:w-0 ">
             <a
@@ -52,7 +52,7 @@ export const Navbar = () => {
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img src={logo} className="h-7" alt="Logo" />
-              <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+              <span className="self-center sm:text-xl xxs:text-lg font-semibold whitespace-nowrap text-white">
                 Henrique Oliveira
               </span>
             </a>

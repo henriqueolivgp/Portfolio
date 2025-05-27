@@ -22,7 +22,7 @@ export const Introduction = (props: IntroductionProps) => {
         />
 
         {/* Adicionando uma camada escura */}
-        <div className="absolute top-0 left-0 h-screen w-full bg-gradient-to-t from-black/100 to-black/35  "></div>
+        <div className="absolute top-0 left-0 h-screen w-full bg-gradient-to-t from-black/100 lg:to-black/35 xxs:to-black/50"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/100 to-black/0 pointer-events-none"></div>
 
         <div className="container mx-auto space-y-2 parallax h-screen flex justify-center items-center w-full">

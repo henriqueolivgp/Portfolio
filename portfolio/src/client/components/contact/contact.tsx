@@ -80,7 +80,7 @@ export const Contact = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     id="email-address"
-                    className="w-96 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block ps-10 p-2.5"
+                    className="xxs:w-64 xs:min-w-72 sm:w-80 md:w-96  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block ps-10 p-2.5"
                     placeholder="youremail@example.com"
                   />
                 </section>

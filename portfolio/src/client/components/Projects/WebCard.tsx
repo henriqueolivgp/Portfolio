@@ -41,15 +41,15 @@ export const ProjectWebCard = ({
               {name}
             </h1>
             <section className="flex w-full gap-2">
-              <Badge text="Web" Icon={Globe} bgColor="bg-orange-500" />
-              <Badge text="Back-end" Icon={Globe} bgColor="bg-gray-700" />
-              <Badge text="Front-end" Icon={Globe} bgColor="bg-blue-500" />
+              <Badge text1="Web" Icon={Globe} bgColor="bg-orange-500" />
+              <Badge text1="Back" text2="-end" Icon={Globe} bgColor="bg-gray-700" />
+              <Badge text1="Front" text2="-end" Icon={Globe} bgColor="bg-blue-500" />
             </section>
             <p className=" font-normal text-gray-200 dark:text-gray-400">
               {description}
             </p>
 
-            <section className="flex flex-wrap sm:flex-nowrap xxs:w-full gap-4">
+            <section className="flex flex-wrap ss:flex-nowrap xxs:w-full gap-4">
               <section className="flex flex-col sm:w-1/2 xxs:w-full space-y-1.5">
                 <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   Technologies

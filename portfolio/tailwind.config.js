@@ -27,6 +27,10 @@ export default {
       'xs': '300px',
       // => @media (min-width: 300px) { ... }
 
+      's': '427px',
+      
+      'ss': '559px',
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 

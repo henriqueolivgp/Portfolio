@@ -16,7 +16,7 @@ export const Projects = () => {
   return (
     <>
       <section id="projects" className="flex h-auto">
-        <section className=" flex flex-col justify-center xxs:items-center top-1/2 p-10 gap-20 h-auto">
+        <section className=" flex flex-col justify-center xxs:items-center mt-24 p-10 gap-20 h-auto">
           <section className="flex flex-col w-full justify-center items-center h-auto">
             <section className="flex gap-2 justify-center">
               <h1 className="font-bold w-full text-left text-gray-300 lg:text-6xl md:text-4xl xxs:mt-6 lg:mt-0 xss:text-2xl">

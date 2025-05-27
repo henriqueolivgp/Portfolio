@@ -57,7 +57,7 @@ export const ProjectMobileCard = ({
               {name}
             </h5>
             <div className="flex gap-2">
-              <Badge Icon={Globe} bgColor="bg-yellow-600" text="Front-end" />
+              <Badge Icon={Globe} bgColor="bg-yellow-600" text1="Front-end" />
             </div>
             <p className="mb-3 font-normal text-gray-200 dark:text-gray-400">
               {description}

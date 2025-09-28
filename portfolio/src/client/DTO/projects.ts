@@ -4,10 +4,14 @@ export interface Project {
   name: string;
   description: string;
   technologies: string[];
-  image?: string;
-  video?: string
+  images?: {
+    src: string,
+    alt: string
+  }[];
+  video?: string;
   repository: string;
-  live: string;
+  live?: string;
   features: string[];
+  order: string;
+  imgSlider: boolean;
 }
-

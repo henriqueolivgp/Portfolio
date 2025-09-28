@@ -11,7 +11,8 @@ export const Projects = () => {
   useEffect(() => {
     setWebProjects(webprojectsData);
     // setMobileProjects(mobileprojectsData);
-  },[]);
+
+  }, []);
 
   return (
     <>
@@ -38,38 +39,22 @@ export const Projects = () => {
                 />
               </section>
             </section>
-            <section className="flex lg:w-full md:w-80 xxs:w-[40%] xxs:-mt-5 lg:-mt-4">
-              <svg
-                width="100%"
-                height="18"
-                viewBox="0 0 863 38"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.99999 34.4052C659.392 -0.143978 847.224 1.07128 859.09 5.99756"
-                  stroke="#EFF6FF"
-                  stroke-width="5.9029"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </section>
           </section>
-          <section className="flex h-auto">
+          <section className="grid grid-cols-1 gap-10 h-auto">
             {webProjects.map((project) => (
-              <>
-                <ProjectWebCard
-                  key={project.id}
-                  img={project.image || ""}
-                  video={project.video || ""}
-                  name={project.name}
-                  description={project.description}
-                  features={project.features}
-                  technologies={project.technologies}
-                  repo={project.repository}
-                  live={project.live}
-                />
-              </>
+              <ProjectWebCard
+                key={project.id}
+                images={project.images || [{ src: "", alt: "" }]}
+                video={project.video || ""}
+                name={project.name}
+                description={project.description}
+                features={project.features}
+                technologies={project.technologies}
+                repo={project.repository}
+                live={project.live || ""}
+                order={project.order}
+                imgSlider={project.imgSlider}
+              />
             ))}
           </section>
         </section>

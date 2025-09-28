@@ -2,9 +2,13 @@ import { ComponentProps, useEffect, useState } from "react";
 import { Github, Globe } from "lucide-react";
 import ShinyText from "../../utils/ShinyText";
 import { Badge } from "../badge/badge";
+import { CardSlider } from "./WebCard/carrousel";
 
-interface ProjectCardProps extends ComponentProps<"div"> {
-  img: string;
+interface ProjectWebCardProps extends ComponentProps<"div"> {
+  images: {
+    src: string;
+    alt: string;
+  }[];
   video: string;
   name: string;
   description: string;
@@ -12,9 +16,12 @@ interface ProjectCardProps extends ComponentProps<"div"> {
   features: string[];
   repo: string;
   live: string;
+  order: string;
+  imgSlider: boolean;
 }
 
 export const ProjectWebCard = ({
+  images,
   video,
   name,
   description,
@@ -22,7 +29,9 @@ export const ProjectWebCard = ({
   features,
   repo,
   live,
-}: ProjectCardProps) => {
+  order,
+  imgSlider,
+}: ProjectWebCardProps) => {
   const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
@@ -34,16 +43,28 @@ export const ProjectWebCard = ({
 
   return (
     <>
-      <div className="flex lgg:flex-row xs:flex-col xs:justify-center xs:items-center justify-center  w-full h-auto gap-8">
-        <div className="flex w-[80%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          <div className="flex flex-col p-4 leading-normal space-y-2">
+      <div className="flex lgg:flex-row xs:flex-col xs:justify-center xs:items-center justify-center h-auto gap-8">
+        <div
+          className={` ${order} flex w-[40%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700`}
+        >
+          <div className="flex w-full flex-col p-4 leading-normal space-y-2">
             <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-400 dark:text-white">
               {name}
             </h1>
             <section className="flex w-full gap-2">
               <Badge text1="Web" Icon={Globe} bgColor="bg-orange-500" />
-              <Badge text1="Back" text2="-end" Icon={Globe} bgColor="bg-gray-700" />
-              <Badge text1="Front" text2="-end" Icon={Globe} bgColor="bg-blue-500" />
+              <Badge
+                text1="Back"
+                text2="-end"
+                Icon={Globe}
+                bgColor="bg-gray-700"
+              />
+              <Badge
+                text1="Front"
+                text2="-end"
+                Icon={Globe}
+                bgColor="bg-blue-500"
+              />
             </section>
             <p className=" font-normal text-gray-200 dark:text-gray-400">
               {description}
@@ -118,12 +139,18 @@ export const ProjectWebCard = ({
         {video && (
           <video
             className="lgg:w-[40%] h-auto xs:w-[80%]"
-            src="/videos/Cyber-Reports.mp4"
+            src={video}
             controls
             autoPlay
             muted
             loop
           />
+        )}
+
+        {imgSlider && (
+          <div className="lgg:w-[40%] h-auto xs:w-[80%]">
+            {imgSlider && <CardSlider slides={images} />}
+          </div>
         )}
       </div>
     </>

@@ -7,7 +7,8 @@
       "Next.js",
       "React",
       "Typescript",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "Node.js"
     ],
     "video": "/videos/Cyber-Reports.mp4",
     "repository": "https://github.com/henriqueolivgp/CyberReports",
@@ -15,8 +16,190 @@
     "features": [
       "User Authentication",
       "Three types of users",
+      "Users can make reports",
       "Store All reports",
       "Filtering reports"
-    ]
+    ],
+    "order": "order-0",
+    "imgSlider": false
+  },
+  {
+    "id": 1,
+    "name": "API",
+    "description": "This project was maded in Rocketseat event when i ",
+    "technologies": [
+      "JS",
+      "Node.js",
+      "Nest.js",
+      "Knex.js",
+      "React",
+      "Typescript"
+    ],
+    "images": [
+      {
+        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "alt": "Project-Print"
+      },
+      {
+        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "alt": "API-Print"
+      }
+    ],
+    "video": "",
+    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "live": "",
+    "features": [
+      "Basic user Authentication ( username, password)",
+      "Three types of users ( View, Edit, Admin )",
+      "Import Movies from one .json",
+      "Store All Movies",
+      "Filtering Movies"
+    ],
+    "order": "order-1",
+    "imgSlider": true
+  },
+  {
+    "id": 2,
+    "name": "Especial Exame SD Project ( University CTeSP )",
+    "description": "This project was maded in university course latform to report your issues directly in your browser. This project saves all to-do items in your browser's storage. You can add to-dos using text or your voice through the microphone.",
+    "technologies": [
+      "JS",
+      "Node.js",
+      "Nest.js",
+      "Knex.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS"
+    ],
+    "images": [
+      {
+        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "alt": "Project-Print"
+      },
+      {
+        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "alt": "API-Print"
+      }
+    ],
+    "video": "",
+    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "live": "",
+    "features": [
+      "Basic user Authentication ( username, password)",
+      "Three types of users ( View, Edit, Admin )",
+      "Import Movies from one .json",
+      "Store All Movies",
+      "Filtering Movies"
+    ],
+    "order": "order-1",
+    "imgSlider": true
+  },
+  {
+    "id": 3,
+    "name": "NLW Pocket Mobile ( Rocketseat )",
+    "description": "This project was maded in Rocketseat event when i ",
+    "technologies": [
+      "JS",
+      "Node.js",
+      "Nest.js",
+      "Knex.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS"
+    ],
+    "images": [
+      {
+        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "alt": "Project-Print"
+      },
+      {
+        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "alt": "API-Print"
+      }
+    ],
+    "video": "",
+    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "live": "",
+    "features": [
+      "Basic user Authentication ( username, password)",
+      "Three types of users ( View, Edit, Admin )",
+      "Import Movies from one .json",
+      "Store All Movies",
+      "Filtering Movies"
+    ],
+    "order": "order-1",
+    "imgSlider": true
+  },
+  {
+    "id": 4,
+    "name": "NLW Deliver App ( Rocketseat )",
+    "description": "This project was maded in Rocketseat event when i ",
+    "technologies": [
+      "JS",
+      "Node.js",
+      "Nest.js",
+      "Knex.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS"
+    ],
+    "images": [
+      {
+        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "alt": "Project-Print"
+      },
+      {
+        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "alt": "API-Print"
+      }
+    ],
+    "video": "",
+    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "live": "",
+    "features": [
+      "Basic user Authentication ( username, password)",
+      "Three types of users ( View, Edit, Admin )",
+      "Import Movies from one .json",
+      "Store All Movies",
+      "Filtering Movies"
+    ],
+    "order": "order-1",
+    "imgSlider": true
+  },
+  {
+    "id": 5,
+    "name": "NLW Expert Notes ( Rocketseat )",
+    "description": "This project was maded in Rocketseat event when i ",
+    "technologies": [
+      "JS",
+      "Node.js",
+      "Nest.js",
+      "Knex.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS"
+    ],
+    "images": [
+      {
+        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "alt": "Project-Print"
+      },
+      {
+        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "alt": "API-Print"
+      }
+    ],
+    "video": "",
+    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "live": "",
+    "features": [
+      "Basic user Authentication ( username, password)",
+      "Three types of users ( View, Edit, Admin )",
+      "Import Movies from one .json",
+      "Store All Movies",
+      "Filtering Movies"
+    ],
+    "order": "order-1",
+    "imgSlider": true
   }
 ]

@@ -44,9 +44,10 @@ export const Projects = () => {
             {webProjects.map((project) => (
               <ProjectWebCard
                 key={project.id}
+                name={project.name}
+                badge={project.badge}
                 images={project.images || [{ src: "", alt: "" }]}
                 video={project.video || ""}
-                name={project.name}
                 description={project.description}
                 features={project.features}
                 technologies={project.technologies}

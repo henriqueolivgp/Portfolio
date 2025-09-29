@@ -40,17 +40,6 @@ export const Introduction = (props: IntroductionProps) => {
                       <TypewriterText text="Full-Stack Developer." />
                     </span>
                   </section>
-                  <div className="flex ">
-                    <svg className="w-4/5 h-8" viewBox="0 0 713 32">
-                      <path
-                        className=""
-                        d="M8 24.6382C314.835 -2.35291 400.867 8.08049 405.529 16.6711"
-                        stroke="#60A5FA"
-                        stroke-width="14"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </div>
                   <div className="flex gap-4 ml-[6%]">
                     <a
                       href="https://www.linkedin.com/in/henrique-oliveira-gp"

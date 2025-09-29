@@ -1,16 +1,22 @@
-import { ComponentProps, useEffect, useState } from "react";
+import { ComponentProps } from "react";
 import { Github, Globe } from "lucide-react";
 import ShinyText from "../../utils/ShinyText";
 import { Badge } from "../badge/badge";
 import { CardSlider } from "./WebCard/carrousel";
 
 interface ProjectWebCardProps extends ComponentProps<"div"> {
+  name: string;
+  badge: {
+    web?: boolean;
+    mobile?: boolean;
+    front?: boolean;
+    back?: boolean;
+  };
   images: {
     src: string;
     alt: string;
   }[];
   video: string;
-  name: string;
   description: string;
   technologies: string[];
   features: string[];
@@ -21,9 +27,10 @@ interface ProjectWebCardProps extends ComponentProps<"div"> {
 }
 
 export const ProjectWebCard = ({
+  name,
+  badge,
   images,
   video,
-  name,
   description,
   technologies,
   features,
@@ -32,39 +39,53 @@ export const ProjectWebCard = ({
   order,
   imgSlider,
 }: ProjectWebCardProps) => {
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  useEffect(() => {
-    if (isZoomed) {
-      const timer = setTimeout(() => setIsZoomed(false), 2000); // Fecha após 3 segundos
-      return () => clearTimeout(timer); // Limpa o timer se o usuário fechar antes
-    }
-  }, [isZoomed]);
+  const badges = [
+    {
+      condition: badge.web,
+      text1: "Web",
+      Icon: Globe,
+      bgColor: "bg-orange-500",
+    },
+    {
+      condition: badge.back,
+      text1: "Back",
+      text2: "-end",
+      Icon: Globe,
+      bgColor: "bg-gray-700",
+    },
+    {
+      condition: badge.front,
+      text1: "Front",
+      text2: "-end",
+      Icon: Globe,
+      bgColor: "bg-blue-500",
+    },
+  ];
 
   return (
     <>
       <div className="flex lgg:flex-row xs:flex-col xs:justify-center xs:items-center justify-center h-auto gap-8">
         <div
-          className={` ${order} flex w-[40%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700`}
+          style={{ order }}
+          className={` flex w-[40%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700`}
         >
           <div className="flex w-full flex-col p-4 leading-normal space-y-2">
             <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-400 dark:text-white">
               {name}
             </h1>
             <section className="flex w-full gap-2">
-              <Badge text1="Web" Icon={Globe} bgColor="bg-orange-500" />
-              <Badge
-                text1="Back"
-                text2="-end"
-                Icon={Globe}
-                bgColor="bg-gray-700"
-              />
-              <Badge
-                text1="Front"
-                text2="-end"
-                Icon={Globe}
-                bgColor="bg-blue-500"
-              />
+              {badges.map(
+                (b, i) =>
+                  b.condition && (
+                    <Badge
+                      key={i}
+                      text1={b.text1}
+                      text2={b.text2}
+                      Icon={b.Icon}
+                      bgColor={b.bgColor}
+                    />
+                  )
+              )}
             </section>
             <p className=" font-normal text-gray-200 dark:text-gray-400">
               {description}
@@ -95,20 +116,22 @@ export const ProjectWebCard = ({
             </section>
 
             <section className="flex xxs:justify-center sm:justify-normal gap-4">
-              <a href={live} target="_blank">
-                <button
-                  type="button"
-                  className=" flex min-w-auto max-w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
-                >
-                  <Globe size={24} />
-                  <ShinyText
-                    text="Website"
-                    disabled={false}
-                    speed={3}
-                    className="custom-class"
-                  />
-                </button>
-              </a>
+              {live && (
+                <a href={live} target="_blank">
+                  <button
+                    type="button"
+                    className=" flex min-w-auto max-w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                  >
+                    <Globe size={24} />
+                    <ShinyText
+                      text="Website"
+                      disabled={false}
+                      speed={3}
+                      className="custom-class"
+                    />
+                  </button>
+                </a>
+              )}
               <a href={repo} target="_blank">
                 <button
                   type="button"

@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Cyber Reports",
-    "description": "Platform to report your issues directly in your browser. This project saves all to-do items in your browser's storage. You can add to-dos using text or your voice through the microphone.",
+    "description": "This project is a recreated version of an existing one on my profile, as the original was developed as part of the PDSI (Computer Systems Programming) course at the Polytechnic Institute of Viana do Castelo, in the ESTG (School of Technology and Management). The project consists of a website where anyone can report a problem they experienced and receive help from people who have gone through similar situations or from specialists, if they prefer.",
     "technologies": [
       "Next.js",
       "React",
@@ -12,7 +12,7 @@
     ],
     "video": "/videos/Cyber-Reports.mp4",
     "repository": "https://github.com/henriqueolivgp/CyberReports",
-    "live": "https://cyberreports.pages.dev/",
+    "live": "https://cyber-reports.henriqueoliv.pt/",
     "features": [
       "User Authentication",
       "Three types of users",
@@ -25,35 +25,33 @@
   },
   {
     "id": 1,
-    "name": "API",
+    "name": "Real estate Management API",
     "description": "This project was maded in Rocketseat event when i ",
     "technologies": [
-      "JS",
       "Node.js",
-      "Nest.js",
-      "Knex.js",
-      "React",
+      "Fastify",
+      "Prisma",
+      "Docker",
       "Typescript"
     ],
     "images": [
       {
-        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
+        "src": "/Projects/Real-Estate-Management-API/Real_Estate_Management_API.png",
         "alt": "Project-Print"
       },
       {
-        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
+        "src": "/Projects/Real-Estate-Management-API/Real_Estate_Management_Insomnia.png",
         "alt": "API-Print"
       }
     ],
     "video": "",
-    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
+    "repository": "https://github.com/henriqueolivgp/Real-Estate-API",
     "live": "",
     "features": [
-      "Basic user Authentication ( username, password)",
-      "Three types of users ( View, Edit, Admin )",
-      "Import Movies from one .json",
-      "Store All Movies",
-      "Filtering Movies"
+      "User Authentication ( name, e-mail, phone, password)",
+      "Three types of users (Admin, Clients)",
+      "Admins are allowed to manage all clients and their properties",
+      "Clients are allowed to register new properties and update them"
     ],
     "order": "order-1",
     "imgSlider": true
@@ -61,123 +59,17 @@
   {
     "id": 2,
     "name": "Especial Exame SD Project ( University CTeSP )",
-    "description": "This project was maded in university course latform to report your issues directly in your browser. This project saves all to-do items in your browser's storage. You can add to-dos using text or your voice through the microphone.",
-    "technologies": [
+    "description": "Este projeto foi realizado numa época especial (exame) como avaliação da disciplina de Sistemas Distribuídos (SD). O objetivo consistia em trabalhar sobre uma base fornecida pelo professor e desenvolver um projeto próprio com um tema à escolha; no meu caso, o tema foi sobre filmes. O projeto incluía duas APIs: uma para autenticação e outra para gerir os filmes fornecidos no JSON atribuído, duas bases de dados: uma para autenticação e outra para os dados do JSON, um importador para carregar os dados do JSON para a base de dados, e um front-end para visualizar os dados de forma interativa.",    "technologies": [
       "JS",
       "Node.js",
       "Nest.js",
       "Knex.js",
+      "Zod",
+      "Prisma",
       "React",
       "Typescript",
-      "Tailwind CSS"
-    ],
-    "images": [
-      {
-        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
-        "alt": "Project-Print"
-      },
-      {
-        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
-        "alt": "API-Print"
-      }
-    ],
-    "video": "",
-    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
-    "live": "",
-    "features": [
-      "Basic user Authentication ( username, password)",
-      "Three types of users ( View, Edit, Admin )",
-      "Import Movies from one .json",
-      "Store All Movies",
-      "Filtering Movies"
-    ],
-    "order": "order-1",
-    "imgSlider": true
-  },
-  {
-    "id": 3,
-    "name": "NLW Pocket Mobile ( Rocketseat )",
-    "description": "This project was maded in Rocketseat event when i ",
-    "technologies": [
-      "JS",
-      "Node.js",
-      "Nest.js",
-      "Knex.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS"
-    ],
-    "images": [
-      {
-        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
-        "alt": "Project-Print"
-      },
-      {
-        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
-        "alt": "API-Print"
-      }
-    ],
-    "video": "",
-    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
-    "live": "",
-    "features": [
-      "Basic user Authentication ( username, password)",
-      "Three types of users ( View, Edit, Admin )",
-      "Import Movies from one .json",
-      "Store All Movies",
-      "Filtering Movies"
-    ],
-    "order": "order-1",
-    "imgSlider": true
-  },
-  {
-    "id": 4,
-    "name": "NLW Deliver App ( Rocketseat )",
-    "description": "This project was maded in Rocketseat event when i ",
-    "technologies": [
-      "JS",
-      "Node.js",
-      "Nest.js",
-      "Knex.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS"
-    ],
-    "images": [
-      {
-        "src": "/Projects/Especial_Exame_SD/Print_SD_Project.png",
-        "alt": "Project-Print"
-      },
-      {
-        "src": "/Projects/Especial_Exame_SD/API_SD_Project.png",
-        "alt": "API-Print"
-      }
-    ],
-    "video": "",
-    "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
-    "live": "",
-    "features": [
-      "Basic user Authentication ( username, password)",
-      "Three types of users ( View, Edit, Admin )",
-      "Import Movies from one .json",
-      "Store All Movies",
-      "Filtering Movies"
-    ],
-    "order": "order-1",
-    "imgSlider": true
-  },
-  {
-    "id": 5,
-    "name": "NLW Expert Notes ( Rocketseat )",
-    "description": "This project was maded in Rocketseat event when i ",
-    "technologies": [
-      "JS",
-      "Node.js",
-      "Nest.js",
-      "Knex.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "Docker"
     ],
     "images": [
       {

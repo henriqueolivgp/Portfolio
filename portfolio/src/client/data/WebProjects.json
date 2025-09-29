@@ -2,6 +2,12 @@
   {
     "id": 0,
     "name": "Cyber Reports",
+    "badge": {
+      "web": true,
+      "mobile": false,
+      "front": true,
+      "back": true
+    },
     "description": "This project is a recreated version of an existing one on my profile, as the original was developed as part of the PDSI (Computer Systems Programming) course at the Polytechnic Institute of Viana do Castelo, in the ESTG (School of Technology and Management). The project consists of a website where anyone can report a problem they experienced and receive help from people who have gone through similar situations or from specialists, if they prefer.",
     "technologies": [
       "Next.js",
@@ -26,7 +32,13 @@
   {
     "id": 1,
     "name": "Real estate Management API",
-    "description": "This project was maded in Rocketseat event when i ",
+    "badge": {
+      "web": false,
+      "mobile": false,
+      "front": false,
+      "back": true
+    },
+    "description": "This project was carried out during a special exam period as part of the Distributed Systems (SD) course evaluation. The goal was to build upon a base provided by the professor and develop our own project with a chosen theme; in my case, the theme was movies. The project included two APIs: one for authentication and another for managing the movies provided in the assigned JSON, two databases: one for authentication and another for the JSON data, an importer to load the JSON data into the database, and a front-end to visualize the data interactively.",
     "technologies": [
       "Node.js",
       "Fastify",
@@ -46,7 +58,7 @@
     ],
     "video": "",
     "repository": "https://github.com/henriqueolivgp/Real-Estate-API",
-    "live": "",
+    "live": null,
     "features": [
       "User Authentication ( name, e-mail, phone, password)",
       "Three types of users (Admin, Clients)",
@@ -59,7 +71,14 @@
   {
     "id": 2,
     "name": "Especial Exame SD Project ( University CTeSP )",
-    "description": "Este projeto foi realizado numa época especial (exame) como avaliação da disciplina de Sistemas Distribuídos (SD). O objetivo consistia em trabalhar sobre uma base fornecida pelo professor e desenvolver um projeto próprio com um tema à escolha; no meu caso, o tema foi sobre filmes. O projeto incluía duas APIs: uma para autenticação e outra para gerir os filmes fornecidos no JSON atribuído, duas bases de dados: uma para autenticação e outra para os dados do JSON, um importador para carregar os dados do JSON para a base de dados, e um front-end para visualizar os dados de forma interativa.",    "technologies": [
+    "badge": {
+      "web": true,
+      "mobile": false,
+      "front": true,
+      "back": true
+    },
+    "description": "Este projeto foi realizado numa época especial (exame) como avaliação da disciplina de Sistemas Distribuídos (SD). O objetivo consistia em trabalhar sobre uma base fornecida pelo professor e desenvolver um projeto próprio com um tema à escolha; no meu caso, o tema foi sobre filmes. O projeto incluía duas APIs: uma para autenticação e outra para gerir os filmes fornecidos no JSON atribuído, duas bases de dados: uma para autenticação e outra para os dados do JSON, um importador para carregar os dados do JSON para a base de dados, e um front-end para visualizar os dados de forma interativa.",
+    "technologies": [
       "JS",
       "Node.js",
       "Nest.js",
@@ -83,7 +102,7 @@
     ],
     "video": "",
     "repository": "https://github.com/henriqueolivgp/Special_Exame_SD",
-    "live": "",
+    "live": null,
     "features": [
       "Basic user Authentication ( username, password)",
       "Three types of users ( View, Edit, Admin )",

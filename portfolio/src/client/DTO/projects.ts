@@ -2,6 +2,12 @@
 export interface Project {
   id: number;
   name: string;
+  badge: {
+    web?: boolean
+    mobile?: boolean
+    front?: boolean,
+    back?: boolean,
+  }
   description: string;
   technologies: string[];
   images?: {
@@ -10,7 +16,7 @@ export interface Project {
   }[];
   video?: string;
   repository: string;
-  live?: string;
+  live?: string | null;
   features: string[];
   order: string;
   imgSlider: boolean;

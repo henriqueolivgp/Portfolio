@@ -1,5 +1,6 @@
 import { AboutmeImg } from "../components/AboutMe/me-about";
 import Particles from "../utils/Particles";
+import ScrollFloat from "../utils/ScrollFloat";
 
 export const AboutMe = () => {
   return (
@@ -25,8 +26,7 @@ export const AboutMe = () => {
         {/* SVG DE CIMA */}
         <div className="absolute left-[-122px] top-[-100px] z-0">
           <svg
-            width="460"
-            height="425"
+            className="sm:w-[460px] sm:h-[425px] xs:w-[320px] xs:h-[400px]"
             viewBox="0 0 460 425"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,32 +57,17 @@ export const AboutMe = () => {
 
         {/* CONTEÚDO PRINCIPAL */}
         <section className="flex-wrap justify-center items-center w-full">
-          <div className="flex lg:flex-wrap xxs:flex-wrap w-full justify-center items-center gap-8 ">
-            <section className="w-full flex flex-col xxs:mt-[10%] lg:mt-0  lg:mb-[8%] items-center relative">
-              <h1 className="font-bold text-gray-300 xxs:text-5xl lg:text-6xl">
+          <div className="flex lg:flex-wrap xs:flex-wrap w-full justify-center items-center gap-8 ">
+            <section className="w-full flex flex-col xs:mt-[10%] lg:mt-0  lg:mb-[8%] items-center relative">
+
+              <h1 className="font-bold text-gray-300 xs:text-3xl sm:text-4xl lg:text-6xl">
                 About Me
               </h1>
-              <section className="flex w-full justify-center">
-                <svg
-                  width="346"
-                  height="22"
-                  viewBox="0 0 136 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.14131 8.21839C103.179 -0.581582 131.229 2.82004 132.748 5.62084"
-                    stroke="#EFF6FF"
-                    strokeWidth="4.56445"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </section>
             </section>
-            <AboutmeImg className="flex xxs:w-full lg:w-1/2" />
-            <div className="flex xxs:w-full lg:w-1/2 items-center">
+            <AboutmeImg className="flex xs:w-full lg:w-1/2" />
+            <div className="flex xs:w-full lg:w-1/2 items-center">
               <p className="font-medium text-gray-300 text-lg text-left">
-                I have been studying
+                I have been studying{" "}
                 <span className="text-sky-600">
                   Systems Development for four years
                 </span>
@@ -122,8 +107,7 @@ export const AboutMe = () => {
         {/* SVG DE BAIXO */}
         <div className="absolute right-[-122px] bottom-[-100px] z-0">
           <svg
-            width="460"
-            height="425"
+            className="sm:w-[460px] sm:h-[425px] xs:w-[320px] xs:h-[400px]"
             viewBox="0 0 460 425"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

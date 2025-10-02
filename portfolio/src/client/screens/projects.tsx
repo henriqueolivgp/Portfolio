@@ -11,22 +11,21 @@ export const Projects = () => {
   useEffect(() => {
     setWebProjects(webprojectsData);
     // setMobileProjects(mobileprojectsData);
-
   }, []);
 
   return (
     <>
       <section id="projects" className="flex h-auto">
-        <section className=" flex flex-col justify-center xxs:items-center mt-24 p-10 gap-20 h-auto">
+        <section className=" flex flex-col justify-center xs:items-center mt-24 p-10 gap-20 h-auto">
           <section className="flex flex-col w-full justify-center items-center h-auto">
             <section className="flex gap-2 justify-center">
-              <h1 className="font-bold w-full text-left text-gray-300 lg:text-6xl md:text-4xl xxs:mt-6 lg:mt-0 xss:text-2xl">
+              <h1 className="font-bold w-full text-left text-gray-300 lg:text-6xl sm:text-5xl xs:mt-6 lg:mt-0 ">
                 Projects
               </h1>
-              <section className="flex justify-center items-center h-20 xxs:w-full">
+              <section className="flex justify-center items-center h-20 xs:w-full">
                 <RotatingText
                   texts={["Web", "Mobile"]}
-                  mainClassName="flex xxs:w-24 md:w-40 lg:w-44 lg:h-full xxs:h-12 items-center  justify-center lg:px-3 text-gray-300 lg:text-5xl md:text-4xl xxs:text-xl  font-bold overflow-hidden rounded-lg w-full"
+                  mainClassName="flex xs:w-24 md:w-40 lg:w-44 lg:h-full xs:h-12 items-center  justify-center lg:px-3 text-gray-300 sm:text-5xl md:text-4xl xs:text-xl  font-bold overflow-hidden rounded-lg w-full"
                   style={{ backgroundColor: "#385B87" }}
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}

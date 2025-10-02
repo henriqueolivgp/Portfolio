@@ -29,7 +29,7 @@ export const Navbar = () => {
     }
 
     // Clean timeout when component is down, when isOpen changed for false or when menu is close manualy
-    return () => {  
+    return () => {
       document.removeEventListener("click", handleOutsideClick);
       clearTimeout(timeoutId);
     };
@@ -44,23 +44,25 @@ export const Navbar = () => {
       <nav className="bg-PPurple-medium/30 dark:bg-gray-900 fixed w-full z-40  ">
         <div
           ref={menuRef}
-          className="flex flex-wrap items-center lgg:justify-between mx-auto p-4"
+          className="flex flex-wrap items-center lg:justify-between mx-auto p-4"
         >
-          <div className="flex justify-between w-full lgg:w-0 ">
+          <div className="flex justify-between w-full lg:w-0 ">
             <a
               href="#profile"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img src={logo} className="h-7" alt="Logo" />
-              <span className="self-center sm:text-xl xxs:text-lg font-semibold whitespace-nowrap text-white">
-                Henrique Oliveira
-              </span>
+              <img src={logo} className="h-7 " alt="Logo" />
+              <div className="hidden md:flex">
+                <p className="self-center  sm:text-xl xs:text-lg font-semibold whitespace-nowrap text-white">
+                  Henrique Oliveira
+                </p>
+              </div>
             </a>
             <button
               onClick={handleClick}
               data-collapse-toggle="navbar-default"
               type="button"
-              className="inline-flex xs:mr-6 items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lgg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-default"
               aria-expanded={isOpen}
             >
@@ -84,7 +86,7 @@ export const Navbar = () => {
           </div>
           <div className="hidden w-full xs:block xs:w-auto" id="navbar-default">
             {isOpen ? (
-              <div className="flex absolute lgg:hidden right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
+              <div className="flex absolute lg:hidden right-0 translate-y-8 -translate-x-6 bg-PPurple-medium/30 rounded-md w-[150px]">
                 <ul className=" space-y-4 p-2 text-sm font-medium text-white bg-PPurple-medium/30 border rounded-lg w-[150px]">
                   <NavMobileLi name="Profile" to="#profile" />
                   <NavMobileLi name="About-me" to="#about-me" />
@@ -93,7 +95,7 @@ export const Navbar = () => {
                 </ul>
               </div>
             ) : (
-              <ul className="font-medium hidden gap-8 flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lgg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
+              <ul className="font-medium hidden gap-8 flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-12 lg:flex rtl:space-x-reverse md:mt-0 md:border-0 text-white">
                 <NavLi name="Profile" to="#profile" />
                 <NavLi name="About-me" to="#about-me" />
                 <NavLi name="Projects" to="#projects" />

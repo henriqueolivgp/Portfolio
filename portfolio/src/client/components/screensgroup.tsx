@@ -9,13 +9,13 @@ export const ScreensGroup = (props: screensProps) => {
   return (
     <>
       <section {...props} className="flex flex-col h-auto">
-        <section className="relative min-h-screen xxs:max-h-auto">
+        <section className="relative min-h-screen xs:max-h-auto">
           <AboutMe />
         </section>
         <section className="relative min-h-screen max-h-auto ">
           <Projects />
         </section>
-        <section className="relative h-auto xxs:max-h-auto">
+        <section className="relative h-auto xs:max-h-auto">
           <Contact />
         </section>
       </section>

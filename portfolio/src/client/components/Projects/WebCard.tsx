@@ -64,10 +64,10 @@ export const ProjectWebCard = ({
 
   return (
     <>
-      <div className="flex lgg:flex-row xs:flex-col xs:justify-center xs:items-center justify-center h-auto gap-8">
+      <div className="flex 2xl:flex-row xl:flex-col xs:flex-col xs:justify-center xs:items-center justify-center h-auto gap-8">
         <div
           style={{ order }}
-          className={` flex w-[40%] flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700`}
+          className={` flex lg:w-[40%] xs:w-auto flex-col border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700`}
         >
           <div className="flex w-full flex-col p-4 leading-normal space-y-2">
             <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-400 dark:text-white">
@@ -91,8 +91,8 @@ export const ProjectWebCard = ({
               {description}
             </p>
 
-            <section className="flex flex-wrap ss:flex-nowrap xxs:w-full gap-4">
-              <section className="flex flex-col sm:w-1/2 xxs:w-full space-y-1.5">
+            <section className="flex sm:flex-nowrap xs:flex-wrap xs:w-full gap-4">
+              <section className="flex flex-col sm:w-1/2 xs:w-full space-y-1.5">
                 <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   Technologies
                 </h1>
@@ -103,7 +103,7 @@ export const ProjectWebCard = ({
                 ))}
               </section>
 
-              <section className="flex flex-col sm:w-1/2 xxs:w-full  space-y-1.5">
+              <section className="flex flex-col sm:w-1/2 xs:w-full  space-y-1.5">
                 <h1 className="mb-2 text-1xl font-semibold tracking-tight text-gray-400 dark:text-white">
                   Features
                 </h1>
@@ -115,12 +115,12 @@ export const ProjectWebCard = ({
               </section>
             </section>
 
-            <section className="flex xxs:justify-center sm:justify-normal gap-4">
+            <section className="flex xs:justify-center sm:justify-normal gap-4">
               {live && (
                 <a href={live} target="_blank">
                   <button
                     type="button"
-                    className=" flex min-w-auto max-w-40 items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
+                    className=" flex min-w-auto max-w-auto items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                   >
                     <Globe size={24} />
                     <ShinyText
@@ -145,7 +145,7 @@ export const ProjectWebCard = ({
                       speed={3}
                       className="custom-class"
                     />
-                    <span className="xxs:hidden sm:flex">
+                    <span className="hidden lg:flex">
                       <ShinyText
                         text="Project"
                         disabled={false}
@@ -161,7 +161,7 @@ export const ProjectWebCard = ({
         </div>
         {video && (
           <video
-            className="lgg:w-[40%] h-auto xs:w-[80%]"
+            className="lg:w-[40%] h-auto xs:w-auto"
             src={video}
             controls
             autoPlay
@@ -171,7 +171,7 @@ export const ProjectWebCard = ({
         )}
 
         {imgSlider && (
-          <div className="lgg:w-[40%] h-auto xs:w-[80%]">
+          <div className="lg:w-[40%] h-auto xs:w-[80%]">
             {imgSlider && <CardSlider slides={images} />}
           </div>
         )}

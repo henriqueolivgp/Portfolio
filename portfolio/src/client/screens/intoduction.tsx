@@ -22,13 +22,13 @@ export const Introduction = (props: IntroductionProps) => {
         />
 
         {/* Adicionando uma camada escura */}
-        <div className="absolute top-0 left-0 h-screen w-full bg-gradient-to-t from-black/100 lg:to-black/35 xxs:to-black/50"></div>
+        <div className="absolute top-0 left-0 h-screen w-full bg-gradient-to-t from-black/100 lg:to-black/35 xs:to-black/50"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/100 to-black/0 pointer-events-none"></div>
 
         <div className="container mx-auto space-y-2 parallax h-screen flex justify-center items-center w-full">
-            <div className="flex w-full lg:p-10 lgg:p-10 xxs:flex-wrap gap-4 lg:justify-between xxs:justify-center items-center">
-              <div className="flex w-full xxs:w-full sm:w-1/2 md:w-1/2 bg-transparent font-normal">
-                <div className="flex flex-col">
+            <div className="flex w-full lg:p-10 xs:flex-wrap gap-4 lg:justify-between xs:justify-center items-center">
+              <div className="grid md:grid-cols-2 xs:grid-cols-1 w-full  md:w-1/2 bg-transparent font-normal">
+                <div className="flex flex-wrap xs:items-center xs:justify-center">
                   <section className="flex flex-col">
                     <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
                       Hi,
@@ -40,7 +40,7 @@ export const Introduction = (props: IntroductionProps) => {
                       <TypewriterText text="Full-Stack Developer." />
                     </span>
                   </section>
-                  <div className="flex gap-4 ml-[6%]">
+                  <div className="flex gap-4 ">
                     <a
                       href="https://www.linkedin.com/in/henrique-oliveira-gp"
                       target="_blank"
@@ -83,7 +83,7 @@ export const Introduction = (props: IntroductionProps) => {
                 </div>
               </div>
               {}
-              <section className="flex lg:w-1/3 sm:w-1/2 xxs:w-full">
+              <section className="flex lg:w-1/3 sm:w-1/2 xs:w-full">
                 <Me />
               </section>
             </div>

@@ -1,6 +1,5 @@
 import { AboutmeImg } from "../components/AboutMe/me-about";
 import Particles from "../utils/Particles";
-import ScrollFloat from "../utils/ScrollFloat";
 
 export const AboutMe = () => {
   return (

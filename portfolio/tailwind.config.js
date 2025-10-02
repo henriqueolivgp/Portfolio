@@ -22,14 +22,7 @@ export default {
     // Define os breakpoints personalizados
     screens: {
 
-      'xxs': '250px',
-
-      'xs': '300px',
-      // => @media (min-width: 300px) { ... }
-
-      's': '427px',
-      
-      'ss': '559px',
+      'xs': '250px',
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -39,8 +32,6 @@ export default {
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
-
-      'lgg': '1150px',
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }

@@ -77,8 +77,7 @@
       "front": true,
       "back": true
     },
-    "description": "Este projeto foi realizado numa época especial (exame) como avaliação da disciplina de Sistemas Distribuídos (SD). O objetivo consistia em trabalhar sobre uma base fornecida pelo professor e desenvolver um projeto próprio com um tema à escolha; no meu caso, o tema foi sobre filmes. O projeto incluía duas APIs: uma para autenticação e outra para gerir os filmes fornecidos no JSON atribuído, duas bases de dados: uma para autenticação e outra para os dados do JSON, um importador para carregar os dados do JSON para a base de dados, e um front-end para visualizar os dados de forma interativa.",
-    "technologies": [
+    "description": "This project was carried out during a special period (exam) as part of the evaluation for the Distributed Systems (SD) course. The objective was to work on a base provided by the professor and develop an individual project with a chosen theme; in my case, the theme was about movies. The project included two APIs: one for authentication and another to manage the movies provided in the assigned JSON file; two databases: one for authentication and another for the JSON data; an importer to load the JSON data into the database; and a front-end to display the data interactively.  ","technologies": [
       "JS",
       "Node.js",
       "Nest.js",

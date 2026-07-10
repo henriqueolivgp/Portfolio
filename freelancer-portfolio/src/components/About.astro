@@ -1,0 +1,163 @@
+---
+// src/components/About.astro
+---
+
+<section id="sobre" aria-labelledby="sobre-h2">
+  <div class="container">
+    <div class="sobre-grid">
+      <!-- Texto -->
+      <div class="sobre-text">
+        <h2 id="sobre-h2">
+          <span class="label">Sobre mim</span>
+          Um developer que <em class="text-highlight">entrega</em>,<br />não só que promete.
+        </h2>
+        <p>
+          Comecei a programar 18 e nunca parei. Hoje trabalho como
+          freelancer full-time, ajudando startups e empresas a construir
+          produtos digitais simples e robustos — seja uma API de alto desempenho, a uma
+          dashboard complexa ou um e-commerce escalável.
+        </p>
+        <p>
+          Gosto de código limpo, testes automatizados e documentação simples e que faça
+          sentido. Não entrego soluções "que funcionam agora" — entrego código
+          que a tua equipa consegue manter a longo prazo.
+        </p>
+        <p>
+          Quando não estou a programar, pratico muito com projetos pessoais muitos deles online.
+          <!-- , dou explicaçoes a jovens universitarios q tenham dificuldades a aprender -->
+        </p>
+      </div>
+
+      <!-- Skills -->
+      <div class="skills">
+        <ul class="skills-list" role="list" aria-label="Competências técnicas">
+          {
+            [
+              { name: "React / Next.js", pct: 95 },
+              { name: "Node.js / Express", pct: 90 },
+              { name: "TypeScript", pct: 92 },
+              { name: "PostgreSQL / MongoDB", pct: 87 },
+              { name: "Docker / AWS", pct: 82 },
+              { name: "GraphQL / REST", pct: 89 },
+            ].map(({ name, pct }) => (
+              <li class="skill-item" role="listitem">
+                <div class="skill-header">
+                  <span class="skill-name">{name}</span>
+                  <span class="skill-pct">{pct}%</span>
+                </div>
+                <div class="skill-bar">
+                  <div
+                    class="skill-fill"
+                    style={`width:${pct}%`}
+                    role="progressbar"
+                    aria-valuenow={pct}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-label={`${name} ${pct}%`}
+                  />
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sobre-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: 1.4fr 1fr; */
+    gap: 4rem;
+  }
+
+  .label {
+    display: block; /* era flex — muda para block para ficar em linha própria */
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.72rem; /* ← força o tamanho, não herda do h2 */
+    font-weight: 400;
+    color: var(--accent-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .text-highlight {
+    color: var(--accent-light);
+  }
+
+  .sobre-h2 {
+    display: flex;
+  }
+
+  .sobre-text {
+    width: 60%;
+  }
+
+  .sobre-text p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .sobre-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills {
+    width: 40%;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.83rem;
+  }
+  .skill-name {
+    font-weight: 600;
+  }
+  .skill-pct {
+    font-family: var(--mono);
+    color: var(--accent2);
+    font-size: 0.72rem;
+  }
+  .skill-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    background: var(--accent-dark);
+    border-radius: 99px;
+  }
+
+  @media (max-width: 900px) {
+    .sobre-grid {
+      flex-direction: column; /* ← coloca os elementos em coluna */
+      gap: 2rem;
+    }
+
+    .sobre-text {
+      width: 100%;
+    }
+
+    .skills-list {
+      padding-left: 0;
+    }
+    .skills {
+      width: 100%;
+    }
+  }
+</style>

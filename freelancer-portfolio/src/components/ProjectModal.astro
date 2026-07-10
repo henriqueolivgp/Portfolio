@@ -1,0 +1,274 @@
+---
+// src/components/ProjectModal.astro
+---
+
+<!-- Modal overlay -->
+<div
+  id="project-modal"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-box">
+
+    <!-- Fechar -->
+    <button class="modal-close" id="modal-close" aria-label="Fechar modal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Imagem -->
+    <div class="modal-img-wrap">
+      <img id="modal-img" src="" alt="" width="1200" height="675" loading="lazy" decoding="async" />
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="modal-body">
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title"></h2>
+        <div class="modal-tags" id="modal-tags"></div>
+      </div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-links" id="modal-links"></div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    /* fechado */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+  }
+  .modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 860px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px) scale(.97);
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .modal-overlay.open .modal-box {
+    transform: translateY(0) scale(1);
+  }
+
+  /* Fechar */
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .modal-close:hover {
+    background: var(--bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .modal-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* Imagem */
+  .modal-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    background: var(--bg);
+  }
+  .modal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Conteúdo */
+  .modal-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .modal-title {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+  }
+  .modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+  }
+  .modal-desc {
+    font-size: .95rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0;
+  }
+  .modal-links {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .modal-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .6rem 1.25rem;
+    border-radius: 8px;
+    font-size: .88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity .2s, transform .2s;
+  }
+  .modal-links a:hover {
+    opacity: .85;
+    transform: translateY(-1px);
+  }
+  .modal-link-demo {
+    background: var(--accent);
+    color: #fff;
+  }
+  .modal-link-github {
+    background: var(--surface2, #1c2433);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .modal-body { padding: 1.25rem; }
+    .modal-header { flex-direction: column; }
+  }
+</style>
+
+<script>
+  const overlay = document.getElementById('project-modal');
+  const closeBtn = document.getElementById('modal-close');
+  const modalImg = document.getElementById('modal-img') as HTMLImageElement;
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalTags = document.getElementById('modal-tags');
+  const modalLinks = document.getElementById('modal-links');
+
+  let lastFocused: HTMLElement | null = null;
+
+  // Abre o modal
+  function openModal(data: {
+    title: string;
+    desc: string;
+    tags: string[];
+    demoUrl: string;
+    githubUrl: string;
+    screenshot: string;
+    screenshotAlt: string;
+  }) {
+    lastFocused = document.activeElement as HTMLElement;
+
+    if (modalImg)    { modalImg.src = data.screenshot; modalImg.alt = data.screenshotAlt; }
+    if (modalTitle)  { modalTitle.textContent = data.title; }
+    if (modalDesc)   { modalDesc.textContent = data.desc; }
+    if (modalTags)   {
+      modalTags.innerHTML = data.tags
+        .map(t => `<span class="tag">${t}</span>`)
+        .join('');
+    }
+    if (modalLinks) {
+      modalLinks.innerHTML = '';
+      if (data.demoUrl && data.demoUrl !== '#') {
+        modalLinks.innerHTML += `
+          <a href="${data.demoUrl}" target="_blank" rel="noopener noreferrer" class="modal-link-demo"
+             aria-label="Ver demonstração de ${data.title} (abre em nova janela)">
+            ↗ Demo ao vivo
+          </a>`;
+      }
+      if (data.githubUrl && data.githubUrl !== '#') {
+        modalLinks.innerHTML += `
+          <a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="modal-link-github"
+             aria-label="Ver código de ${data.title} no GitHub (abre em nova janela)">
+            GitHub
+          </a>`;
+      }
+    }
+
+    overlay?.classList.add('open');
+    overlay?.removeAttribute('aria-hidden');
+    closeBtn?.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Fecha o modal
+  function closeModal() {
+    overlay?.classList.remove('open');
+    overlay?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lastFocused?.focus();
+  }
+
+  // Fechar ao clicar no X
+  closeBtn?.addEventListener('click', closeModal);
+
+  // Fechar ao clicar fora
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  // Fechar com Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay?.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  // Expõe a função globalmente para os cards chamarem
+  (window as any).openProjectModal = openModal;
+</script>

@@ -1,0 +1,99 @@
+/* ── TEMA ESCURO (padrão) ─────────────────── */
+:root {
+  /* Fundos */
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2433;
+  --border: #2a3444;
+
+  /* Texto — todos passam WCAG AA sobre --bg */
+  --text: #e8eaf0; /* 15.1:1 ✓ */
+  --muted: #9da8b8; /*  6.2:1 ✓ */
+
+  /* Accent — azul marinho da tua camisa */
+  --accent: #2d6a9f; /* botões (4.6:1 com #fff ✓) */
+  --accent-light: #a8c8e8; /* links, labels (8.1:1 ✓)  */
+  --accent-dark: #1e3a5f; /* hover, tag bg             */
+
+  /* Warm — tom de pele */
+  --warm: #c8a882; /* badges warm (5.8:1 ✓)    */
+
+  /* Status */
+  --online: #22c55e; /* badge disponível          */
+
+  /* Fontes de texto */
+  --mono: "Space Mono", monospace;
+  --sans: "Space Grotesk", sans-serif;
+
+  /* Tamanho de ecra */
+  --maxw: 1100px;
+
+  --gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* ── TEMA CLARO ───────────────────────────── */
+[data-theme="light"] {
+  /* Fundos */
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface2: #edf1f7;
+  --border: #d1d9e6;
+
+  /* Texto */
+  --text: #0d1117; /* 16.7:1 ✓ */
+  --muted: #4a6080; /*  5.1:1 ✓ */
+
+  /* Accent */
+  --accent: #2d6a9f; /* igual nos dois temas ✓    */
+  --accent-light: #1e4d7b; /* escurece no claro (8.4:1) */
+  --accent-dark: #dbeafe; /* tag bg claro              */
+
+  /* Warm */
+  --warm: #7a5c3a; /* escurece no claro (6.2:1) */
+
+  /* Status */
+  --online: #15803d;
+}
+
+/* ── PREFERÊNCIA DO SISTEMA (opcional) ────── */
+/* Remove se usares só o toggle manual        */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --surface2: #edf1f7;
+    --border: #d1d9e6;
+    --text: #0d1117;
+    --muted: #4a6080;
+    --accent-light: #1e4d7b;
+    --accent-dark: #dbeafe;
+    --warm: #7a5c3a;
+    --online: #15803d;
+  }
+}
+
+body {
+  /* Remove as margens padrão do navegador */
+  margin: 0;
+  padding: 0;
+
+  /* Cor de fundo da página */
+  background-color: var(--bg);
+
+  /* Fonte padrão para todo o texto */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Cor do texto padrão */
+  color: var(--text);
+}
+
+/* Layout Principal */
+.container {
+  max-width: var(--maxw); /* Define o limite máximo de largura */
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+section {
+  padding-block: var(--gap);
+}

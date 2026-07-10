@@ -1,0 +1,116 @@
+---
+import {
+  Globe,
+  FileText,
+  AppWindow,
+  Plug,
+  Gauge,
+  Wrench
+} from 'lucide-astro';
+
+type LucideIcon = (props: { size?: number; color?: string; strokeWidth?: number }) => any;
+
+interface Service {
+  title: string;
+  desc: string;
+  Icon: LucideIcon;
+}
+
+const services: Service[] = [
+  {
+    title: 'Desenvolvimento Web',
+    desc: 'Sites e aplicações web modernas, rápidas e responsivas. Do design ao deploy com React e Next.js, otimizadas para performance e acessibilidade.',
+    Icon: Globe,
+  },
+  {
+    title: 'Landing Pages',
+    desc: 'Páginas de apresentação rápidas e otimizadas para conversão, com foco em SEO, performance e design responsivo.',
+    Icon: FileText,
+  },
+  {
+    title: 'Plataformas Personalizadas',
+    desc: 'Aplicações web à medida — dashboards, sistemas de gestão e portais B2B com React, Node.js e base de dados.',
+    Icon: AppWindow,
+  },
+  {
+    title: 'APIs & Integrações',
+    desc: 'APIs REST, integrações com serviços externos — pagamentos via Stripe, email, autenticação e webhooks. Documentação incluída.',
+    Icon: Plug,
+  },
+  {
+    title: 'Otimização de Performance',
+    desc: 'Auditoria e otimização de sites existentes — Lighthouse, Core Web Vitals, SEO técnico e acessibilidade. Resultados mensuráveis.',
+    Icon: Gauge,
+  },
+  {
+    title: 'Manutenção & Suporte',
+    desc: 'Atualizações, correções, novas funcionalidades e suporte técnico contínuo para o teu projeto web. Disponibilidade garantida.',
+    Icon: Wrench,
+  },
+];
+---
+
+<section id="servicos" aria-labelledby="servicos-h2">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="servicos-h2">
+        <span class="label">Serviços</span>
+        Como posso ajudar
+      </h2>
+      <p>Trabalho em projetos isolados ou como membro externo da tua equipa de produto.</p>
+    </div>
+
+    <ul class="services-grid" role="list">
+      {services.map(({ title, desc, Icon }) => (
+        <li class="service-card">
+          <div class="service-icon">
+            <!-- Ícone decorativo — alt="" correto para acessibilidade -->
+            <Icon size={24} />
+          </div>
+          <h3 class="service-title">{title}</h3>
+          <p class="service-desc">{desc}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+
+  .section-header {
+    text-align: center;
+  }
+
+  .label {
+    display: block; /* era flex — muda para block para ficar em linha própria */
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.72rem; /* ← força o tamanho, não herda do h2 */
+    font-weight: 400;
+    color: var(--accent-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .services-grid {
+    list-style: none; /* ← adiciona isto */
+    padding: 0;  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 2rem;
+  }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: rgba(124,111,247,.12);
+    border-radius: 10px;
+    display: grid; place-items: center;
+    margin-bottom: 1rem;
+  }
+  .service-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .65rem; }
+  .service-desc  { font-size: .875rem; color: var(--muted); }
+
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+</style>

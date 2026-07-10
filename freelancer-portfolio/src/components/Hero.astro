@@ -1,0 +1,353 @@
+---
+// src/components/Hero.astro
+// Importa a Image do Astro — gera automaticamente WebP, srcset e lazy/eager
+import { Image } from "astro:assets";
+
+/*
+  ── FOTO DE PERFIL (AVATAR HERO — ELEMENTO LCP) ─────────────────────────
+  1. Coloca a tua foto em: src/assets/images/avatar.jpg  (ou .png / .webp)
+  2. Descomenta a linha do import abaixo
+  3. Substitui o <img> manual pelo componente <Image> do Astro
+  4. O Astro trata automaticamente de:
+       • Converter para WebP/AVIF
+       • Gerar width + height corretos (evita CLS)
+       • Aplicar loading="eager" se passares loading="eager"
+       • Gerar srcset responsivo
+  ─────────────────────────────────────────────────────────────────────────
+*/
+
+import avatar from "@/assets/Me.jpeg";
+import PlatformBadges from "./PlatformBadges.astro";
+---
+
+<section id="inicio" aria-labelledby="hero-h1">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Texto -->
+      <div class="hero-text-group">
+        <p class="hero-eyebrow" aria-hidden="true">
+          Full Stack Developer · Freelancer
+        </p>
+        <h1 id="hero-h1">
+          Transformo ideias em <br />
+          <em>produtos digitais</em>!
+        </h1>
+        <p class="hero-sub">
+          Entrego aplicações rápidas, acessíveis e
+          fáceis de manter — sem depender de uma equipa.
+        </p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn-cta">Ver projetos</a>
+          <a href="#contato" class="btn-outline">Contratar</a>
+        </div>
+      </div>
+
+      <!-- Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring" aria-hidden="true"></div>
+
+        <!--
+          ── OPÇÃO A — Com foto real (recomendado) ─────────────────────
+          Descomenta o bloco abaixo e comenta o <img> do placeholder.
+          O componente <Image> do Astro aplica automaticamente:
+            • loading="eager" + fetchpriority="high" (elemento LCP)
+            • width + height (sem CLS)
+            • conversão para WebP
+            • srcset responsivo
+
+          <Image
+            src={avatarSrc}
+            alt="Foto de perfil de Henrique Oliveira, Full Stack Developer"
+            width={260}
+            height={260}
+            loading="eager"
+            fetchpriority="high"
+            class="avatar-img"
+          />
+          ─────────────────────────────────────────────────────────────
+
+          ── OPÇÃO B — Placeholder SVG (enquanto não tens foto) ────────
+        -->
+        <Image
+          src={avatar}
+          alt="Foto de perfil de Henrique Oliveira, Full Stack Developer"
+          width={360}
+          height={360}
+          loading="eager"
+          fetchpriority="high"
+          class="avatar-img"
+        />
+        <!-- <img
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236358e8'/%3E%3Cstop offset='1' stop-color='%23c4b5fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='130' cy='130' r='130' fill='%2313131a'/%3E%3Ccircle cx='130' cy='105' r='48' fill='url(%23g)'/%3E%3Cellipse cx='130' cy='220' rx='80' ry='55' fill='url(%23g)'/%3E%3Ctext x='130' y='118' text-anchor='middle' font-family='monospace' font-size='40' font-weight='bold' fill='%230a0a0f'%3EJS%3C/text%3E%3C/svg%3E"
+          alt="Foto de perfil de Henrique Oliveira, Full Stack Developer"
+          width="260"
+          height="260"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="avatar-img"
+        /> -->
+
+        <div
+          id="status-badge"
+          class="avatar-badge"
+          aria-label="Status de disponibilidade"
+        >
+          <span class="status-dot"></span>
+          <span class="status-text">A verificar...</span>
+        </div>
+      </div>
+    </div>
+    <!-- <PlatformBadges /> -->
+  </div>
+
+</section>
+
+<style>
+  #inicio {
+    padding-block: clamp(4rem, 10vw, 12rem);
+    height: 100%;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  #hero-h1 {
+    margin-top: 0;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding-bottom: none;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsivo: cresce com o ecrã */
+    /* line-height: 1.1; */
+    margin-bottom: 0;
+    color: var(--text, #ffffff);
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(
+      --accent,
+      #6358e8
+    ); /* Dá uma cor diferente ao texto em itálico */
+  }
+
+  .hero-sub {
+    color: #9090aa;
+    max-width: 46ch;
+    margin-bottom: 2rem;
+  } /* 5.2:1 ✓ */
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-cta,
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: var(--r, 8px);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  /* Botão Principal */
+  .btn-cta {
+    background-color: var(--accent);
+    color: #ffffff;
+    border: 1px solid var(--accent);
+  }
+
+  .btn-cta:hover {
+    background-color: transparent;
+    color: var(--accent);
+  }
+
+  /* Botão Secundário */
+  .btn-outline {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border, #333);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Avatar */
+  .avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+  }
+
+  .avatar-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    object-fit: cover;
+  }
+
+  .avatar-ring {
+    position: absolute;
+    inset: -8px;
+    width: calc(100% + 16px); /* ← adiciona isto */
+    height: calc(100% + 16px); /* ← e isto */
+    border-radius: 50%;
+    border: 2px dashed rgba(124, 111, 247, 0.3);
+    animation: spin 20s linear infinite;
+    top: -8px; /* ← posiciona correctamente */
+    left: -8px;
+  }
+
+  .avatar-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 0.3rem 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--accent2);
+    white-space: nowrap;
+
+    /* Adicionado flexbox para alinhar a bolinha e o texto */
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* A bolinha de status base */
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #9090aa; /* Cor neutra enquanto carrega */
+  }
+
+  /* --- CLASSES DINÂMICAS QUE O JS VAI APLICAR --- */
+
+  /* Verde quando online */
+  .avatar-badge.is-online .status-dot {
+    background-color: #22c55e;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.4); /* Brilho extra, opcional */
+  }
+
+  /* Vermelho quando offline */
+  .avatar-badge.is-offline .status-dot {
+    background-color: #ef4444;
+  }
+  .avatar-badge.is-offline .status-text {
+    color: #ef4444; /* Podes pintar o texto de vermelho também, se quiseres */
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      padding-top: 1.5rem;
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .hero-sub {
+    margin-inline: auto;
+  }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .avatar-wrap {
+      width: 220px;
+      height: 220px;
+      margin-inline: auto;
+    }
+
+    .avatar-img {
+      width: 220px;
+      height: 220px;
+    }
+
+    /* o ring acompanha automaticamente com calc() */
+
+    .avatar-badge {
+      right: 16px;
+      font-size: 0.65rem;
+      padding: 0.25rem 0.6rem;
+    }
+  }
+</style>
+
+<script>
+function updateAvailability() {
+    const badge = document.getElementById("status-badge");
+    const textEl = badge?.querySelector(".status-text");
+
+    if (!badge || !textEl) return;
+
+    const portugalTimeString = new Date().toLocaleString("en-US", {
+      timeZone: "Europe/Lisbon",
+    });
+    const portugalDate = new Date(portugalTimeString);
+
+    const month = portugalDate.getMonth(); // Julho é o mês 6
+    const day = portugalDate.getDate();
+    const hour = portugalDate.getHours();
+
+    // Limpa as classes
+    badge.classList.remove("is-online", "is-offline");
+
+    // 1. Fase de espera: Se for antes de Julho (mês < 6) ou se for Julho mas antes do dia 20
+    const isBeforeStart = month < 6 || (month === 6 && day < 20);
+
+    if (isBeforeStart) {
+      badge.classList.add("is-offline"); 
+      textEl.textContent = "Começo a 20 Jul";
+      return; 
+    }
+
+    // 2. Fase ativa: A partir de 20 de Julho
+    // Manhã: 9h às 12h59 | Tarde: 14h às 17h59
+    const isWorkingHour = (hour >= 9 && hour < 13) || (hour >= 14 && hour < 18);
+
+    if (isWorkingHour) {
+      badge.classList.add("is-online");
+      textEl.textContent = "Disponível";
+    } else {
+      badge.classList.add("is-offline");
+      textEl.textContent = "Indisponível";
+    }
+  }
+
+  updateAvailability();
+  setInterval(updateAvailability, 60000);
+</script>

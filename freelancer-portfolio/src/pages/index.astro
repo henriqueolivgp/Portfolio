@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/Hero.astro";
+import Stats from "@/components/Stats.astro";
+import About from "@/components/About.astro";
+import Footer from "@/components/Footer.astro";
+import Contact from "@/components/Contact.astro";
+import Projects from "@/components/Projects.astro";
+import Services from "@/components/Services.astro";
+import ScrollUpButton from "@/components/ScrollUpButton.astro";
+// import Testemunhos from "@/components/Testemunhos.astro";
+---
+
+<Layout>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <Hero />
+    <Stats />
+    <About />
+    <Projects />
+    <Services />
+    <Contact />
+    <ScrollUpButton />
+  </main>
+  <footer>
+    <Footer />
+  </footer>
+</Layout>

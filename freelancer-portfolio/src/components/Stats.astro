@@ -1,0 +1,91 @@
+---
+// src/components/Stats.astro
+// const stats = [
+//   { num: '47+', label: 'Projetos entregues' },
+//   { num: '6',   label: 'Anos de experiência' },
+//   { num: '98%', label: 'Clientes satisfeitos' },
+//   { num: '24h', label: 'Tempo médio de resposta' },
+// ];
+
+// src/components/Stats.astro
+const stats = [
+  { num: "5+", label: "Projetos em produção" },
+  { num: "Full", label: "Stack Developer" },
+  { num: "96+", label: "Lighthouse Score" },
+  { num: "24h", label: "Tempo de resposta" },
+];
+---
+
+<section id="stats" aria-label="Estatísticas de carreira">
+  <ul class="stats-grid" role="list">
+    {
+      stats.map(({ num, label }) => (
+        <li class="stat" role="listitem">
+          <div class="stat-num">{num}</div>
+          <div class="stat-label">{label}</div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  #stats {
+    padding-block: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Em conjunto com o fundo abaixo, cria as linhas verticais perfeitas */
+    background: var(--border); 
+    list-style: none; /* Garante que não aparecem pontos de lista */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .stat {
+    background: var(--bg);
+    padding: 2rem 1.5rem; /* Aumentado significativamente para dar a altura da imagem */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-num {
+    font-family: var(--mono);
+    font-size: clamp(2rem,3vw,2.20rem); /* Tamanho base maior para mais impacto */
+    font-weight: 700;
+    color: var(--accent2);
+    line-height: 1;
+    margin-bottom: 0.75rem; /* Espaço ligeiramente maior entre número e texto */
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* Breakpoint ajustado para 900px em vez de 600px para evitar que os blocos fiquem muito apertados em tablets */
+  @media (max-width: 900px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+      padding: 2.5rem 1rem; /* Reduz a altura mas mantém respiro no mobile */
+    }
+
+    .stat-num {
+      font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    .stat-label {
+      font-size: 0.75rem; 
+    }
+  }
+</style>

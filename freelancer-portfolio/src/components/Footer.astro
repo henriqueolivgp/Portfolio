@@ -1,0 +1,65 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#"
+        ><img
+          class="footer-logo"
+          src="/Logo.webp"
+          alt="Logotipo do Portefólio"
+        /></a
+      >
+
+      <span>© {year} Henrique Oliveira · Figueira da Foz, Portugal 🇵🇹</span>
+      <span
+        >Feito com <a
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener noreferrer">Astro</a
+        > · Deploy na Vercel</span
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding-block: 2rem;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.83rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    width: 34px;
+    color: var(--accent2);
+  }
+  footer a {
+    color: var(--accent2);
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  footer a:hover {
+    opacity: 0.75;
+  }
+  @media (max-width: 900px) {
+    .footer-inner {
+      text-align: center;
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+</style>

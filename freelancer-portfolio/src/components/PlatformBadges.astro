@@ -1,0 +1,89 @@
+---
+// src/components/PlatformBadges.astro
+const platforms = [
+  {
+    name: 'Zaask',
+    url: 'https://www.zaask.pt/user/henriqueboliveira',
+    logo: 'Z',
+    bg: '#ff6b35',
+    metric: '★★★★★',
+    stars: true,
+  },
+];
+---
+
+<div class="badges-wrap" aria-label="Perfis em plataformas freelancer">
+  {platforms.map((p) => (
+    <a href={p.url} target="_blank" rel="noopener noreferrer" class="badge" aria-label={`Ver perfil no ${p.name} (abre em nova janela)`}>
+      <div class="badge-logo" style={`background:${p.bg}`}>
+        {p.logo}
+      </div>
+      <div class="badge-info">
+        <span class="badge-name">{p.name}</span>
+        <span class={p.stars ? 'badge-metric stars' : 'badge-metric'}>{p.metric}</span>
+      </div>
+    </a>
+  ))}
+</div>
+
+<style>
+  .badges-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: center;
+    margin-top: 1.25rem;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: .6rem .9rem;
+    text-decoration: none;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .badge:hover {
+    border-color: var(--accent2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  }
+  .badge:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  .badge-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .badge-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .badge-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .badge-metric {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .badge-metric.stars {
+    color: #f5a623;
+    letter-spacing: .5px;
+  }
+</style>

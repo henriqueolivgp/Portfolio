@@ -3,6 +3,8 @@ import { TypewriterText } from "../utils/tipeWriter";
 import { Me } from "../components/introduction/me";
 import { Github, Linkedin } from "lucide-react";
 import ShinyText from "../utils/ShinyText";
+import { logos } from "../data/logos";
+import LogoLoop from "../utils/LogoLoop";
 
 interface IntroductionProps extends ComponentProps<"div"> {}
 
@@ -26,70 +28,73 @@ export const Introduction = (props: IntroductionProps) => {
         <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/100 to-black/0 pointer-events-none"></div>
 
         <div className="container mx-auto space-y-2 parallax h-screen flex justify-center items-center w-full">
-            <div className="flex w-full lg:p-10 xs:flex-wrap gap-4 lg:justify-between xs:justify-center items-center">
-              <div className="grid md:grid-cols-2 xs:grid-cols-1 w-full  md:w-1/2 bg-transparent font-normal">
-                <div className="flex flex-wrap xs:items-center xs:justify-center">
-                  <section className="flex flex-col">
-                    <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
-                      Hi,
-                    </p>
-                    <p className=" md:mb-2 tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
-                      I’m Henrique Oliveira,
-                    </p>
-                    <span className="tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
-                      <TypewriterText text="Full-Stack Developer." />
-                    </span>
-                  </section>
-                  <div className="flex gap-4 ">
-                    <a
-                      href="https://www.linkedin.com/in/henrique-oliveira-gp"
-                      target="_blank"
-                      rel="noopener noreferrer"
+          <div className="flex w-full lg:p-10 xs:flex-wrap gap-4 lg:justify-between xs:justify-center items-center">
+            <div className="grid md:grid-cols-2 xs:grid-cols-1 w-full  md:w-1/2 bg-transparent font-normal">
+              <div className="flex flex-wrap xs:items-center xs:justify-center">
+                <section className="flex flex-col">
+                  <p className="md:mb-2 md:tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
+                    Hi,
+                  </p>
+                  <p className=" md:mb-2 tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
+                    I’m Henrique Oliveira,
+                  </p>
+                  <span className="tracking-tight text-gray-300  text-4xl xl:text-4xl xs:text-2xl lg:text-3xl ">
+                    <TypewriterText text="Full-Stack Developer." />
+                  </span>
+                </section>
+                <div className="flex gap-4 ">
+                  <a
+                    href="https://www.linkedin.com/in/henrique-oliveira-gp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      type="button"
+                      className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
                     >
-                      <button
-                        type="button"
-                        className=" flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4"
-                      >
-                        <Linkedin />
+                      <Linkedin />
 
-                        <ShinyText
-                          text="LinkedIn"
-                          disabled={false}
-                          speed={3}
-                          className="custom-class"
-                        />
-                      </button>
-                    </a>
-                    <a
-                      href="https://github.com/henriqueolivgp"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      <ShinyText
+                        text="LinkedIn"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class"
+                      />
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/henriqueolivgp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button
+                      type="button"
+                      className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
                     >
-                      <button
-                        type="button"
-                        className="flex items-center gap-x-2 text-gray-200 border-gray-400 border-2 md:text-lg xs:text-sm bg-slate-950 hover:bg-slate-800 font-medium rounded-lg md:px-5 xs:p-2 py-2.5 mt-4 "
-                      >
-                        <Github size={24} />
+                      <Github size={24} />
 
-                        <ShinyText
-                          text="Github"
-                          disabled={false}
-                          speed={3}
-                          className="custom-class"
-                        />
-                      </button>
-                    </a>
-                  </div>
+                      <ShinyText
+                        text="Github"
+                        disabled={false}
+                        speed={3}
+                        className="custom-class"
+                      />
+                    </button>
+                  </a>
                 </div>
               </div>
-              {}
-              <section className="flex lg:w-1/3 sm:w-1/2 xs:w-full">
-                <Me />
-              </section>
             </div>
+            {}
+            <section className="flex lg:w-1/3 sm:w-1/2 xs:w-full">
+              <Me />
+            </section>
+          </div>
+          {/* Tratar do loop de logos !!! */}
+          <div className="flex bottom-0">
+            <LogoLoop logos={logos} gap={90}  />
           </div>
         </div>
-      
+      </div>
     </>
   );
 };

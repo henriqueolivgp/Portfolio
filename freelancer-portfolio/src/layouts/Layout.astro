@@ -11,9 +11,9 @@ interface Props {
 }
 
 const {
-  title = "Henrique Oliveira — Full Stack Developer Freelancer",
+  title = "Henrique Oliveira — Desenvolvedor Full Stack Freelancer",
   description = "Portfólio de Henrique Oliveira — Full Stack Developer freelancer especializado em React, Node.js e arquiteturas modernas. Disponível para projetos remotos.",
-  ogImage = "/og-image.webp", // coloca a tua imagem OG em public/og-image.webp
+  ogImage = "/Logo.webp", // coloca a tua imagem OG em public/og-image.webp
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -27,8 +27,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0a0a0f" />
 
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- SEO Canónico -->
     <link rel="canonical" href={canonicalURL} />

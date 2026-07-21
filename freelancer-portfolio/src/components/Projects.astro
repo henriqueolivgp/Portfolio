@@ -38,27 +38,66 @@ interface Project {
 
 const projects: Project[] = [
   // ── PROJETOS ──────────────────────────────────────────────
-  {
-    title: "Triador Saúde PT",
-    desc: "Plataforma que ajuda utilizadores portugueses a encontrar a alternativa de saúde mais rápida e adequada na sua zona — evitando idas desnecessárias às urgências.",
-    tags: ["Next.js", "Vercel", "Maps API"],
-    demoUrl: "https://triador-saude-pt.vercel.app/",
-    githubUrl: "https://github.com/henriqueolivgp/Triador-Saude-PT",
-    screenshot: triadorSrc,
-    screenshotAlt:
-      "Screenshot do Triador Saúde PT mostrando formulário de pesquisa por sintoma e mapa de unidades de saúde",
-    category: "projetos",
-  },
   // {
-  //   title: 'Outro Projecto',
-  //   desc: 'Descrição.',
-  //   tags: ['React', 'Node.js'],
+  //   title: "API de um Imobiliario",
+  //   desc: "API construída para o setor imobiliário focada em regras de negócio sólidas e gestão eficiente de bases de dados para aplicações comerciais.",
+  //   tags: ["Node.js", "TypeScript", "API REST"],
+  //   demoUrl: "", 
+  //   githubUrl: "https://github.com/henriqueolivgp/Real-Estate-API",
+  //   screenshot: realEstateSrc, 
+  //   screenshotAlt: "Estrutura e documentação representativa da Real Estate API",
+  //   category: "projetos",
+  // },
+  // {
+  //   title: "CyberReports",
+  //   desc: "Plataforma de relatórios e denúncias de cibersegurança reestruturada para garantir uma gestão segura de dados e submissão de formulários complexos.",
+  //   tags: ["Full Stack", "Segurança", "Gestão de Dados"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/henriqueolivgp/CyberReports",
+  //   screenshot: cyberReportsSrc,
+  //   screenshotAlt: "Screenshot da interface do dashboard e relatórios da plataforma CyberReports",
+  //   category: "projetos",
+  // },
+  // {
+  //   title: "Techquiz V2",
+  //   desc: "Aplicação interativa de quizzes pensada para plataformas de e-learning ou onboarding, com foco em design dinâmico e gestão de estado eficiente.",
+  //   tags: ["React", "Frontend", "UI/UX"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/henriqueolivgp/Techquiz_V2",
+  //   screenshot: techquizSrc,
+  //   screenshotAlt: "Screenshot da interface de perguntas e respostas do Techquiz V2",
+  //   category: "projetos",
+  // },
+  // {
+  //   title: "CineShard",
+  //   desc: "Projeto focado em sistemas distribuídos, demonstrando conhecimentos avançados em arquitetura de software e engenharia backend de alta complexidade.",
+  //   tags: ["Sistemas Distribuídos", "Backend", "Arquitetura"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/henriqueolivgp/CineShard",
+  //   screenshot: cineShardSrc,
+  //   screenshotAlt: "Screenshot representativo do sistema e estrutura do CineShard",
+  //   category: "projetos",
+  // },
+  // {
+  //   title: "Deliver App (NLW)",
+  //   desc: "Aplicação de delivery focada na experiência do utilizador mobile, construída com base em tecnologias e stacks modernas.",
+  //   tags: ["React Native", "TypeScript", "Mobile"],
+  //   demoUrl: "",
+  //   githubUrl: "https://github.com/henriqueolivgp/NLW-Deliver-app",
+  //   screenshot: deliverAppSrc,
+  //   screenshotAlt: "Screenshot da interface mobile da aplicação de delivery",
+  //   category: "projetos",
+  // },
+  // {
+  //   title: 'Nome do Novo Projeto',
+  //   desc: 'Descrição do novo projeto focada no valor de negócio.',
+  //   tags: ['Tecnologia 1', 'Tecnologia 2'],
   //   demoUrl: 'https://...',
   //   githubUrl: 'https://github.com/...',
-  //   screenshot: outro,
-  //   screenshotAlt: 'Screenshot de ...',
+  //   screenshot: novoProjetoSrc,
+  //   screenshotAlt: 'Screenshot descritiva do novo projeto',
   //   category: 'projetos',
-  // },
+  // }
 
   // ── LANDING PAGES ─────────────────────────────────────────
   {
@@ -75,17 +114,17 @@ const projects: Project[] = [
     title: "Landing Page — Loja de Cookies",
     desc: "Landing page para restaurante com menu, galeria e reservas online.",
     tags: ["Astro", "CSS"],
-    demoUrl: "https://...",
+    demoUrl: "https://cookiestore.henriqueoliv.pt/",
     githubUrl: "#",
     screenshot: LandingPageImages.cookieStore.print1,
     screenshotAlt: "Screenshot da landing page do restaurante",
     category: "landing-pages",
   },
   {
-    title: "Landing Page — Loja de Cookies",
+    title: "Landing Page — Loja de Games",
     desc: "Landing page para restaurante com menu, galeria e reservas online.",
     tags: ["Astro", "CSS"],
-    demoUrl: "https://...",
+    demoUrl: "https://game-store.henriqueoliv.pt/",
     githubUrl: "#",
     screenshot: LandingPageImages.gameStore.print1,
     screenshotAlt: "Screenshot da landing page do restaurante",
@@ -383,6 +422,7 @@ const sectionDescs: Record<Category, string> = {
 
   .project-trigger {
     display: flex;
+    flex: 1;
     flex-direction: column;
     width: 100%;
     background: none;
@@ -458,6 +498,11 @@ const sectionDescs: Record<Category, string> = {
     font-weight: 700;
     font-size: 1rem;
     color: var(--text);
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .project-desc {
     font-size: 0.875rem;
@@ -465,6 +510,7 @@ const sectionDescs: Record<Category, string> = {
     flex: 1;
   }
   .project-tags {
+    color: var(--text);
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;

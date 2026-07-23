@@ -33,13 +33,17 @@ import PlatformBadges from "./PlatformBadges.astro";
           <em>produtos digitais</em>!
         </h1>
         <p class="hero-sub">
-          Entrego aplicações rápidas, acessíveis e
-          fáceis de manter — sem depender de uma equipa.
+          Entrego aplicações rápidas, acessíveis e fáceis de manter — sem
+          depender de uma equipa.
         </p>
         <div class="hero-actions">
           <a href="#projetos" class="btn-cta">Ver projetos</a>
           <a href="#contato" class="btn-outline">Contratar</a>
         </div>
+        <!-- Badges aqui — separadas dos botões -->
+        <!-- <div class="hero-badges">
+          <PlatformBadges />
+        </div> -->
       </div>
 
       <!-- Avatar -->
@@ -98,9 +102,7 @@ import PlatformBadges from "./PlatformBadges.astro";
         </div>
       </div>
     </div>
-    <!-- <PlatformBadges /> -->
   </div>
-
 </section>
 
 <style>
@@ -154,6 +156,12 @@ import PlatformBadges from "./PlatformBadges.astro";
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  .hero-badges {
+    margin-top: 2rem; /* espaço generoso acima das badges */
+    /* padding-top: 1.5rem; respiro extra */
+    border-top: 1px solid var(--border); /* linha separadora subtil */
   }
 
   .btn-cta,
@@ -279,10 +287,15 @@ import PlatformBadges from "./PlatformBadges.astro";
     }
 
     .hero-sub {
-    margin-inline: auto;
-  }
+      margin-inline: auto;
+    }
 
     .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-badges {
+      display: flex;
       justify-content: center;
     }
 
@@ -308,7 +321,7 @@ import PlatformBadges from "./PlatformBadges.astro";
 </style>
 
 <script>
-function updateAvailability() {
+  function updateAvailability() {
     const badge = document.getElementById("status-badge");
     const textEl = badge?.querySelector(".status-text");
 
@@ -327,12 +340,12 @@ function updateAvailability() {
     badge.classList.remove("is-online", "is-offline");
 
     // 1. Fase de espera: Se for antes de Julho (mês < 6) ou se for Julho mas antes do dia 20
-    const isBeforeStart = month < 6 || (month === 6 && day < 20);
+    const isBeforeStart = month < 6 || (month === 6 && day < 30);
 
     if (isBeforeStart) {
-      badge.classList.add("is-offline"); 
-      textEl.textContent = "Começo a 20 Jul";
-      return; 
+      badge.classList.add("is-offline");
+      textEl.textContent = "Começo a 30 Jul";
+      return;
     }
 
     // 2. Fase ativa: A partir de 20 de Julho

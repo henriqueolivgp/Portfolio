@@ -1,12 +1,12 @@
 ---
 // src/components/Projects.astro
 import { Image } from "astro:assets";
-import triadorSrc from "../assets/projects/Triador-Saude.png";
+import realEstateSrc from "../assets/projects/real-state-api/insomnia.png";
 import cakeStore1 from "../assets/projects/cake-store/print1.png";
 import cakeStore2 from "../assets/projects/cake-store/print2.png";
 import cookieStore1 from "../assets/projects/cookie-store/print1.png";
 import gameStore1 from "../assets/projects/game-store/print1.png";
-// import landing2Src from '../assets/projects/landing2.png';
+import triadorSaudeSrc from '../assets/projects/triador-de-saude/home.png';
 
 type ScreenshotType = ImageMetadata | string;
 type Category = "projetos" | "landing-pages";
@@ -38,16 +38,16 @@ interface Project {
 
 const projects: Project[] = [
   // ── PROJETOS ──────────────────────────────────────────────
-  // {
-  //   title: "API de um Imobiliario",
-  //   desc: "API construída para o setor imobiliário focada em regras de negócio sólidas e gestão eficiente de bases de dados para aplicações comerciais.",
-  //   tags: ["Node.js", "TypeScript", "API REST"],
-  //   demoUrl: "", 
-  //   githubUrl: "https://github.com/henriqueolivgp/Real-Estate-API",
-  //   screenshot: realEstateSrc, 
-  //   screenshotAlt: "Estrutura e documentação representativa da Real Estate API",
-  //   category: "projetos",
-  // },
+  {
+    title: "API de um Imobiliario",
+    desc: "API construída para o setor imobiliário focada em regras de negócio sólidas e gestão eficiente de bases de dados para aplicações comerciais.",
+    tags: ["Node.js", "TypeScript", "API REST"],
+    demoUrl: "", 
+    githubUrl: "https://github.com/henriqueolivgp/Real-Estate-API",
+    screenshot: realEstateSrc, 
+    screenshotAlt: "Estrutura e documentação representativa da Real Estate API",
+    category: "projetos",
+  },
   // {
   //   title: "CyberReports",
   //   desc: "Plataforma de relatórios e denúncias de cibersegurança reestruturada para garantir uma gestão segura de dados e submissão de formulários complexos.",
@@ -88,16 +88,16 @@ const projects: Project[] = [
   //   screenshotAlt: "Screenshot da interface mobile da aplicação de delivery",
   //   category: "projetos",
   // },
-  // {
-  //   title: 'Nome do Novo Projeto',
-  //   desc: 'Descrição do novo projeto focada no valor de negócio.',
-  //   tags: ['Tecnologia 1', 'Tecnologia 2'],
-  //   demoUrl: 'https://...',
-  //   githubUrl: 'https://github.com/...',
-  //   screenshot: novoProjetoSrc,
-  //   screenshotAlt: 'Screenshot descritiva do novo projeto',
-  //   category: 'projetos',
-  // }
+  {
+  title: 'Triador de Saúde',
+  desc: 'Sistema de triagem médica que prioriza o atendimento de pacientes com base na gravidade dos sintomas, otimizando o fluxo de trabalho clínico e garantindo uma resposta ágil para casos urgentes.',
+  tags: ['React', 'Node.js', 'TypeScript'], // Ajusta conforme a stack real que usaste
+  demoUrl: 'https://...', // Coloca o link do deploy se existir
+  githubUrl: 'https://github.com/henriqueolivgp/Triador-de-Saude',
+  screenshot: triadorSaudeSrc, // Lembra-te de importar a imagem com este nome no topo do ficheiro
+  screenshotAlt: 'Interface do sistema Triador de Saúde mostrando a avaliação e classificação de pacientes',
+  category: 'projetos',
+},
 
   // ── LANDING PAGES ─────────────────────────────────────────
   {

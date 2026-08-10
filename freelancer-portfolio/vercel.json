@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/projetos/gaming-store/:path*",
+      "destination": "https://gamingstore-217.pages.dev/:path*"
+    },
+    {
+      "source": "/projetos/projeto2/:path*",
+      "destination": "https://projeto2-xxxx.vercel.app/:path*"
+    }
+  ]
+}

@@ -62,6 +62,59 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Sitemap gerado pelo @astrojs/sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Henrique Oliveira",
+        "givenName": "Henrique",
+        "familyName": "Oliveira",
+        "alternateName": "henriqueoliv",
+        "jobTitle": "Fullstack Developer",
+        "description": "Fullstack Developer e Freelancer especializado no desenvolvimento de aplicações web modernas com React, Node.js e TypeScript.",
+        "url": "https://www.henriqueoliv.pt",
+        "email": "mailto:geral@henriqueoliv.pt",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Figueira da Foz",
+          "addressCountry": "PT"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/henrique-oliv",
+          "https://github.com/henriqueolivgp",
+          "https://www.instagram.com/henryolivgp/"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "Frontend Development",
+          "Backend Development",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "REST API",
+          "PostgreSQL",
+          "MongoDB",
+          "Git",
+          "Tailwind CSS",
+          "Search Engine Optimization (SEO)"
+        ],
+        "knowsLanguage": [
+          {
+            "@type": "Language",
+            "name": "Portuguese",
+            "alternateName": "pt"
+          }
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance",
+          "url": "https://www.henriqueoliv.pt"
+        }
+      }
+    </script>
   </head>
   <body class="body-style">
     <slot />

@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   // ─── Muda para o teu domínio real antes do deploy ───────────
-  site: 'https://henriqueoliv.pt',
+  site: 'https://www.henriqueoliv.pt',
 
   // Static export — zero JS no cliente por padrão
   output: 'static',

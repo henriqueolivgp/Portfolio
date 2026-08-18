@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   // ─── Muda para o teu domínio real antes do deploy ───────────
@@ -9,9 +11,7 @@ export default defineConfig({
   // Static export — zero JS no cliente por padrão
   output: 'static',
 
-  integrations: [
-   // sitemap(), // gera sitemap.xml automaticamente → +SEO
-  ],
+  integrations: [sitemap()],
 
   image: {
     // Astro converte automaticamente para WebP/AVIF e gera srcset
@@ -19,4 +19,3 @@ export default defineConfig({
     remotePatterns: [], // adiciona domínios externos se precisares
   },
 });
-

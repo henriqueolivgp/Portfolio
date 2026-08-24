@@ -1,11 +1,10 @@
 <!-- src/components/ThemeToggle.astro -->
 <button
-  class="theme-button"
-  id="theme-toggle"
+  class="theme-button theme-toggle"
   aria-label="Alternar entre tema escuro e claro"
   aria-pressed="false"
 >
-  <div class="theme-track" id="theme-track">
+  <div class="theme-track">
     <div class="star s1" aria-hidden="true"></div>
     <div class="star s2" aria-hidden="true"></div>
     <div class="star s3" aria-hidden="true"></div>
@@ -208,8 +207,10 @@
 
 <script>
   const root = document.documentElement;
-  const btn = document.getElementById("theme-toggle");
-  const track = document.getElementById("theme-track");
+
+  // Apanha TODOS os botões de tema na página
+  const buttons = document.querySelectorAll(".theme-toggle");
+  const tracks = document.querySelectorAll(".theme-track");
 
   const saved = localStorage.getItem("theme");
   const system = matchMedia("(prefers-color-scheme: light)").matches
@@ -218,21 +219,33 @@
   const theme = saved ?? system;
 
   root.setAttribute("data-theme", theme);
-  btn?.setAttribute("aria-pressed", String(theme === "light"));
+  buttons.forEach((btn) =>
+    btn.setAttribute("aria-pressed", String(theme === "light")),
+  );
 
-  btn?.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    btn.setAttribute("aria-pressed", String(next === "light"));
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const next =
+        root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
 
-    track?.classList.remove("pulse");
-    void track?.offsetWidth;
-    track?.classList.add("pulse");
-    track?.addEventListener(
-      "animationend",
-      () => track.classList.remove("pulse"),
-      { once: true },
-    );
+      // Atualiza todos os botões
+      buttons.forEach((b) =>
+        b.setAttribute("aria-pressed", String(next === "light")),
+      );
+
+      // Animação de pulse em todos os tracks
+      tracks.forEach((track) => {
+        track.classList.remove("pulse");
+        void (track as HTMLElement).offsetWidth;
+        track.classList.add("pulse");
+        track.addEventListener(
+          "animationend",
+          () => track.classList.remove("pulse"),
+          { once: true },
+        );
+      });
+    });
   });
 </script>

@@ -219,13 +219,11 @@ import PlatformBadges from "./PlatformBadges.astro";
   .avatar-ring {
     position: absolute;
     inset: -8px;
-    width: calc(100% + 16px); /* ← adiciona isto */
-    height: calc(100% + 16px); /* ← e isto */
     border-radius: 50%;
     border: 2px dashed rgba(124, 111, 247, 0.3);
     animation: spin 20s linear infinite;
-    top: -8px; /* ← posiciona correctamente */
-    left: -8px;
+    will-change: transform;
+    transform: translateZ(0); /* força GPU compositing no Firefox */
   }
 
   .avatar-badge {
@@ -335,23 +333,21 @@ import PlatformBadges from "./PlatformBadges.astro";
     const month = portugalDate.getMonth(); // Julho é o mês 6
     const day = portugalDate.getDate();
     const hour = portugalDate.getHours();
+    const weekday = portugalDate.getDay(); // 0 = domingo &
 
     // Limpa as classes
     badge.classList.remove("is-online", "is-offline");
 
-    // 1. Fase de espera: Se for antes de Julho (mês < 6) ou se for Julho mas antes do dia 20
-    const isBeforeStart = month < 6 || (month === 6 && day < 30);
-
-    if (isBeforeStart) {
+    // 2. Fim de semana
+    const isWeekend = weekday === 0 || weekday === 6;
+    if (isWeekend) {
       badge.classList.add("is-offline");
-      textEl.textContent = "Começo a 30 Jul";
+      textEl.textContent = "Indisponível";
       return;
     }
 
-    // 2. Fase ativa: A partir de 20 de Julho
-    // Manhã: 9h às 12h59 | Tarde: 14h às 17h59
+    // 3. Fase ativa: dias úteis
     const isWorkingHour = (hour >= 9 && hour < 13) || (hour >= 14 && hour < 18);
-
     if (isWorkingHour) {
       badge.classList.add("is-online");
       textEl.textContent = "Disponível";

@@ -1,0 +1,12 @@
+{
+  "apis": [
+    {
+      "name": "Portfolio API",
+      "description": "API catalog for henriqueoliv.pt — portfolio site services and documentation",
+      "url": "https://www.henriqueoliv.pt/openapi.json",
+      "documentation": "https://www.henriqueoliv.pt/docs/api"
+    }
+  ],
+  "catalog_created": "2026-01-01T00:00:00Z",
+  "spec": "https://www.rfc-editor.org/rfc/rfc9727#section-3"
+}

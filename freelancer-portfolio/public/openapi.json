@@ -1,0 +1,38 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "henriqueoliv.pt Portfolio",
+    "description": "Service description for henriqueoliv.pt — freelance developer portfolio. This OpenAPI document is advertised via RFC 8288 Link headers (rel=service-desc / service-doc) for agent discovery.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Henrique Oliveira",
+      "url": "https://www.henriqueoliv.pt/#contacto"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.henriqueoliv.pt",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Homepage",
+        "description": "Portfolio homepage",
+        "responses": {
+          "200": {
+            "description": "HTML homepage",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

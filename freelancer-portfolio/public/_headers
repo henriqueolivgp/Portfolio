@@ -1,0 +1,18 @@
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json"
+  Link: </openapi.json>; rel="service-doc"; type="application/vnd.oai.openapi+json"
+  Vary: Accept
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json"
+  Link: </openapi.json>; rel="service-doc"; type="application/vnd.oai.openapi+json"
+  Vary: Accept
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Vary: Accept
+  x-markdown-tokens: 1321
+  Cache-Control: public, max-age=3600
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Vary: Accept

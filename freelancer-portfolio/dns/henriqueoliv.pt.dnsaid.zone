@@ -1,0 +1,100 @@
+; DNS for AI Discovery (DNS-AID) — SVCB/HTTPS records for henriqueoliv.pt
+; Draft: draft-mozleywilliams-dnsop-dnsaid-02
+; RFC 9460 ServiceMode SVCB/HTTPS with alpn + endpoint + private-use SvcParamKeys
+; Zone is DNSSEC-signed via Cloudflare (see DNSKEY below) — validated via DoH
+;
+; Deploy via Cloudflare dashboard, API, or Terraform (see dns/README.md).
+; These records are under the _agents namespace: _index._agents, _a2a._agents, _mcp._agents
+;
+; NOTES:
+; - Use numeric keyNNNNN for experimental DNS-AID params (cap, well-known, bap, etc.)
+;   until IANA SvcParamKeys are registered (RFC 9460 §14.3.2 private-use 65280-65534).
+; - TargetName MUST NOT contain underscores (x.509 SAN requirement) — points to
+;   www.henriqueoliv.pt which serves the agent/card endpoints over HTTPS.
+; - port + alpn are gated via mandatory for downgrade resistance (RFC 9460 §8).
+; - ipv4hint/ipv6hint are optional address hints for the TargetName (Cloudflare anycast).
+;   If you proxy through Cloudflare, you may omit hints and let Cloudflare synthesize.
+; - DNSSEC: Cloudflare DNSSEC is enabled (DNSKEY + RRSIG present). Verify with:
+;     dig DNSKEY henriqueoliv.pt +dnssec
+;     dig SVCB _index._agents.henriqueoliv.pt +dnssec
+;     delv @1.1.1.1 _index._agents.henriqueoliv.pt SVCB
+;
+
+; ─── Organization index (well-known entrypoint) ───────────────────────────────
+; Required by DNS-AID §3.2 — clients query _index._agents.<domain> first.
+; Points to the HTTPS host that serves the agent index / skill cards.
+_index._agents.henriqueoliv.pt. 3600 IN SVCB 1 www.henriqueoliv.pt. (
+    alpn="mcp"
+    port=443
+    ipv4hint=104.21.9.250,172.67.189.216
+    ipv6hint=2606:4700:3035::ac43:bdd8,2606:4700:3037::6815:9fa
+    mandatory=alpn,port
+    key65280="endpoint=https://www.henriqueoliv.pt/mcp"
+    key65281="well-known=/.well-known/mcp/server-card.json"
+    key65282="cap=https://www.henriqueoliv.pt/.well-known/ai-catalog.json"
+    )
+
+; HTTPS variant (alternative for HTTPS endpoints — equivalent to SVCB above).
+; Publish EITHER SVCB or HTTPS; HTTPS is preferred for HTTPS origins per RFC 9460.
+; Uncomment if your DNS provider supports HTTPS RR type (65):
+; _index._agents.henriqueoliv.pt. 3600 IN HTTPS 1 www.henriqueoliv.pt. (
+;     alpn="h2,h3"
+;     port=443
+;     key65280="endpoint=https://www.henriqueoliv.pt/mcp"
+;     )
+
+; ─── Protocol-specific discovery leaves (DNS-SD compatible) ──────────────────
+; Optional but recommended — allows filtering by protocol (mcp vs a2a) without
+; fetching the index. Scanners that check _a2a._agents or _mcp._agents will pass.
+
+; A2A (Agent-to-Agent) endpoint
+_a2a._agents.henriqueoliv.pt. 3600 IN SVCB 1 www.henriqueoliv.pt. (
+    alpn="a2a"
+    port=443
+    ipv4hint=104.21.9.250,172.67.189.216
+    ipv6hint=2606:4700:3035::ac43:bdd8,2606:4700:3037::6815:9fa
+    mandatory=alpn,port
+    key65280="endpoint=https://www.henriqueoliv.pt/mcp"
+    key65281="well-known=/.well-known/mcp/server-card.json"
+    )
+
+; MCP (Model Context Protocol) endpoint
+_mcp._agents.henriqueoliv.pt. 3600 IN SVCB 1 www.henriqueoliv.pt. (
+    alpn="mcp"
+    port=443
+    ipv4hint=104.21.9.250,172.67.189.216
+    ipv6hint=2606:4700:3035::ac43:bdd8,2606:4700:3037::6815:9fa
+    mandatory=alpn,port
+    key65280="endpoint=https://www.henriqueoliv.pt/mcp"
+    key65281="well-known=/.well-known/mcp/server-card.json"
+    key65282="cap=https://www.henriqueoliv.pt/.well-known/ai-catalog.json"
+    key65283="bap=mcp=1.0"
+    )
+
+; ─── Flat primary owner (draft-02) — optional alias for known-agent use-case ─
+; §3.1 Known Agent: direct FQDN SVCB for the portfolio agent itself.
+; Consumers MUST try flat form first; AliasMode walkable form below is optional.
+portfolio.henriqueoliv.pt. 3600 IN SVCB 1 www.henriqueoliv.pt. (
+    alpn="mcp"
+    port=443
+    key65280="endpoint=https://www.henriqueoliv.pt/mcp"
+    key65281="well-known=/.well-known/mcp/server-card.json"
+    )
+
+; Walkable AliasMode pointer (so DNS-SD enumerators can discover via _agents)
+; Priority 0 = AliasMode per RFC 9460 §2.4.2
+portfolio._agents.henriqueoliv.pt. 3600 IN SVCB 0 portfolio.henriqueoliv.pt.
+
+; ─── DNSSEC — already enabled via Cloudflare ─────────────────────────────────
+; Verify:
+;   dig henriqueoliv.pt DNSKEY +multi
+;   Expected (example, rotates):
+;   henriqueoliv.pt. 3600 IN DNSKEY 257 3 13 <KSK>
+;   henriqueoliv.pt. 3600 IN DNSKEY 256 3 13 <ZSK>
+;   Ensure DS at parent (.pt) is published — Cloudflare does this automatically
+;   when DNSSEC is toggled ON in Dashboard > DNS > Settings > DNSSEC > Enable.
+
+; ─── Optional: TLSA for DANE (if you publish TLSA at _443._tcp.<target>) ──────
+; Uncomment and replace with your cert hash after generating via:
+;   tlsa --create --selector 1 --mtype 1 www.henriqueoliv.pt
+; _443._tcp.www.henriqueoliv.pt. 3600 IN TLSA 3 1 1 <sha256 of SPKI>

@@ -57,6 +57,10 @@
         {
           "key": "Vary",
           "value": "Accept"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     },
@@ -163,6 +167,10 @@
           "value": "text/markdown; charset=utf-8"
         },
         {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
         }
@@ -188,8 +196,8 @@
       "has": [
         {
           "type": "header",
-          "key": "accept",
-          "value": "(?i).*text/markdown.*"
+          "key": "Accept",
+          "value": ".*text/markdown.*"
         }
       ],
       "destination": "/index.md"
@@ -199,8 +207,8 @@
       "has": [
         {
           "type": "header",
-          "key": "accept",
-          "value": "(?i).*text/markdown.*"
+          "key": "Accept",
+          "value": ".*text/markdown.*"
         }
       ],
       "destination": "/index.md"

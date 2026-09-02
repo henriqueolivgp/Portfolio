@@ -1,0 +1,18 @@
+{
+  "issuer": "https://www.henriqueoliv.pt",
+  "authorization_endpoint": "https://www.henriqueoliv.pt/oauth/authorize",
+  "token_endpoint": "https://www.henriqueoliv.pt/oauth/token",
+  "userinfo_endpoint": "https://www.henriqueoliv.pt/oauth/userinfo",
+  "jwks_uri": "https://www.henriqueoliv.pt/.well-known/jwks.json",
+  "registration_endpoint": "https://www.henriqueoliv.pt/oauth/register",
+  "scopes_supported": ["openid", "profile", "email", "offline_access", "api"],
+  "response_types_supported": ["code", "id_token", "token", "code id_token", "code token", "id_token token", "code id_token token", "none"],
+  "grant_types_supported": ["authorization_code", "implicit", "refresh_token", "client_credentials", "urn:ietf:params:oauth:grant-type:device_code"],
+  "subject_types_supported": ["public"],
+  "id_token_signing_alg_values_supported": ["RS256", "ES256"],
+  "claims_supported": ["sub", "iss", "aud", "exp", "iat", "name", "email", "email_verified"],
+  "code_challenge_methods_supported": ["plain", "S256"],
+  "token_endpoint_auth_methods_supported": ["client_secret_basic", "client_secret_post", "none"],
+  "revocation_endpoint": "https://www.henriqueoliv.pt/oauth/revoke",
+  "introspection_endpoint": "https://www.henriqueoliv.pt/oauth/introspect"
+}

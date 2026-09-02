@@ -1,0 +1,66 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Henrique Oliveira — Freelancer Portfolio",
+    "identifier": "did:web:www.henriqueoliv.pt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.henriqueoliv.pt:mcp:portfolio",
+      "displayName": "Portfolio MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.henriqueoliv.pt/.well-known/mcp/server-card.json",
+      "description": "MCP server exposing portfolio projects, services, and contact tools",
+      "representativeQueries": [
+        "show me your portfolio projects",
+        "what services do you offer as a freelancer",
+        "how can I contact Henrique Oliveira"
+      ],
+      "capabilities": ["tools", "resources", "prompts"]
+    },
+    {
+      "identifier": "urn:air:www.henriqueoliv.pt:api:portfolio",
+      "displayName": "Portfolio OpenAPI",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://www.henriqueoliv.pt/openapi.json",
+      "description": "OpenAPI 3.1 description for henriqueoliv.pt portfolio site and APIs",
+      "representativeQueries": [
+        "what is the API spec for henriqueoliv.pt",
+        "list available portfolio API endpoints"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.henriqueoliv.pt:skill:portfolio",
+      "displayName": "Portfolio Skill",
+      "type": "text/markdown",
+      "url": "https://www.henriqueoliv.pt/.well-known/agent-skills/portfolio.md",
+      "description": "Agent skill for querying portfolio projects and services",
+      "representativeQueries": [
+        "discover portfolio skills",
+        "tell me about the real estate API project"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.henriqueoliv.pt:skill:contact",
+      "displayName": "Contact Skill",
+      "type": "text/markdown",
+      "url": "https://www.henriqueoliv.pt/.well-known/agent-skills/contact.md",
+      "description": "Agent skill for contacting Henrique Oliveira",
+      "representativeQueries": [
+        "how to hire Henrique Oliveira",
+        "what is the contact email for freelance work"
+      ]
+    },
+    {
+      "identifier": "urn:air:www.henriqueoliv.pt:catalog:api-catalog",
+      "displayName": "API Catalog",
+      "type": "application/linkset+json",
+      "url": "https://www.henriqueoliv.pt/.well-known/api-catalog",
+      "description": "RFC9727 API catalog linking service-desc, service-doc, and health status",
+      "representativeQueries": [
+        "where is the API catalog",
+        "find service documentation for henriqueoliv.pt"
+      ]
+    }
+  ]
+}

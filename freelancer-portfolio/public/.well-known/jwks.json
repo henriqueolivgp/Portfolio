@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "kid": "henriqueoliv-pt-2026-01",
+      "alg": "RS256",
+      "n": "placeholder-modulus-replace-with-real-jwk-in-production",
+      "e": "AQAB"
+    }
+  ]
+}

@@ -1,12 +1,54 @@
 {
-  "apis": [
+  "linkset": [
     {
-      "name": "Portfolio API",
-      "description": "API catalog for henriqueoliv.pt — portfolio site services and documentation",
-      "url": "https://www.henriqueoliv.pt/openapi.json",
-      "documentation": "https://www.henriqueoliv.pt/docs/api"
+      "anchor": "https://www.henriqueoliv.pt/",
+      "service-desc": [
+        {
+          "href": "https://www.henriqueoliv.pt/openapi.json",
+          "type": "application/vnd.oai.openapi+json",
+          "title": "Portfolio OpenAPI 3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.henriqueoliv.pt/docs",
+          "type": "text/html",
+          "title": "API Documentation"
+        },
+        {
+          "href": "https://www.henriqueoliv.pt/openapi.json",
+          "type": "application/vnd.oai.openapi+json",
+          "title": "OpenAPI as Documentation"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://www.henriqueoliv.pt/api/health",
+          "type": "application/health+json",
+          "title": "Health Endpoint"
+        }
+      ]
+    },
+    {
+      "anchor": "https://www.henriqueoliv.pt/api",
+      "service-desc": [
+        {
+          "href": "https://www.henriqueoliv.pt/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://www.henriqueoliv.pt/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://www.henriqueoliv.pt/api/health",
+          "type": "application/health+json"
+        }
+      ]
     }
-  ],
-  "catalog_created": "2026-01-01T00:00:00Z",
-  "spec": "https://www.rfc-editor.org/rfc/rfc9727#section-3"
+  ]
 }

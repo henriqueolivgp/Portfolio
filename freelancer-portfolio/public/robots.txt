@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Agentmap: https://www.henriqueoliv.pt/.well-known/ai-catalog.json
+
+Sitemap: https://www.henriqueoliv.pt/sitemap-index.xml
+Sitemap: https://www.henriqueoliv.pt/sitemap.xml

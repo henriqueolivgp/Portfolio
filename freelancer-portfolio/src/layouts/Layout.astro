@@ -62,6 +62,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Sitemap gerado pelo @astrojs/sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- ARD / ai-catalog discovery -->
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -118,5 +120,91 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="body-style">
     <slot />
+    <script>
+      (() => {
+        const tools = [
+          {
+            name: "get_projects",
+            description: "List portfolio projects with tech stack, demo and source links for Henrique Oliveira",
+            inputSchema: { type: "object", properties: {}, additionalProperties: false },
+            execute: async () => {
+              return {
+                projects: [
+                  { name: "API de um Imobiliário", tech: ["Node.js","TypeScript","REST"], code: "https://github.com/henriqueolivgp/Real-Estate-API" },
+                  { name: "Triador de Saúde", tech: ["React","Node.js","TypeScript"], demo: "https://triador-de-saude.vercel.app/", code: "https://github.com/henriqueolivgp/Triador-de-Saude" },
+                  { name: "Landing Page — Loja de Games", tech: ["Astro","CSS"], demo: "https://gamingstore-217.pages.dev/" }
+                ]
+              };
+            }
+          },
+          {
+            name: "get_services",
+            description: "List freelance services offered by Henrique Oliveira",
+            inputSchema: { type: "object", properties: {}, additionalProperties: false },
+            execute: async () => {
+              return {
+                services: ["Desenvolvimento Web (React/Next.js)", "Landing Pages", "Plataformas Personalizadas", "APIs & Integrações", "Otimização de Performance", "Manutenção & Suporte"],
+                contact: "geral@henriqueoliv.pt"
+              };
+            }
+          },
+          {
+            name: "contact",
+            description: "Get contact info and navigate to contact section for hiring Henrique Oliveira",
+            inputSchema: { type: "object", properties: { message: { type: "string", description: "Optional message to prefill" } }, additionalProperties: false },
+            execute: async (args) => {
+              const el = document.querySelector("#contacto");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+              else window.location.hash = "#contacto";
+              return { email: "geral@henriqueoliv.pt", location: "Figueira da Foz, PT", availability: "09:00-13:00, 14:00-18:00 Europe/Lisbon", message: args?.message || null, navigated: true };
+            }
+          },
+          {
+            name: "navigate_to_section",
+            description: "Navigate to a portfolio section: projetos, servicos, sobre, contacto",
+            inputSchema: { type: "object", properties: { section: { type: "string", enum: ["projetos","servicos","sobre","contacto","hero"] } }, required: ["section"] },
+            execute: async (args) => {
+              const id = args.section;
+              const el = document.getElementById(id) || document.querySelector(`#${id}`) || document.querySelector(`[data-section="${id}"]`);
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+              else window.location.hash = `#${id}`;
+              return { navigated: true, section: id };
+            }
+          }
+        ];
+
+        function register() {
+          const ctx = navigator.modelContext;
+          if (!ctx) return false;
+          // New API: registerTool
+          if (typeof ctx.registerTool === "function") {
+            const controller = new AbortController();
+            for (const t of tools) {
+              try { ctx.registerTool(t, { signal: controller.signal }); } catch(e) { console.warn("WebMCP registerTool failed", e); }
+            }
+          }
+          // Legacy API: provideContext
+          if (typeof ctx.provideContext === "function") {
+            try {
+              ctx.provideContext({
+                tools: tools.map(t => ({ name: t.name, description: t.description, inputSchema: t.inputSchema })),
+                // @ts-ignore legacy execute dispatcher
+                onToolCall: async (name, args) => {
+                  const tool = tools.find(x => x.name === name);
+                  return tool ? tool.execute(args) : { error: "unknown tool" };
+                }
+              });
+            } catch(e) { console.warn("WebMCP provideContext failed", e); }
+          }
+          return true;
+        }
+
+        if (!register()) {
+          window.addEventListener("modelContextReady", register, { once: true });
+          // also retry after load for polyfills
+          window.addEventListener("load", register, { once: true });
+        }
+      })();
+    </script>
   </body>
 </html>

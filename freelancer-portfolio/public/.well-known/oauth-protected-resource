@@ -1,0 +1,11 @@
+{
+  "resource": "https://www.henriqueoliv.pt/",
+  "authorization_servers": ["https://www.henriqueoliv.pt"],
+  "jwks_uri": "https://www.henriqueoliv.pt/.well-known/jwks.json",
+  "scopes_supported": ["openid", "profile", "email", "offline_access", "api:read", "api:write"],
+  "bearer_methods_supported": ["header"],
+  "resource_name": "henriqueoliv.pt Portfolio API",
+  "resource_documentation": "https://www.henriqueoliv.pt/docs",
+  "tls_client_certificate_bound_access_tokens": false,
+  "dpop_signing_alg_values_supported": ["ES256", "RS256"]
+}

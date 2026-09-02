@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "portfolio",
+      "type": "skill-md",
+      "description": "Query Henrique Oliveira's portfolio projects, services, and availability",
+      "url": "https://www.henriqueoliv.pt/.well-known/agent-skills/portfolio.md",
+      "digest": "sha256:8a0c5d8a558e0e0238b86b4afe94c3152790a5ba5e16e8d549ea9ab9f2c5f07f"
+    },
+    {
+      "name": "contact",
+      "type": "skill-md",
+      "description": "Initiate contact for freelance inquiries via email or contact form",
+      "url": "https://www.henriqueoliv.pt/.well-known/agent-skills/contact.md",
+      "digest": "sha256:72d5df46d77bea91ef4da25dfb0e37f291498717b05ddcf26d9b41b5d46147a3"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "serverInfo": {
+    "name": "henriqueoliv.pt-mcp",
+    "version": "1.0.0",
+    "title": "Henrique Oliveira Portfolio MCP",
+    "description": "MCP server for henriqueoliv.pt — exposes portfolio projects, services, and contact tools for AI agents.",
+    "websiteUrl": "https://www.henriqueoliv.pt"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://www.henriqueoliv.pt/mcp"
+  },
+  "endpoint": "https://www.henriqueoliv.pt/mcp",
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "logging": true
+  },
+  "tools": [
+    {
+      "name": "get_projects",
+      "description": "List portfolio projects with tech stack and links"
+    },
+    {
+      "name": "get_services",
+      "description": "List services offered (web dev, APIs, performance)"
+    },
+    {
+      "name": "contact",
+      "description": "Send a contact inquiry to Henrique Oliveira"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "https://www.henriqueoliv.pt/openapi.json",
+      "name": "OpenAPI Spec",
+      "mimeType": "application/vnd.oai.openapi+json"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "portfolio_intro",
+      "description": "Introduce Henrique Oliveira's freelance services"
+    }
+  ]
+}

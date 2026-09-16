@@ -1,0 +1,1169 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ThemeButton from "@/components/ThemeButton.astro";
+import { Image } from "astro:assets";
+import avatar from "@/assets/Me.jpeg";
+import triadorImg from "@/assets/projects/triador-de-saude/home.png";
+import cakeImg from "@/assets/projects/cake-store/print1.png";
+import estateImg from "@/assets/projects/real-state-api/insomnia.png";
+---
+
+<Layout
+    title="Media Kit — Henrique Oliveira | @henriqueoliv.dev"
+    description="Media Kit de Henrique Oliveira (@henriqueoliv.dev) — Full Stack Developer & Criador Tech. Métricas Instagram, audiência, formatos e contactos para parcerias com a USE T.I."
+    ogImage="/Logo.webp"
+>
+    <nav class="mk-nav" aria-label="Navegação Media Kit">
+        <div class="mk-nav-inner">
+            <a class="mk-brand" href="/">
+                <img
+                    src="/Logo.webp"
+                    alt="Henrique Oliveira"
+                    width="34"
+                    height="34"
+                />
+                <span>
+                    Henrique Oliveira
+                    <small>@henriqueoliv.dev · MEDIA KIT</small>
+                </span>
+            </a>
+            <div class="mk-nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#metricas">Métricas</a>
+                <a href="#audiencia">Audiência</a>
+                <a href="#formatos">Formatos</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="mk-nav-actions">
+                <ThemeButton />
+                <a
+                    class="mk-btn mk-btn-primary mk-no-print"
+                    href="https://wa.me/351923374819"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Falar Comigo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="mk-container mk-hero" id="topo">
+        <div class="mk-hero-grid">
+            <div>
+                <p class="mk-eyebrow">
+                    Media Kit · Para USE T.I · Atualizado Set 2026
+                </p>
+                <h1 class="mk-h1">
+                    Full Stack Developer que também <em>cria conteúdo tech</em>.
+                </h1>
+                <p class="mk-sub">
+                    Sou o Henrique Oliveira, freelancer em Figueira da Foz. No
+                    Instagram documento a vida real de dev — builds, tutoriais,
+                    reviews de ferramentas e freelance life — para uma audiência
+                    jovem PT/BR 18-34. Proponho à <strong>USE T.I</strong> um
+                    formato misto:{" "}
+                    <strong>influência tech + execução dev</strong>.
+                </p>
+                <div class="mk-ctas">
+                    <a
+                        class="mk-btn mk-btn-primary"
+                        href="https://www.instagram.com/henriqueoliv.dev/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        ↗ @henriqueoliv.dev
+                    </a>
+                    <a class="mk-btn mk-btn-ghost" href="/">
+                        Ver portfólio
+                    </a>
+                    <button
+                        class="mk-btn mk-btn-ghost mk-no-print"
+                        id="mkPrint"
+                    >
+                        ⬇ Guardar PDF
+                    </button>
+                </div>
+                <div class="mk-badges">
+                    <span>📍 Figueira da Foz, PT</span>
+                    <span>🗣 PT-PT</span>
+                    <span>⚡ Resposta 24h</span>
+                    <span>🏷 #PUB transparente</span>
+                </div>
+            </div>
+            <aside class="mk-profile">
+                <Image
+                    src={avatar}
+                    alt="Henrique Oliveira"
+                    width={264}
+                    height={264}
+                    loading="eager"
+                    class="mk-avatar"
+                />
+                <div class="mk-handle">Henrique Oliveira</div>
+                <div class="mk-role">@henriqueoliv.dev · Dev &amp; Criador</div>
+                <div>
+                    <span class="mk-status">
+                        <span class="mk-dot"></span> Disponível para parcerias
+                    </span>
+                </div>
+                <div class="mk-follow">
+                    <div>
+                        <b>157</b>
+                        <span>seguidores</span>
+                    </div>
+                    <div>
+                        <b>1.453</b>
+                        <span>views 30d</span>
+                    </div>
+                    <div>
+                        <b>82%</b>
+                        <span>18-34 anos</span>
+                    </div>
+                </div>
+                <div class="mk-mini">
+                    github.com/henriqueolivgp · 27 followers
+                    <br />
+                    henriqueoliv.pt · 94+ Lighthouse
+                </div>
+            </aside>
+        </div>
+        <div class="mk-stats">
+            <div class="mk-stat">
+                <b>1.453</b>
+                <span>Visualizações (30 dias)</span>
+                <small>17/08 → 15/09 · IG Insights</small>
+            </div>
+            <div class="mk-stat">
+                <b>37</b>
+                <span>Interações totais</span>
+                <small>18 Reels · 17 Stories · 2 Posts</small>
+            </div>
+            <div class="mk-stat">
+                <b>45 + 7</b>
+                <span>Visitas + cliques bio</span>
+                <small>Intenção real de contacto</small>
+            </div>
+            <div class="mk-stat">
+                <b>74,9%</b>
+                <span>Views de seguidores</span>
+                <small>Comunidade fiel + 25% novo alcance</small>
+            </div>
+        </div>
+    </header>
+
+    <main class="mk-container">
+        <section id="sobre" class="mk-section">
+            <span class="mk-label">Sobre mim</span>
+            <h2 class="mk-h2">Um developer que entrega, não só que promete.</h2>
+            <p class="mk-lead">
+                Comecei a programar aos 18 e hoje sou freelancer full-time.
+                Ajudo startups e empresas com APIs, dashboards e e-commerces
+                robustos — código limpo, testado e documentado. No Instagram
+                mostro o processo sem filtro: o que corre bem, os bugs, as
+                ferramentas que uso (CachyOS, React, Node, TS) e a rotina
+                freelancer.
+            </p>
+            <div class="mk-cards mk-3">
+                <div class="mk-card">
+                    <div class="mk-icon">💻</div>
+                    <h3>Stack real</h3>
+                    <p>
+                        React / Next.js 95% · Node 90% · TypeScript 92% ·
+                        Postgres/Mongo 87% · Docker/AWS 82% · REST/GraphQL 89%.
+                    </p>
+                </div>
+                <div class="mk-card">
+                    <div class="mk-icon">🎬</div>
+                    <h3>Conteúdo diário</h3>
+                    <p>
+                        Stories diários (40-140 views), Reels build-in-public,
+                        posts collab. Top Reel: 451 views. Frequência
+                        consistente.
+                    </p>
+                </div>
+                <div class="mk-card">
+                    <div class="mk-icon">🤝</div>
+                    <h3>Porquê eu para a USE T.I</h3>
+                    <p>
+                        Nicho tech puro, audiência PT/BR jovem, autoridade de
+                        quem executa. Posso promover <em>e</em> implementar o
+                        produto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metricas" class="mk-section">
+            <span class="mk-label">
+                Métricas completas · Instagram Insights
+            </span>
+            <h2 class="mk-h2">Performance últimos 30 dias</h2>
+            <p class="mk-lead">
+                Fonte: Painel Profissional @henriqueoliv.dev. Crescimento
+                líquido +0 (base estável e fiel), com pico de 508 views/dia no
+                melhor dia.
+            </p>
+            <div class="mk-cards mk-2">
+                <div class="mk-card">
+                    <h3>Visualizações por formato</h3>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Histórias</span>
+                            <b>972</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill mk-fill-pink" data-w="96"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Reels</span>
+                            <b>458</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="47"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Publicações</span>
+                            <b>15</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="4"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Diretos</span>
+                            <b>0</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="0"></div>
+                        </div>
+                    </div>
+                    <p class="mk-note">
+                        Visualizadores únicos: 319 · Stories dominam o volume,
+                        Reels dão alcance novo.
+                    </p>
+                </div>
+                <div class="mk-card">
+                    <h3>Interações + perfil</h3>
+                    <div class="mk-kpi">
+                        <b>37</b>
+                        <span>interações totais</span>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Reels</span>
+                            <b>18</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="48"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Histórias</span>
+                            <b>17</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill mk-fill-pink" data-w="46"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Publicações</span>
+                            <b>2</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="6"></div>
+                        </div>
+                    </div>
+                    <p class="mk-note">
+                        Visitas ao perfil 45 · Cliques no link da bio 7 ·
+                        Stories recentes: 141 / 99 / 64 / 44 views.
+                    </p>
+                </div>
+            </div>
+            <div class="mk-card" style="margin-top:14px">
+                <h3>Top conteúdos do mês</h3>
+                <span class="mk-tag">451 views · Boas malta! Então!</span>
+                <span class="mk-tag">141 views · Muito interessante, já…</span>
+                <span class="mk-tag">
+                    99 views · A passear com a minha marketera
+                </span>
+                <span class="mk-tag">
+                    78 views · Post collab @ana_beatriz.marketing
+                </span>
+                <span class="mk-tag">64 views · Eu utilizo CachyOS</span>
+                <p class="mk-note">
+                    Mix vencedor: dev humor + lifestyle + reviews de setup.
+                    Ideal para integrar marcas tech de forma nativa.
+                </p>
+            </div>
+        </section>
+
+        <section id="audiencia" class="mk-section">
+            <span class="mk-label">Audiência</span>
+            <h2 class="mk-h2">Quem me segue</h2>
+            <p class="mk-lead">
+                Comunidade pequena, qualificada e no alvo tech: homens jovens
+                PT/BR que programam ou querem entrar na área.
+            </p>
+            <div class="mk-cards mk-4">
+                <div class="mk-card">
+                    <h3>Género</h3>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Homens</span>
+                            <b>74,5%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="74.5"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Mulheres</span>
+                            <b>25,5%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div
+                                class="mk-fill mk-fill-pink"
+                                data-w="25.5"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mk-card">
+                    <h3>🎂 Idade</h3>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>18-24</span>
+                            <b>41,2%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="41.2"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>25-34</span>
+                            <b>41,2%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="41.2"></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>35-44</span>
+                            <b>8,8%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div
+                                class="mk-fill mk-fill-pink"
+                                data-w="8.8"
+                            ></div>
+                        </div>
+                    </div>
+                    <p class="mk-note">82,4% entre 18-34.</p>
+                </div>
+                <div class="mk-card">
+                    <h3>🌍 Países</h3>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Portugal</span>
+                            <b>54,9%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div
+                                class="mk-fill mk-fill-green"
+                                data-w="54.9"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="mk-bar">
+                        <div class="mk-bar-top">
+                            <span>Brasil</span>
+                            <b>19,6%</b>
+                        </div>
+                        <div class="mk-track">
+                            <div class="mk-fill" data-w="19.6"></div>
+                        </div>
+                    </div>
+                    <p class="mk-note">
+                        Índia 6,5% · Paquistão 3,3% · Turquia 2,6% · ~75%
+                        lusófono.
+                    </p>
+                </div>
+                <div class="mk-card">
+                    <h3>⏰ Atividade (WEST)</h3>
+                    <p>
+                        <strong>Sextas 18-21</strong> e{" "}
+                        <strong>Sábados 18-23</strong> são o pico. Ao longo do
+                        dia: forte <strong>12h-21h</strong>, pico 15h-18h.
+                    </p>
+                    <p class="mk-note">
+                        Recomendo collabs 5ª/6ª às 18h para máximo alcance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formatos" class="mk-section">
+            <span class="mk-label">Proposta mista para USE T.I</span>
+            <h2 class="mk-h2">O que posso fazer por vocês</h2>
+            <p class="mk-lead">
+                Sem preços — orçamento sob consulta mediante brief. Cumpro
+                sempre a lei PT: identificação <code>#PUB / #PARCERIA</code> no
+                início do conteúdo.
+            </p>
+            <div class="mk-cards mk-2">
+                <div class="mk-card">
+                    <div class="mk-icon">📣</div>
+                    <h3>A · Para Marcas (influência)</h3>
+                    <p>
+                        • UGC unboxing 30s vertical 9:16
+                        <br />• Review post + stories (uso real 3-7 dias)
+                        <br />• Tutorial integração (ex: API, hosting,
+                        ferramenta dev)
+                        <br />• Live coding Twitch + repost Reels
+                        <br />• Collab post (ex: já fiz com
+                        @ana_beatriz.marketing)
+                    </p>
+                </div>
+                <div class="mk-card">
+                    <div class="mk-icon">🛠</div>
+                    <h3>B · Para Clientes (execução dev)</h3>
+                    <p>
+                        • Sites &amp; Apps React/Next.js rápidos e acessíveis
+                        <br />• Landing pages SEO + conversão
+                        <br />• APIs REST, Stripe, auth, webhooks + docs
+                        <br />• Otimização Lighthouse / Core Web Vitals
+                        <br />• Manutenção e suporte contínuo
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="mk-section">
+            <span class="mk-label">Prova de execução</span>
+            <h2 class="mk-h2">Projetos em produção</h2>
+            <p class="mk-lead">
+                Não sou só criador — entrego produto. 5+ projetos live, 94+
+                Lighthouse.
+            </p>
+            <div class="mk-cards mk-3">
+                <div class="mk-card">
+                    <Image
+                        src={triadorImg}
+                        alt="Triador de Saúde"
+                        width={640}
+                        height={360}
+                        loading="lazy"
+                        class="mk-shot"
+                    />
+                    <h3>Triador de Saúde</h3>
+                    <p>
+                        Sistema de triagem médica com priorização por gravidade.
+                        React + Node + TS.
+                    </p>
+                    <div class="mk-links">
+                        <a
+                            href="https://triador-de-saude.vercel.app/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ↗ Demo
+                        </a>
+                        <a
+                            href="https://github.com/henriqueolivgp/Triador-de-Saude"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="mk-card">
+                    <Image
+                        src={estateImg}
+                        alt="Real Estate API"
+                        width={640}
+                        height={360}
+                        loading="lazy"
+                        class="mk-shot"
+                    />
+                    <h3>Real Estate API</h3>
+                    <p>
+                        API imobiliária com regras de negócio sólidas. Node + TS
+                        + REST.
+                    </p>
+                    <span class="mk-tag">Node.js</span>
+                    <span class="mk-tag">TypeScript</span>
+                    <span class="mk-tag">REST</span>
+                    <div class="mk-links">
+                        <a
+                            href="https://github.com/henriqueolivgp/Real-Estate-API"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="mk-card">
+                    <Image
+                        src={cakeImg}
+                        alt="Landing Loja de Bolos"
+                        width={640}
+                        height={360}
+                        loading="lazy"
+                        class="mk-shot"
+                    />
+                    <h3>Landing — Loja de Bolos</h3>
+                    <p>
+                        Landing Astro ultra-rápida, SEO e conversão. Modelo
+                        replicável para clientes.
+                    </p>
+                    <div class="mk-links">
+                        <a
+                            href="https://landingpage-cake.pages.dev/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ↗ Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mk-section">
+            <span class="mk-label">Como colaborar</span>
+            <h2 class="mk-h2">Simples e rápido</h2>
+            <div class="mk-timeline">
+                <div>
+                    <b>1 · Brief</b>
+                    <p>
+                        Envias objetivo, produto e prazo por WhatsApp ou email.
+                    </p>
+                </div>
+                <div>
+                    <b>2 · Proposta em 24h</b>
+                    <p>
+                        Respondo com formato, guião e calendário (orçamento sob
+                        consulta).
+                    </p>
+                </div>
+                <div>
+                    <b>3 · Entrega + métricas</b>
+                    <p>
+                        Publico, entrego prints de Insights e mantenho o
+                        conteúdo no perfil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="mk-section">
+            <div class="mk-contact">
+                <span class="mk-label">Contacto</span>
+                <h2 class="mk-h2">Tens uma marca ou projeto? Vamos falar.</h2>
+                <p class="mk-lead" style="margin:10px auto;max-width:56ch">
+                    Respondo em menos de 24h. Manda brief da USE T.I com ideia
+                    de collab ou projeto dev.
+                </p>
+                <div class="mk-contact-grid">
+                    <a
+                        class="mk-btn mk-btn-primary"
+                        href="https://wa.me/351923374819"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+                    <a
+                        class="mk-btn mk-btn-ghost"
+                        href="mailto:geral@henriqueoliv.pt"
+                    >
+                        geral@henriqueoliv.pt
+                    </a>
+                    <a
+                        class="mk-btn mk-btn-ghost"
+                        href="https://www.instagram.com/henriqueoliv.dev/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Instagram
+                    </a>
+                    <a
+                        class="mk-btn mk-btn-ghost"
+                        href="https://www.linkedin.com/in/henrique-oliv"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        LinkedIn
+                    </a>
+                    <a
+                        class="mk-btn mk-btn-ghost"
+                        href="https://github.com/henriqueolivgp"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        GitHub
+                    </a>
+                </div>
+                <p class="mk-note">
+                    henriqueoliv.pt/media-kit · Figueira da Foz, Portugal 🇵🇹 ·
+                    Dados IG: 17/08–15/09/2026
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mk-footer">
+        <div class="mk-container mk-footer-inner">
+            <span>
+                © <span id="mkYear"></span> Henrique Oliveira ·
+                @henriqueoliv.dev · Media Kit para USE T.I
+            </span>
+        </div>
+    </footer>
+</Layout>
+
+<style>
+    .mk-container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 22px;
+    }
+    .mk-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+    }
+    .mk-nav-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 12px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .mk-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--text);
+        font-family: var(--sans);
+    }
+    .mk-brand img {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .mk-brand small {
+        display: block;
+        font-family: var(--mono);
+        font-weight: 400;
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+    }
+    .mk-nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+    }
+    .mk-nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+    }
+    .mk-nav-links a:hover {
+        color: var(--text);
+    }
+    .mk-nav-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .mk-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: var(--sans);
+        color: var(--text);
+        background: transparent;
+    }
+    .mk-btn-primary {
+        background: #6358e8;
+        color: #fff;
+    }
+    .mk-btn-primary:hover {
+        filter: brightness(1.1);
+    }
+    .mk-btn-ghost {
+        border-color: var(--border);
+        background: var(--surface);
+    }
+    .mk-btn-ghost:hover {
+        border-color: #6358e8;
+    }
+    @media (max-width: 860px) {
+        .mk-nav-links {
+            display: none;
+        }
+    }
+    .mk-hero {
+        padding: 48px 22px 10px;
+    }
+    .mk-hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+    }
+    @media (max-width: 860px) {
+        .mk-hero-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .mk-eyebrow {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-light);
+        margin-bottom: 12px;
+    }
+    .mk-h1 {
+        font-size: clamp(32px, 5vw, 54px);
+        line-height: 1.06;
+        letter-spacing: -0.02em;
+        font-family: var(--sans);
+    }
+    .mk-h1 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #6358e8, #e93df5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .mk-sub {
+        color: var(--muted);
+        margin: 16px 0 22px;
+        max-width: 52ch;
+    }
+    .mk-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+    .mk-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--muted);
+    }
+    .mk-badges span {
+        border: 1px solid var(--border);
+        background: var(--surface);
+        padding: 6px 11px;
+        border-radius: 999px;
+    }
+    .mk-profile {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .mk-profile::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 110px;
+        background: radial-gradient(
+            400px 160px at 50% 0%,
+            rgba(99, 88, 232, 0.4),
+            transparent
+        );
+    }
+    .mk-avatar {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #6358e8;
+        position: relative;
+        margin: 6px auto 12px;
+        display: block;
+    }
+    .mk-handle {
+        font-weight: 700;
+        font-size: 20px;
+        font-family: var(--sans);
+    }
+    .mk-role {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--muted);
+        margin: 4px 0 14px;
+    }
+    .mk-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        background: rgba(34, 197, 94, 0.14);
+        color: #22c55e;
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        padding: 7px 13px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+    }
+    .mk-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.2);
+    }
+    .mk-follow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 8px 0 16px;
+    }
+    .mk-follow div {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 10px 6px;
+    }
+    .mk-follow b {
+        display: block;
+        font-size: 19px;
+        font-family: var(--sans);
+    }
+    .mk-follow span {
+        font-size: 11px;
+        color: var(--muted);
+        font-family: var(--mono);
+    }
+    .mk-mini {
+        font-family: var(--mono);
+        font-size: 12px;
+        color: var(--muted);
+    }
+    .mk-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin: 26px 0 6px;
+    }
+    @media (max-width: 760px) {
+        .mk-stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .mk-stat {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 20px;
+        text-align: center;
+    }
+    .mk-stat b {
+        font-size: 30px;
+        display: block;
+        font-family: var(--sans);
+    }
+    .mk-stat span {
+        font-size: 13px;
+        color: var(--muted);
+    }
+    .mk-stat small {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 6px;
+    }
+    .mk-section {
+        padding: 30px 0;
+    }
+    .mk-section:target {
+        scroll-margin-top: 90px;
+    }
+    #sobre,
+    #metricas,
+    #audiencia,
+    #formatos,
+    #projetos,
+    #contacto {
+        scroll-margin-top: 90px;
+    }
+    .mk-label {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-light);
+        display: block;
+        margin-bottom: 8px;
+    }
+    .mk-h2 {
+        font-size: clamp(25px, 3.4vw, 35px);
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+        font-family: var(--sans);
+    }
+    .mk-lead {
+        color: var(--muted);
+        max-width: 70ch;
+        margin-bottom: 20px;
+    }
+    .mk-cards {
+        display: grid;
+        gap: 14px;
+    }
+    .mk-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mk-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .mk-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 900px) {
+        .mk-2,
+        .mk-3,
+        .mk-4 {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (min-width: 620px) and (max-width: 900px) {
+        .mk-3 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .mk-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .mk-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 22px;
+    }
+    .mk-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-family: var(--sans);
+    }
+    .mk-card p {
+        color: var(--muted);
+        font-size: 14.5px;
+    }
+    .mk-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: rgba(99, 88, 232, 0.15);
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .mk-bar {
+        margin: 13px 0;
+    }
+    .mk-bar-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+    .mk-bar-top b {
+        font-family: var(--mono);
+    }
+    .mk-track {
+        height: 10px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+    }
+    .mk-fill {
+        height: 100%;
+        width: 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #6358e8, #e93df5);
+        transition: width 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .mk-fill-pink {
+        background: linear-gradient(90deg, #e93df5, #f0abfc);
+    }
+    .mk-fill-green {
+        background: linear-gradient(90deg, #22c55e, #86efac);
+    }
+    .mk-note {
+        font-family: var(--mono);
+        font-size: 11.5px;
+        color: var(--muted);
+        margin-top: 14px;
+    }
+    .mk-kpi {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 4px;
+    }
+    .mk-kpi b {
+        font-size: 32px;
+        font-family: var(--sans);
+    }
+    .mk-kpi span {
+        color: var(--muted);
+        font-size: 13px;
+    }
+    .mk-tag {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 11px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 4px 10px;
+        margin: 3px 4px 0 0;
+        color: var(--muted);
+    }
+    .mk-shot {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        margin-bottom: 12px;
+    }
+    .mk-links {
+        display: flex;
+        gap: 14px;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .mk-links a {
+        color: var(--accent-light);
+        text-decoration: none;
+    }
+    .mk-timeline {
+        border-left: 2px solid var(--border);
+        margin: 10px 0 0 8px;
+        padding-left: 20px;
+        display: grid;
+        gap: 16px;
+    }
+    .mk-timeline b {
+        display: block;
+        font-family: var(--sans);
+    }
+    .mk-timeline p {
+        color: var(--muted);
+        font-size: 14px;
+    }
+    .mk-contact {
+        background:
+            linear-gradient(180deg, rgba(99, 88, 232, 0.16), transparent),
+            var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 30px;
+        text-align: center;
+    }
+    .mk-contact-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .mk-footer {
+        border-top: 1px solid var(--border);
+        padding: 26px 0 46px;
+        color: var(--muted);
+        font-size: 13px;
+    }
+    .mk-footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .mk-footer a {
+        color: inherit;
+    }
+    @media print {
+        .mk-nav,
+        .mk-ctas,
+        .mk-no-print {
+            display: none !important;
+        }
+        .mk-card,
+        .mk-stat,
+        .mk-profile,
+        .mk-contact {
+            background: #fff !important;
+            border-color: #ddd !important;
+        }
+        .mk-section {
+            padding: 12px 0;
+        }
+    }
+</style>
+
+<script>
+    const printBtn = document.getElementById("mkPrint");
+    printBtn?.addEventListener("click", () => window.print());
+    const yearEl = document.getElementById("mkYear");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    const io = new IntersectionObserver(
+        (entries) =>
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    const el = e.target as HTMLElement;
+                    el.style.width = el.dataset.w + "%";
+                    io.unobserve(el);
+                }
+            }),
+        { threshold: 0.3 },
+    );
+    document.querySelectorAll(".mk-fill").forEach((f) => io.observe(f));
+</script>

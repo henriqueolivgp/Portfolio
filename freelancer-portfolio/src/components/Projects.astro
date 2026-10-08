@@ -9,7 +9,6 @@ import gameStore1 from "../assets/projects/game-store/print1.png";
 import triadorSaudeSrc from '../assets/projects/triador-de-saude/home.png';
 
 type ScreenshotType = ImageMetadata | string;
-type Category = "projetos" | "landing-pages";
 
 const LandingPageImages = {
   cakeStore: {
@@ -33,7 +32,6 @@ interface Project {
   githubUrl: string;
   screenshot: ScreenshotType;
   screenshotAlt: string;
-  category: Category;
 }
 
 const projects: Project[] = [
@@ -46,18 +44,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/henriqueolivgp/Real-Estate-API",
     screenshot: realEstateSrc, 
     screenshotAlt: "Estrutura e documentação representativa da Real Estate API",
-    category: "projetos",
   },
-  // {
-  //   title: "CyberReports",
-  //   desc: "Plataforma de relatórios e denúncias de cibersegurança reestruturada para garantir uma gestão segura de dados e submissão de formulários complexos.",
-  //   tags: ["Full Stack", "Segurança", "Gestão de Dados"],
-  //   demoUrl: "",
-  //   githubUrl: "https://github.com/henriqueolivgp/CyberReports",
-  //   screenshot: cyberReportsSrc,
-  //   screenshotAlt: "Screenshot da interface do dashboard e relatórios da plataforma CyberReports",
-  //   category: "projetos",
-  // },
   // {
   //   title: "Techquiz V2",
   //   desc: "Aplicação interativa de quizzes pensada para plataformas de e-learning ou onboarding, com foco em design dinâmico e gestão de estado eficiente.",
@@ -96,7 +83,6 @@ const projects: Project[] = [
   githubUrl: 'https://github.com/henriqueolivgp/Triador-de-Saude',
   screenshot: triadorSaudeSrc, // Lembra-te de importar a imagem com este nome no topo do ficheiro
   screenshotAlt: 'Interface do sistema Triador de Saúde mostrando a avaliação e classificação de pacientes',
-  category: 'projetos',
 },
 
   // ── LANDING PAGES ─────────────────────────────────────────
@@ -108,7 +94,6 @@ const projects: Project[] = [
     githubUrl: "#",
     screenshot: LandingPageImages.cakeStore.print1,
     screenshotAlt: "Screenshot da landing page do restaurante",
-    category: "landing-pages",
   },
   {
     title: "Landing Page — Loja de Cookies",
@@ -118,7 +103,6 @@ const projects: Project[] = [
     githubUrl: "#",
     screenshot: LandingPageImages.cookieStore.print1,
     screenshotAlt: "Screenshot da landing page do restaurante",
-    category: "landing-pages",
   },
   {
     title: "Landing Page — Loja de Games",
@@ -128,7 +112,6 @@ const projects: Project[] = [
     githubUrl: "#",
     screenshot: LandingPageImages.gameStore.print1,
     screenshotAlt: "Screenshot da landing page do restaurante",
-    category: "landing-pages",
   },
 ];
 
@@ -137,20 +120,6 @@ function getScreenshotSrc(screenshot: ScreenshotType): string {
   return screenshot.src;
 }
 
-const tabs = [
-  { id: "projetos", label: "Projetos" },
-  { id: "landing-pages", label: "Landing Pages" },
-] as const;
-
-const sectionTitles: Record<Category, string> = {
-  projetos: "O que já construí",
-  "landing-pages": "Templates & Landing Pages",
-};
-
-const sectionDescs: Record<Category, string> = {
-  projetos: "Aplicações reais em produção, com impacto mensurável.",
-  "landing-pages": "Landing pages e templates prontos a usar.",
-};
 ---
 
 <!-- ── MODAL ──────────────────────────────────────────────── -->
@@ -207,27 +176,9 @@ const sectionDescs: Record<Category, string> = {
     <div class="section-header">
       <h2 id="projetos-h2">
         <span class="label">Projetos</span>
-        <span id="section-title">{sectionTitles["projetos"]}</span>
+        <span id="section-title">O que já construí</span>
       </h2>
-      <p id="section-desc">{sectionDescs["projetos"]}</p>
-    </div>
-
-    <!-- Tabs -->
-    <div class="tabs-wrap" role="tablist" aria-label="Filtrar por categoria">
-      {
-        tabs.map((tab, i) => (
-          <button
-            class={`tab-btn${i === 0 ? " active" : ""}`}
-            role="tab"
-            aria-selected={i === 0 ? "true" : "false"}
-            data-category={tab.id}
-            data-title={sectionTitles[tab.id as Category]}
-            data-desc={sectionDescs[tab.id as Category]}
-          >
-            {tab.label}
-          </button>
-        ))
-      }
+      <p id="section-desc">Projetos web | Full Stack | Mobile </p>
     </div>
 
     <!-- Grid de cards -->
@@ -236,8 +187,6 @@ const sectionDescs: Record<Category, string> = {
         projects.map((p) => (
           <li
             class="project-card"
-            data-category={p.category}
-            style={p.category !== "projetos" ? "display:none" : ""}
           >
             <button
               class="project-trigger"
